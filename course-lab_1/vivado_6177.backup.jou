@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Sep 13 18:05:59 2023
+# Process ID: 6177
+# Current directory: /home/ubuntu/course-lab_1
+# Command line: vivado
+# Log file: /home/ubuntu/course-lab_1/vivado.log
+# Journal file: /home/ubuntu/course-lab_1/vivado.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 2495.998 MHz, CPU Physical cores: 2, Host memory: 8323 MB
+#-----------------------------------------------------------
+start_gui
+create_project vivado /home/ubuntu/course-lab_1/vivado -part xc7z020clg400-1
+set_property  ip_repo_paths  /home/ubuntu/course-lab_1/hls_ip [current_project]
+update_ip_catalog
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup

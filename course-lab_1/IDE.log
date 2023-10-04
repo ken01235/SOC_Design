@@ -1,0 +1,9 @@
+11:49:26 DEBUG : Logs will be stored at '/home/ubuntu/course-lab_1/IDE.log'.
+11:49:30 INFO  : Launching XSCT server: xsct -n  -interactive /home/ubuntu/course-lab_1/temp_xsdb_launch_script.tcl
+11:49:30 INFO  : Registering command handlers for Vitis TCF services
+11:49:32 INFO  : Platform repository initialization has completed.
+11:49:37 INFO  : XSCT server has started successfully.
+11:49:37 INFO  : Successfully done setting XSCT server connection channel  
+11:49:38 INFO  : plnx-install-location is set to ''
+11:49:38 INFO  : Successfully done setting workspace for the tool. 
+11:49:38 INFO  : Successfully done query RDI_DATADIR 
