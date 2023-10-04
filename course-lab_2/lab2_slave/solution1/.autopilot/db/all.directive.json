@@ -1,0 +1,168 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "fir_n11_strm",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/ubuntu\/SOC_Design\/course-lab_2\/lab2_slave\/solution1\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": ""
+              },
+              {
+                "name": "depth",
+                "value": "600"
+              },
+              {
+                "name": "port",
+                "value": "return"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "fir_n11_strm",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "\/home\/ubuntu\/SOC_Design\/course-lab_2\/lab2_slave\/solution1\/directives.tcl",
+          "sourceLine": "7",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "m_axi",
+                "value": ""
+              },
+              {
+                "name": "depth",
+                "value": "600"
+              },
+              {
+                "name": "port",
+                "value": "pstrmInput"
+              },
+              {
+                "name": "offset",
+                "value": "slave"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "fir_n11_strm",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "\/home\/ubuntu\/SOC_Design\/course-lab_2\/lab2_slave\/solution1\/directives.tcl",
+          "sourceLine": "8",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "m_axi",
+                "value": ""
+              },
+              {
+                "name": "depth",
+                "value": "600"
+              },
+              {
+                "name": "port",
+                "value": "pstrmOutput"
+              },
+              {
+                "name": "offset",
+                "value": "slave"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "fir_n11_strm",
+          "label": "",
+          "functionLabel": "",
+          "id": "4",
+          "sourceFile": "\/home\/ubuntu\/SOC_Design\/course-lab_2\/lab2_slave\/solution1\/directives.tcl",
+          "sourceLine": "9",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": ""
+              },
+              {
+                "name": "depth",
+                "value": "600"
+              },
+              {
+                "name": "port",
+                "value": "an32Coef"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "fir_n11_strm",
+          "label": "",
+          "functionLabel": "",
+          "id": "5",
+          "sourceFile": "\/home\/ubuntu\/SOC_Design\/course-lab_2\/lab2_slave\/solution1\/directives.tcl",
+          "sourceLine": "10",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": ""
+              },
+              {
+                "name": "depth",
+                "value": "600"
+              },
+              {
+                "name": "port",
+                "value": "regXferLeng"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "fir_n11_strm",
+          "label": "",
+          "functionLabel": "",
+          "id": "6",
+          "sourceFile": "\/home\/ubuntu\/SOC_Design\/course-lab_2\/lab2_slave\/solution1\/directives.tcl",
+          "sourceLine": "11",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "fir_n11_strm"
+              }]
+          }
+        },
+        {
+          "functionName": "fir_n11_strm",
+          "label": "",
+          "functionLabel": "",
+          "id": "7",
+          "sourceFile": "\/home\/ubuntu\/SOC_Design\/course-lab_2\/lab2_slave\/solution1\/csynth.tcl",
+          "sourceLine": "16",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "fir_n11_strm"
+              }]
+          }
+        }
+      ]
+    }]}

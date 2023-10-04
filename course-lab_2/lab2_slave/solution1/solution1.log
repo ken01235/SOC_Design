@@ -1,0 +1,118 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./lab2_slave/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -depth 600 fir_n11_strm 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi -depth 600 -offset slave fir_n11_strm pstrmInput 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi -depth 600 -offset slave fir_n11_strm pstrmOutput 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -depth 600 fir_n11_strm an32Coef 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -depth 600 fir_n11_strm regXferLeng 
+INFO: [HLS 200-1510] Running: set_directive_top -name fir_n11_strm fir_n11_strm 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'hls_FIRN11Stream/FIR.cpp' ... 
+WARNING: [HLS 207-5552] unexpected pragma parameter 'depth' (/home/ubuntu/SOC_Design/course-lab_2/lab2_slave/solution1/directives.tcl:10:48)
+WARNING: [HLS 207-5552] unexpected pragma parameter 'depth' (/home/ubuntu/SOC_Design/course-lab_2/lab2_slave/solution1/directives.tcl:6:48)
+WARNING: [HLS 207-5555] Unsupported interface port data type in '#pragma HLS interface m_axi' (/home/ubuntu/SOC_Design/course-lab_2/lab2_slave/solution1/directives.tcl:7:53)
+WARNING: [HLS 207-5555] Unsupported interface port data type in '#pragma HLS interface m_axi' (/home/ubuntu/SOC_Design/course-lab_2/lab2_slave/solution1/directives.tcl:8:53)
+WARNING: [HLS 207-5552] unexpected pragma parameter 'depth' (/home/ubuntu/SOC_Design/course-lab_2/lab2_slave/solution1/directives.tcl:9:48)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.25 seconds. CPU system time: 0.28 seconds. Elapsed time: 2.07 seconds; current allocated memory: 462.531 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<32>s.i32' into 'fir_n11_strm(hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul>, 0>*, hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul>, 0>*, int*, ap_uint<32>)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'fir_n11_strm(hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul>, 0>*, hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul>, 0>*, int*, ap_uint<32>)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i4.s_struct.ap_uint<4>s' into 'fir_n11_strm(hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul>, 0>*, hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul>, 0>*, int*, ap_uint<32>)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i32.s_struct.ap_uint<32>s' into 'fir_n11_strm(hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul>, 0>*, hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul>, 0>*, int*, ap_uint<32>)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<1>s.i1' into 'fir_n11_strm(hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul>, 0>*, hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul>, 0>*, int*, ap_uint<32>)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<4>s.i4' into 'fir_n11_strm(hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul>, 0>*, hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul>, 0>*, int*, ap_uint<32>)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.87 seconds. CPU system time: 0.39 seconds. Elapsed time: 2.32 seconds; current allocated memory: 463.758 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 463.758 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 471.535 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 482.320 MB.
+INFO: [XFORM 203-510] Pipelining loop 'XFER_LOOP' (hls_FIRN11Stream/FIR.cpp:16) in function 'fir_n11_strm' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'XFER_LOOP' (hls_FIRN11Stream/FIR.cpp:16) in function 'fir_n11_strm' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT_ACC_LOOP' (hls_FIRN11Stream/FIR.cpp:11) in function 'fir_n11_strm' completely with a factor of 11.
+INFO: [XFORM 203-102] Partitioning array 'an32ShiftReg' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'fir_n11_strm' (hls_FIRN11Stream/FIR.cpp:3:2)...10 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.07 seconds; current allocated memory: 514.598 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 0 seconds; current allocated memory: 524.359 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_n11_strm' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_n11_strm_Pipeline_XFER_LOOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'XFER_LOOP'.
+WARNING: [HLS 200-885] The II Violation in module 'fir_n11_strm_Pipeline_XFER_LOOP' (loop 'XFER_LOOP'): Unable to schedule 'load' operation ('an32Coef_load', hls_FIRN11Stream/FIR.cpp:34) on array 'an32Coef' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'an32Coef'.
+WARNING: [HLS 200-885] The II Violation in module 'fir_n11_strm_Pipeline_XFER_LOOP' (loop 'XFER_LOOP'): Unable to schedule 'load' operation ('an32Coef_load_1', hls_FIRN11Stream/FIR.cpp:34) on array 'an32Coef' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'an32Coef'.
+WARNING: [HLS 200-885] The II Violation in module 'fir_n11_strm_Pipeline_XFER_LOOP' (loop 'XFER_LOOP'): Unable to schedule 'load' operation ('an32Coef_load_2', hls_FIRN11Stream/FIR.cpp:34) on array 'an32Coef' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'an32Coef'.
+WARNING: [HLS 200-885] The II Violation in module 'fir_n11_strm_Pipeline_XFER_LOOP' (loop 'XFER_LOOP'): Unable to schedule 'load' operation ('an32Coef_load_3', hls_FIRN11Stream/FIR.cpp:34) on array 'an32Coef' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'an32Coef'.
+WARNING: [HLS 200-885] The II Violation in module 'fir_n11_strm_Pipeline_XFER_LOOP' (loop 'XFER_LOOP'): Unable to schedule 'load' operation ('an32Coef_load_6', hls_FIRN11Stream/FIR.cpp:34) on array 'an32Coef' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'an32Coef'.
+WARNING==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================

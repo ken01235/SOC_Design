@@ -1,5 +1,5 @@
 #include <iostream>
-#include "fir.h"
+#include "FIR.h"
 
 using namespace std;
 
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 	fclose(fp);
 
 	cout << ">> Comparing against output data..." << endl;
-	if (system("fc .\\out.dat ..\\..\\..\\out_gold.dat")) {
+	if (system("diff ./out.dat ../../../out_gold.dat")) {
 		cout << ">> Test failed!" << endl;
 		return 1;
 	}
