@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1 opened at Wed Oct 04 02:25:08 EDT 2023
+INFO-FLOW: Workspace /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1 opened at Wed Oct 04 03:00:47 EDT 2023
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xck26-sfvc784-2LV-c 
@@ -7,7 +7,7 @@ DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2022.1/lib
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2022.1/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
-Command       create_platform done; 1.61 sec.
+Command       create_platform done; 1.6 sec.
 Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
@@ -22,7 +22,7 @@ Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/i
 Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
 Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 1.61 sec.
+Command     set_part done; 1.69 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute     get_config_interface -m_axi_latency 
@@ -39,7 +39,7 @@ Execute     config_export -rtl=verilog
 Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_clock=10 
 INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
 Execute     config_export -vivado_clock=10 
-Command   open_solution done; 1.72 sec.
+Command   open_solution done; 1.69 sec.
 Execute   set_part xck26-sfvc784-2LV-c 
 INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
 Execute     create_platform xck26-sfvc784-2LV-c -board  
@@ -87,7 +87,7 @@ Execute     get_config_compile -skip_transform
 Execute     get_config_compile -pre_tcl 
 Execute     get_config_compile -keep_printf 
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.461 GB.
 INFO: [HLS 200-10] Analyzing design file 'hls_FIRN11MAXI/FIR.cpp' ... 
 INFO-FLOW: Compiling one TU...
 Execute       get_config_compile -pragma_strict_mode 
@@ -96,40 +96,39 @@ Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
 Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang hls_FIRN11MAXI/FIR.cpp -foptimization-record-file=/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 > /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.cpp.clang.out.log 2> /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.cpp.clang.err.log 
-Command       ap_eval done; 0.3 sec.
-INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
+INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
 Execute       set_directive_top fir_n11_maxi -name=fir_n11_maxi 
 Execute       source /tools/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source /tools/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
 INFO-FLOW: Source syntax check for synthesis
 Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 > /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/clang.out.log 2> /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/clang.err.log 
-Command       ap_eval done; 0.36 sec.
+Command       ap_eval done; 0.29 sec.
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/.systemc_flag -fix-errors /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.47 sec.
+Command       clang_tidy done; 0.25 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/all.directive.json -fix-errors /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.4 sec.
+Command       clang_tidy done; 0.33 sec.
 Execute       clang_tidy xilinx-remove-assert -desc remove-assert /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.29 sec.
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.7 seconds per iteration
+Command       clang_tidy done; 0.22 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.6 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp std=gnu++14 -target fpga  
 Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp.clang-tidy.loop-label.err.log 
-Command         ap_eval done; 0.42 sec.
+Command         ap_eval done; 0.45 sec.
 Execute         source /tools/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Command       clang_tidy done; 0.43 sec.
+Command       clang_tidy done; 0.47 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
-Command       ap_eval done; 0.34 sec.
+Command       ap_eval done; 0.22 sec.
 Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
 INFO-FLOW: compiling source code to llvm bc
 Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.bc -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 > /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp.clang.out.log 2> /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.pp.0.cpp.clang.err.log 
-Command       ap_eval done; 0.33 sec.
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.27 seconds. CPU system time: 0.56 seconds. Elapsed time: 2.99 seconds; current allocated memory: 462.617 MB.
+Command       ap_eval done; 0.25 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.34 seconds. CPU system time: 0.38 seconds. Elapsed time: 2.19 seconds; current allocated memory: 462.605 MB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute       run_link_or_opt -out /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/FIR.g.bc"  
@@ -137,20 +136,18 @@ Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.1/lnx64/
 INFO-FLOW: 
 Execute       run_link_or_opt -opt -out /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
 Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.1.lower.bc > /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
-Command         ap_eval done; 0.3 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 0.3 sec.
 INFO-FLOW: Linking math bc lib
 Execute       run_link_or_opt -out /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tools/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libhlsm_39.bc /tools/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libhlsmc++_39.bc 
 Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tools/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libhlsm_39.bc /tools/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libhlsmc++_39.bc -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
-Command         ap_eval done; 2.02 sec.
+Command         ap_eval done; 1.64 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 2.02 sec.
+Command       run_link_or_opt done; 1.64 sec.
 Execute       run_link_or_opt -opt -out /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=fir_n11_maxi -reflow-float-conversion 
 Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=fir_n11_maxi -reflow-float-conversion -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
-Command         ap_eval done; 0.64 sec.
+Command         ap_eval done; 0.62 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 0.64 sec.
+Command       run_link_or_opt done; 0.62 sec.
 Execute       run_link_or_opt -out /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tools/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libfloatconversion_39.bc 
 Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tools/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libfloatconversion_39.bc -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
 INFO-FLOW: 
@@ -200,23 +197,22 @@ Execute       is_m_axi_addr64
 Execute       get_clock_period -ns -default 
 INFO-FLOW: Doing LTO.
 Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=fir_n11_maxi -mllvm -hls-db-dir -mllvm /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -x ir /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 > /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
-Command       ap_eval done; 0.18 sec.
+Command       ap_eval done; 0.12 sec.
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.47 seconds. CPU system time: 0.43 seconds. Elapsed time: 3.31 seconds; current allocated memory: 463.387 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 463.387 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.23 seconds. CPU system time: 0.28 seconds. Elapsed time: 2.52 seconds; current allocated memory: 463.445 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 463.445 MB.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top fir_n11_maxi -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.0.bc -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command         transform done; 0.14 sec.
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.15 seconds; current allocated memory: 466.121 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 466.164 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.1.bc -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 469.438 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.04 seconds; current allocated memory: 469.477 MB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.g.1.bc to /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
@@ -228,17 +224,17 @@ INFO: [XFORM 203-102] Partitioning array 'an32ShiftReg' automatically.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
 INFO: [XFORM 203-11] Balancing expressions in function 'fir_n11_maxi' (hls_FIRN11MAXI/FIR.cpp:4)...10 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 494.887 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.07 seconds; current allocated memory: 494.918 MB.
 Execute         get_config_compile -enable_auto_rewind 
 Execute         get_config_compile -enable_loop_extract 
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.o.2.bc -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem' (hls_FIRN11MAXI/FIR.cpp:18:13). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
-INFO: [HLS 200-444] Inferring multiple bus burst write of variable length on port 'gmem' (hls_FIRN11MAXI/FIR.cpp:30:28). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 496.324 MB.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem' (hls_FIRN11MAXI/FIR.cpp:24:13). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst write of variable length on port 'gmem' (hls_FIRN11MAXI/FIR.cpp:36:28). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 496.363 MB.
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 0.32 sec.
-Command     elaborate done; 6.62 sec.
+Command       opt_and_import_c done; 0.16 sec.
+Command     elaborate done; 4.88 sec.
 Execute     ap_eval exec zip -j /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
@@ -275,8 +271,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'XFER_LOOP'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'XFER_LOOP'
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.11 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 498.156 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.13 seconds; current allocated memory: 498.180 MB.
 Execute       syn_report -verbosereport -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi_Pipeline_XFER_LOOP.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -289,7 +284,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 498.156 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 498.180 MB.
 Execute       syn_report -verbosereport -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi_Pipeline_XFER_LOOP.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -302,7 +297,7 @@ Execute       set_default_model fir_n11_maxi
 Execute       schedule -model fir_n11_maxi 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 498.516 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 498.555 MB.
 Execute       syn_report -verbosereport -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -315,7 +310,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 498.516 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 498.555 MB.
 Execute       syn_report -verbosereport -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -346,7 +341,7 @@ WARNING: [RTGEN 206-101] Register 'an32ShiftReg_1' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'an32ShiftReg_0' is power-on initialization.
 INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 11 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_n11_maxi_Pipeline_XFER_LOOP'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 498.801 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 498.828 MB.
 Execute       source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.rtl_wrap.cfg.tcl 
 Execute       gen_rtl fir_n11_maxi_Pipeline_XFER_LOOP -style xilinx -f -lang vhdl -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/syn/vhdl/fir_n11_maxi_fir_n11_maxi_Pipeline_XFER_LOOP 
 Execute       gen_rtl fir_n11_maxi_Pipeline_XFER_LOOP -style xilinx -f -lang vlog -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/syn/verilog/fir_n11_maxi_fir_n11_maxi_Pipeline_XFER_LOOP 
@@ -375,10 +370,10 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/pn32HPInput' 
 INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/pn32HPOutput' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/an32Coef' to 's_axilite & ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/regXferLeng' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'fir_n11_maxi' to 'ap_ctrl_hs'.
-INFO: [RTGEN 206-100] Bundling port 'pn32HPInput', 'pn32HPOutput', 'regXferLeng' and 'an32Coef' to AXI-Lite port control.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_n11_maxi' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'pn32HPInput', 'pn32HPOutput', 'regXferLeng', 'an32Coef' to AXI-Lite port control.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_n11_maxi'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 501.777 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 501.820 MB.
 Execute       source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.rtl_wrap.cfg.tcl 
 Execute       gen_rtl fir_n11_maxi -istop -style xilinx -f -lang vhdl -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/syn/vhdl/fir_n11_maxi 
 Execute       gen_rtl fir_n11_maxi -istop -style xilinx -f -lang vlog -o /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/syn/verilog/fir_n11_maxi 
@@ -477,7 +472,7 @@ Execute       source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.auto
 Execute       source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi_Pipeline_XFER_LOOP.compgen.tcl 
 Execute       source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.compgen.tcl 
 Execute         source ./control.slave.tcl 
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 506.824 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 506.906 MB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='fir_n11_maxi_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
@@ -673,6 +668,7 @@ Execute       get_config_export -format
 Execute       source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/top-io-be.tcl 
 Execute       source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
 Execute       source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.compgen.dataonly.tcl 
+Execute       get_config_interface -s_axilite_interrupt_mode 
 Execute       source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.compgen.dataonly.tcl 
 Execute       source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.rtl_wrap.cfg.tcl 
 Execute       source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.compgen.dataonly.tcl 
@@ -700,24 +696,24 @@ Execute       source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.auto
 Execute       get_config_export -ip_xdc_file 
 Execute       get_config_export -ip_xdc_ooc_file 
 Execute       get_config_debug -directory 
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE fir_n11_maxi LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_m_axi_U SOURCE {} VARIABLE {} MODULE fir_n11_maxi LOOP {} BUNDLEDNAME gmem DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST fir_n11_maxi MODULE2INSTS {fir_n11_maxi fir_n11_maxi fir_n11_maxi_Pipeline_XFER_LOOP grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242} INST2MODULE {fir_n11_maxi fir_n11_maxi grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242 fir_n11_maxi_Pipeline_XFER_LOOP} INSTDATA {fir_n11_maxi {DEPTH 1 CHILDREN grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242} grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242 {DEPTH 2 CHILDREN {}}} MODULEDATA {fir_n11_maxi_Pipeline_XFER_LOOP {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln16_fu_282_p2 SOURCE hls_FIRN11MAXI/FIR.cpp:16 VARIABLE add_ln16 LOOP XFER_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U1 SOURCE hls_FIRN11MAXI/FIR.cpp:28 VARIABLE mul_ln28 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U2 SOURCE hls_FIRN11MAXI/FIR.cpp:28 VARIABLE mul_ln28_1 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U3 SOURCE hls_FIRN11MAXI/FIR.cpp:28 VARIABLE mul_ln28_2 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U4 SOURCE hls_FIRN11MAXI/FIR.cpp:28 VARIABLE mul_ln28_3 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U5 SOURCE hls_FIRN11MAXI/FIR.cpp:28 VARIABLE mul_ln28_4 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U6 SOURCE hls_FIRN11MAXI/FIR.cpp:28 VARIABLE mul_ln28_5 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U7 SOURCE hls_FIRN11MAXI/FIR.cpp:28 VARIABLE mul_ln28_6 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U8 SOURCE hls_FIRN11MAXI/FIR.cpp:28 VARIABLE mul_ln28_7 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U9 SOURCE hls_FIRN11MAXI/FIR.cpp:28 VARIABLE mul_ln28_8 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U10 SOURCE hls_FIRN11MAXI/FIR.cpp:28 VARIABLE mul_ln28_9 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U11 SOURCE hls_FIRN11MAXI/FIR.cpp:28 VARIABLE mul_ln28_10 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln28_fu_446_p2 SOURCE hls_FIRN11MAXI/FIR.cpp:28 VARIABLE add_ln28 LOOP XFER_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln28_4_fu_470_p2 SOURCE hls_FIRN11MAXI/FIR.cpp:28 VARIABLE add_ln28_4 LOOP XFER_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 33 BRAM 0 URAM 0}} fir_n11_maxi {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln16_fu_289_p2 SOURCE hls_FIRN11MAXI/FIR.cpp:16 VARIABLE add_ln16 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 33 BRAM 0 URAM 0}}}}'
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE fir_n11_maxi LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_m_axi_U SOURCE {} VARIABLE {} MODULE fir_n11_maxi LOOP {} BUNDLEDNAME gmem DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST fir_n11_maxi MODULE2INSTS {fir_n11_maxi fir_n11_maxi fir_n11_maxi_Pipeline_XFER_LOOP grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242} INST2MODULE {fir_n11_maxi fir_n11_maxi grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242 fir_n11_maxi_Pipeline_XFER_LOOP} INSTDATA {fir_n11_maxi {DEPTH 1 CHILDREN grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242} grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242 {DEPTH 2 CHILDREN {}}} MODULEDATA {fir_n11_maxi_Pipeline_XFER_LOOP {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln22_fu_282_p2 SOURCE hls_FIRN11MAXI/FIR.cpp:22 VARIABLE add_ln22 LOOP XFER_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U1 SOURCE hls_FIRN11MAXI/FIR.cpp:34 VARIABLE mul_ln34 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U2 SOURCE hls_FIRN11MAXI/FIR.cpp:34 VARIABLE mul_ln34_1 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U3 SOURCE hls_FIRN11MAXI/FIR.cpp:34 VARIABLE mul_ln34_2 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U4 SOURCE hls_FIRN11MAXI/FIR.cpp:34 VARIABLE mul_ln34_3 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U5 SOURCE hls_FIRN11MAXI/FIR.cpp:34 VARIABLE mul_ln34_4 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U6 SOURCE hls_FIRN11MAXI/FIR.cpp:34 VARIABLE mul_ln34_5 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U7 SOURCE hls_FIRN11MAXI/FIR.cpp:34 VARIABLE mul_ln34_6 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U8 SOURCE hls_FIRN11MAXI/FIR.cpp:34 VARIABLE mul_ln34_7 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U9 SOURCE hls_FIRN11MAXI/FIR.cpp:34 VARIABLE mul_ln34_8 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U10 SOURCE hls_FIRN11MAXI/FIR.cpp:34 VARIABLE mul_ln34_9 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_1_1_U11 SOURCE hls_FIRN11MAXI/FIR.cpp:34 VARIABLE mul_ln34_10 LOOP XFER_LOOP BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_fu_446_p2 SOURCE hls_FIRN11MAXI/FIR.cpp:34 VARIABLE add_ln34 LOOP XFER_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_4_fu_470_p2 SOURCE hls_FIRN11MAXI/FIR.cpp:34 VARIABLE add_ln34_4 LOOP XFER_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 33 BRAM 0 URAM 0}} fir_n11_maxi {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln22_fu_289_p2 SOURCE hls_FIRN11MAXI/FIR.cpp:22 VARIABLE add_ln22 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 33 BRAM 0 URAM 0}}}}'
 INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
 INFO-FLOW: Running: gen_csynth_sec_pragma
 INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.29 seconds; current allocated memory: 514.035 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.3 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 514.211 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for fir_n11_maxi.
 INFO: [VLOG 209-307] Generating Verilog RTL for fir_n11_maxi.
 Execute       syn_report -model fir_n11_maxi -printsummary 
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
 Command     autosyn done; 1.11 sec.
-Command   csynth_design done; 7.75 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5.93 seconds. CPU system time: 1.02 seconds. Elapsed time: 7.75 seconds; current allocated memory: -982.133 MB.
-Command ap_source done; 9.56 sec.
+Command   csynth_design done; 6.03 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5.69 seconds. CPU system time: 0.78 seconds. Elapsed time: 6.03 seconds; current allocated memory: -981.949 MB.
+Command ap_source done; 7.84 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1 opened at Wed Oct 04 02:25:33 EDT 2023
+INFO-FLOW: Workspace /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1 opened at Wed Oct 04 03:01:01 EDT 2023
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xck26-sfvc784-2LV-c 
@@ -726,7 +722,7 @@ DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2022.1/lib
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2022.1/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
-Command       create_platform done; 1.6 sec.
+Command       create_platform done; 1.53 sec.
 Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
@@ -741,7 +737,7 @@ Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/i
 Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
 Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 1.68 sec.
+Command     set_part done; 1.61 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute     get_config_interface -m_axi_latency 
@@ -758,7 +754,7 @@ Execute     config_export -rtl=verilog
 Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_clock=10 
 INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
 Execute     config_export -vivado_clock=10 
-Command   open_solution done; 1.68 sec.
+Command   open_solution done; 1.62 sec.
 Execute   set_part xck26-sfvc784-2LV-c 
 INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
 Execute     create_platform xck26-sfvc784-2LV-c -board  
@@ -811,13 +807,11 @@ Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/int
 Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
 Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command       ap_source done; 0.13 sec.
 Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
 Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
 Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
 Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.18 sec.
 INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10 (was NA)
 Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
 Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
@@ -833,12 +827,12 @@ Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info
 INFO-FLOW: TB processing: /home/ubuntu/SOC_Design/course-lab_2/hls_FIRN11MAXI/FIRTester.cpp /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/./sim/autowrap/testbench/FIRTester.cpp_pre.cpp
 Execute     clang_tidy xilinx-tb-process -desc tb-process /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/./sim/autowrap/testbench/FIRTester.cpp_pre.cpp.tb.cpp std=c++14 
 INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/./sim/autowrap/testbench/FIRTester.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
-Command     clang_tidy done; 1.07 sec.
+Command     clang_tidy done; 0.98 sec.
 Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info 
 INFO-FLOW: TB processing: /home/ubuntu/SOC_Design/course-lab_2/hls_FIRN11MAXI/FIR.cpp /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/./sim/autowrap/testbench/FIR.cpp_pre.cpp
 Execute     clang_tidy xilinx-tb-process -desc tb-process /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/./sim/autowrap/testbench/FIR.cpp_pre.cpp.tb.cpp std=c++14 
 INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/./sim/autowrap/testbench/FIR.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
-Command     clang_tidy done; 0.97 sec.
+Command     clang_tidy done; 0.93 sec.
 Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/./sim/autowrap/testbench/tb.status.tcl 
 Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
 Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.rtl_wrap.cfg.tcl 
@@ -849,7 +843,6 @@ Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopi
 Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info 
 Execute     source .run_sim.tcl 
 INFO: [COSIM 212-302] Starting C TB testing ... 
-Command     ap_source done; 0.13 sec.
 INFO: [COSIM 212-333] Generating C post check test bench ...
 Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info 
 INFO: [COSIM 212-12] Generating RTL test bench ...
@@ -879,14 +872,14 @@ Execute       source .sim.status.tcl
 INFO: [COSIM 212-323] Starting verilog simulation. 
 INFO: [COSIM 212-15] Starting XSIM ...
 INFO: [COSIM 212-316] Starting C post checking ...
-Command     ap_source done; 9.25 sec.
+Command     ap_source done; 8 sec.
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-Command   cosim_design done; 16.08 sec.
-INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 14.23 seconds. CPU system time: 2.37 seconds. Elapsed time: 16.08 seconds; current allocated memory: -1024.262 MB.
-Command ap_source done; 17.84 sec.
+Command   cosim_design done; 13.7 sec.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 14.14 seconds. CPU system time: 2.02 seconds. Elapsed time: 13.7 seconds; current allocated memory: -1019.383 MB.
+Command ap_source done; 15.45 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1 opened at Wed Oct 04 02:26:43 EDT 2023
+INFO-FLOW: Workspace /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1 opened at Wed Oct 04 03:01:31 EDT 2023
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xck26-sfvc784-2LV-c 
@@ -895,7 +888,7 @@ DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2022.1/lib
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2022.1/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
-Command       create_platform done; 1.7 sec.
+Command       create_platform done; 1.56 sec.
 Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
@@ -910,7 +903,7 @@ Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/i
 Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
 Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 1.79 sec.
+Command     set_part done; 1.64 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute     get_config_interface -m_axi_latency 
@@ -927,7 +920,7 @@ Execute     config_export -rtl=verilog
 Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_clock=10 
 INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
 Execute     config_export -vivado_clock=10 
-Command   open_solution done; 1.8 sec.
+Command   open_solution done; 1.64 sec.
 Execute   set_part xck26-sfvc784-2LV-c 
 INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
 Execute     create_platform xck26-sfvc784-2LV-c -board  
@@ -1048,6 +1041,7 @@ Execute     get_config_export -format
 Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/top-io-be.tcl 
 Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
 Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.compgen.dataonly.tcl 
+Execute     get_config_interface -s_axilite_interrupt_mode 
 Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.compgen.dataonly.tcl 
 Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.rtl_wrap.cfg.tcl 
 Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.compgen.dataonly.tcl 
@@ -1089,8 +1083,8 @@ Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet
 Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
 Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
 Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.compgen.dataonly.tcl 
+Execute     get_config_interface -s_axilite_interrupt_mode 
 Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.compgen.dataonly.tcl 
-Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
 Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
 Execute     get_config_debug -directory 
 INFO-FLOW: DBG:PUTS:       generate_top_info
@@ -1153,7 +1147,445 @@ INFO-FLOW: DBG:PUTS:     IP package: success /home/ubuntu/SOC_Design/course-lab_
 Execute     get_config_export -output 
 Execute     send_msg_by_id INFO @200-802@%s hsp_ip/solution1/impl/export.zip 
 INFO: [HLS 200-802] Generated output file hsp_ip/solution1/impl/export.zip
-Command   export_design done; 10.6 sec.
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 7.64 seconds. CPU system time: 2.76 seconds. Elapsed time: 10.6 seconds; current allocated memory: -1025.145 MB.
-Command ap_source done; 12.53 sec.
+Command   export_design done; 10 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 6.19 seconds. CPU system time: 3.62 seconds. Elapsed time: 10 seconds; current allocated memory: -1025.082 MB.
+Command ap_source done; 11.75 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1 opened at Wed Oct 04 03:02:13 EDT 2023
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xck26-sfvc784-2LV-c 
+Execute       create_platform xck26-sfvc784-2LV-c -board  
+DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2022.1/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2022.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+Command       create_platform done; 1.92 sec.
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_clock=10 
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+Execute     config_export -vivado_clock=10 
+Command   open_solution done; 2.01 sec.
+Execute   set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+Execute     create_platform xck26-sfvc784-2LV-c -board  
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+Execute   source ./hsp_ip/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./hsp_ip/solution1/directives.tcl
+Execute     set_directive_interface -mode m_axi -depth 600 -offset slave fir_n11_maxi pn32HPInput 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi -depth 600 -offset slave fir_n11_maxi pn32HPInput 
+Execute     set_directive_interface -mode m_axi -depth 600 -offset slave fir_n11_maxi pn32HPOutput 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi -depth 600 -offset slave fir_n11_maxi pn32HPOutput 
+Execute     set_directive_interface -mode s_axilite fir_n11_maxi an32Coef 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite fir_n11_maxi an32Coef 
+Execute     set_directive_interface -mode s_axilite fir_n11_maxi regXferLeng 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite fir_n11_maxi regXferLeng 
+Execute     set_directive_interface -mode s_axilite -depth 600 fir_n11_maxi AXI-lite 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -depth 600 fir_n11_maxi AXI-lite 
+Execute   cosim_design 
+INFO: [HLS 200-1510] Running: cosim_design 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10 (was NA)
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.rtl_wrap.cfg.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info 
+INFO-FLOW: TB processing: /home/ubuntu/SOC_Design/course-lab_2/hls_FIRN11MAXI/FIRTester.cpp /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/./sim/autowrap/testbench/FIRTester.cpp_pre.cpp
+Execute     clang_tidy xilinx-tb-process -desc tb-process /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/./sim/autowrap/testbench/FIRTester.cpp_pre.cpp.tb.cpp std=c++14 
+INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/./sim/autowrap/testbench/FIRTester.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
+Command     clang_tidy done; 1.07 sec.
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info 
+INFO-FLOW: TB processing: /home/ubuntu/SOC_Design/course-lab_2/hls_FIRN11MAXI/FIR.cpp /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/./sim/autowrap/testbench/FIR.cpp_pre.cpp
+Execute     clang_tidy xilinx-tb-process -desc tb-process /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/./sim/autowrap/testbench/FIR.cpp_pre.cpp.tb.cpp std=c++14 
+INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/./sim/autowrap/testbench/FIR.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
+Command     clang_tidy done; 1 sec.
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/./sim/autowrap/testbench/tb.status.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.rtl_wrap.cfg.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.rtl_wrap.cfg.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.rtl_wrap.cfg.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info 
+Execute     source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info 
+INFO: [COSIM 212-12] Generating RTL test bench ...
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+Execute     source .run_sim.tcl 
+Execute       source check_sim.tcl 
+Execute       source dataflow_monitor_API.tcl 
+Execute       source .sim.status.tcl 
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+Command     ap_source done; 8.65 sec.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+Command   cosim_design done; 15.03 sec.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 13.39 seconds. CPU system time: 4.13 seconds. Elapsed time: 15.03 seconds; current allocated memory: -1019.383 MB.
+Command ap_source done; 17.16 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1 opened at Wed Oct 04 03:02:38 EDT 2023
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xck26-sfvc784-2LV-c 
+Execute       create_platform xck26-sfvc784-2LV-c -board  
+DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2022.1/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2022.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+Command       create_platform done; 1.75 sec.
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.84 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_clock=10 
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+Execute     config_export -vivado_clock=10 
+Command   open_solution done; 1.85 sec.
+Execute   set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+Execute     create_platform xck26-sfvc784-2LV-c -board  
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+Execute   source ./hsp_ip/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./hsp_ip/solution1/directives.tcl
+Execute     set_directive_interface -mode m_axi -depth 600 -offset slave fir_n11_maxi pn32HPInput 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi -depth 600 -offset slave fir_n11_maxi pn32HPInput 
+Execute     set_directive_interface -mode m_axi -depth 600 -offset slave fir_n11_maxi pn32HPOutput 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi -depth 600 -offset slave fir_n11_maxi pn32HPOutput 
+Execute     set_directive_interface -mode s_axilite fir_n11_maxi an32Coef 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite fir_n11_maxi an32Coef 
+Execute     set_directive_interface -mode s_axilite fir_n11_maxi regXferLeng 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite fir_n11_maxi regXferLeng 
+Execute     set_directive_interface -mode s_axilite -depth 600 fir_n11_maxi AXI-lite 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -depth 600 fir_n11_maxi AXI-lite 
+Execute   export_design -rtl verilog -format ip_catalog 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     get_config_export -ipname 
+Execute     get_config_export -library 
+Execute     get_config_export -output 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -vendor 
+Execute     get_config_export -version 
+Execute     get_config_export -xo 
+Execute     config_export -format=ip_catalog -rtl=verilog 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -rtl verilog
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -vivado_clock 
+Execute     get_top 
+Execute     get_config_export -ipname 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     get_config_rtl -module_auto_prefix 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     get_config_export -ip_xdc_file 
+Execute     get_config_export -ip_xdc_ooc_file 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10 (was NA)
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=fir_n11_maxi xml_exists=1
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.rtl_wrap.cfg.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.rtl_wrap.cfg.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.rtl_wrap.cfg.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     get_config_rtl -deadlock_detection 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     get_config_rtl -module_prefix 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to fir_n11_maxi
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=5
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=5 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='fir_n11_maxi_mul_32s_32s_32_1_1
+fir_n11_maxi_gmem_m_axi
+fir_n11_maxi_control_s_axi
+fir_n11_maxi_Pipeline_XFER_LOOP
+fir_n11_maxi
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/top-io-be.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.compgen.dataonly.tcl 
+Execute     get_config_interface -s_axilite_interrupt_mode 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.compgen.dataonly.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.rtl_wrap.cfg.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.compgen.dataonly.tcl 
+Execute     get_config_export -format 
+Execute     get_config_export -vendor 
+Execute     get_config_export -library 
+Execute     get_config_export -version 
+Execute     get_config_export -ipname 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi_Pipeline_XFER_LOOP.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     get_solution -flow_target 
+Execute     get_config_rtl -kernel_profile 
+Execute     get_config_rtl -kernel_profile 
+Execute     get_config_rtl -stall_sig_gen 
+Execute     get_config_rtl -profile 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.constraint.tcl 
+Execute     sc_get_clocks fir_n11_maxi 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -ip_xdc_file 
+Execute     get_config_export -ip_xdc_ooc_file 
+Execute     get_config_debug -directory 
+Execute     get_config_rtl -deadlock_detection 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     get_config_rtl -module_prefix 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to fir_n11_maxi
+INFO-FLOW: DBG:PUTS:       copy ip_driver_dir 1_0 /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/driver
+Execute     get_config_export -format 
+INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.compgen.dataonly.tcl 
+Execute     get_config_interface -s_axilite_interrupt_mode 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.compgen.dataonly.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_debug -directory 
+INFO-FLOW: DBG:PUTS:       generate_top_info
+INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=fir_n11_maxi
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.rtl_wrap.cfg.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.rtl_wrap.cfg.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.rtl_wrap.cfg.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -ip_xdc_ooc_file 
+Execute     get_config_export -ip_xdc_file 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.constraint.tcl 
+INFO-FLOW: DBG:PUTS:       generate_ipi_example_script
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.constraint.tcl 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/fir_n11_maxi.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:     IP package: exec /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/impl/ip/pack.sh
+INFO-FLOW: DBG:PUTS:     IP package: success /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/impl/ip/pack.sh
+Execute     get_config_export -output 
+Execute     send_msg_by_id INFO @200-802@%s hsp_ip/solution1/impl/export.zip 
+INFO: [HLS 200-802] Generated output file hsp_ip/solution1/impl/export.zip
+Command   export_design done; 10.01 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 6.61 seconds. CPU system time: 3.12 seconds. Elapsed time: 10.01 seconds; current allocated memory: -1025.074 MB.
+Command ap_source done; 11.97 sec.
 Execute cleanup_all 

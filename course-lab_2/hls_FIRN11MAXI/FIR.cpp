@@ -11,6 +11,12 @@ void fir_n11_maxi(volatile int32_t* pn32HPInput, volatile int32_t* pn32HPOutput,
 	int32_t n32NumXfer4B;
 	int32_t n32XferCnt;
 
+	#pragma HLS INTERFACE s_axilite port=regXferLeng
+	#pragma HLS INTERFACE s_axilite port=an32Coef
+	#pragma HLS INTERFACE m_axi port=pn32HPOutput depth=600 offset=slave
+	#pragma HLS INTERFACE m_axi port=pn32HPInput depth=600 offset=slave
+	#pragma HLS INTERFACE s_axilite port=return
+
     n32NumXfer4B = (regXferLeng + (sizeof(int32_t) - 1)) / sizeof(int32_t);
 XFER_LOOP:
 	for (n32XferCnt = 0; n32XferCnt < n32NumXfer4B; n32XferCnt++) {

@@ -28,9 +28,13 @@ module AESL_axi_slave_control (
     TRAN_s_axi_control_BRESP,
     TRAN_control_write_data_finish,
     TRAN_control_start_in,
-    TRAN_control_idle_in,
+    TRAN_control_idle_out,
+    TRAN_control_ready_out,
     TRAN_control_ready_in,
-    TRAN_control_done_in,
+    TRAN_control_done_out,
+    TRAN_control_write_start_in   ,
+    TRAN_control_write_start_finish,
+    TRAN_control_interrupt,
     TRAN_control_transaction_done_in
     );
 
@@ -53,10 +57,14 @@ parameter an32Coef_c_bitwidth = 32;
 parameter regXferLeng_DEPTH = 1;
 reg [31 : 0] regXferLeng_OPERATE_DEPTH = 0;
 parameter regXferLeng_c_bitwidth = 32;
+parameter START_ADDR = 0;
+parameter fir_n11_maxi_continue_addr = 0;
+parameter fir_n11_maxi_auto_start_addr = 0;
 parameter pn32HPInput_data_in_addr = 16;
 parameter pn32HPOutput_data_in_addr = 28;
 parameter regXferLeng_data_in_addr = 40;
 parameter an32Coef_data_in_addr = 64;
+parameter STATUS_ADDR = 0;
 
 output [ADDR_WIDTH - 1 : 0] TRAN_s_axi_control_AWADDR;
 output  TRAN_s_axi_control_AWVALID;
@@ -79,9 +87,13 @@ output TRAN_control_write_data_finish;
 input     clk;
 input     reset;
 input     TRAN_control_start_in;
-input     TRAN_control_done_in;
+output    TRAN_control_done_out;
+output    TRAN_control_ready_out;
 input     TRAN_control_ready_in;
-input     TRAN_control_idle_in;
+output    TRAN_control_idle_out;
+input  TRAN_control_write_start_in   ;
+output TRAN_control_write_start_finish;
+input     TRAN_control_interrupt;
 input     TRAN_control_transaction_done_in;
 
 reg [ADDR_WIDTH - 1 : 0] AWADDR_reg = 0;
@@ -117,6 +129,8 @@ reg process_0_finish = 0;
 reg process_1_finish = 0;
 reg process_2_finish = 0;
 reg process_3_finish = 0;
+reg process_4_finish = 0;
+reg process_5_finish = 0;
 //write pn32HPInput reg
 reg [31 : 0] write_pn32HPInput_count = 0;
 reg write_pn32HPInput_run_flag = 0;
@@ -133,6 +147,8 @@ reg write_one_an32Coef_data_done = 0;
 reg [31 : 0] write_regXferLeng_count = 0;
 reg write_regXferLeng_run_flag = 0;
 reg write_one_regXferLeng_data_done = 0;
+reg [31 : 0] write_start_count = 0;
+reg write_start_run_flag = 0;
 
 //===================process control=================
 reg [31 : 0] ongoing_process_number = 0;
@@ -149,17 +165,17 @@ assign TRAN_s_axi_control_ARADDR = ARADDR_reg;
 assign TRAN_s_axi_control_ARVALID = ARVALID_reg;
 assign TRAN_s_axi_control_RREADY = RREADY_reg;
 assign TRAN_s_axi_control_BREADY = BREADY_reg;
+assign TRAN_control_write_start_finish = AESL_write_start_finish;
+assign TRAN_control_done_out = AESL_done_index_reg;
+assign TRAN_control_ready_out = AESL_ready_out_index_reg;
+assign TRAN_control_idle_out = AESL_idle_index_reg;
 assign TRAN_control_write_data_finish = 1 & pn32HPInput_write_data_finish & pn32HPOutput_write_data_finish & an32Coef_write_data_finish & regXferLeng_write_data_finish;
-always @(TRAN_control_done_in) 
-begin
-    AESL_done_index_reg <= TRAN_control_done_in;
-end
 always @(TRAN_control_ready_in or ready_initial) 
 begin
     AESL_ready_reg <= TRAN_control_ready_in | ready_initial;
 end
 
-always @(reset or process_0_finish or process_1_finish or process_2_finish or process_3_finish ) begin
+always @(reset or process_0_finish or process_1_finish or process_2_finish or process_3_finish or process_4_finish or process_5_finish ) begin
     if (reset == 0) begin
         ongoing_process_number <= 0;
     end
@@ -173,6 +189,12 @@ always @(reset or process_0_finish or process_1_finish or process_2_finish or pr
             ongoing_process_number <= ongoing_process_number + 1;
     end
     else if (ongoing_process_number == 3 && process_3_finish == 1) begin
+            ongoing_process_number <= ongoing_process_number + 1;
+    end
+    else if (ongoing_process_number == 4 && process_4_finish == 1) begin
+            ongoing_process_number <= ongoing_process_number + 1;
+    end
+    else if (ongoing_process_number == 5 && process_5_finish == 1) begin
             ongoing_process_number <= 0;
     end
 end
@@ -318,6 +340,29 @@ initial begin : ready_initial_process
     ready_initial = 0;
 end
 
+initial begin : update_status
+    integer process_num ;
+    integer read_status_resp;
+    wait(reset === 1);
+    @(posedge clk);
+    process_num = 0;
+    while (1) begin
+        process_0_finish = 0;
+        AESL_done_index_reg         <= 0;
+        AESL_ready_out_index_reg        <= 0;
+        if (ongoing_process_number === process_num && process_busy === 0) begin
+            process_busy = 1;
+            read (STATUS_ADDR, RDATA_reg, read_status_resp);
+                AESL_done_index_reg         <= RDATA_reg[1 : 1];
+                AESL_ready_out_index_reg    <= RDATA_reg[1 : 1];
+                AESL_idle_index_reg         <= RDATA_reg[2 : 2];
+            process_0_finish = 1;
+            process_busy = 0;
+        end 
+        @(posedge clk);
+    end
+end
+
 always @(reset or posedge clk) begin
     if (reset == 0) begin
         pn32HPInput_write_data_finish <= 0;
@@ -355,10 +400,10 @@ initial begin : write_pn32HPInput
     wait(reset === 1);
     @(posedge clk);
     c_bitwidth = pn32HPInput_c_bitwidth;
-    process_num = 0;
+    process_num = 1;
     count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
     while (1) begin
-        process_0_finish <= 0;
+        process_1_finish <= 0;
 
         if (ongoing_process_number === process_num && process_busy === 0 ) begin
             get_ack = 1;
@@ -389,7 +434,7 @@ initial begin : write_pn32HPInput
                 @(posedge clk);
                 write_one_pn32HPInput_data_done <= 0;
             end   
-            process_0_finish <= 1;
+            process_1_finish <= 1;
         end
         @(posedge clk);
     end    
@@ -431,10 +476,10 @@ initial begin : write_pn32HPOutput
     wait(reset === 1);
     @(posedge clk);
     c_bitwidth = pn32HPOutput_c_bitwidth;
-    process_num = 1;
+    process_num = 2;
     count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
     while (1) begin
-        process_1_finish <= 0;
+        process_2_finish <= 0;
 
         if (ongoing_process_number === process_num && process_busy === 0 ) begin
             get_ack = 1;
@@ -465,7 +510,7 @@ initial begin : write_pn32HPOutput
                 @(posedge clk);
                 write_one_pn32HPOutput_data_done <= 0;
             end   
-            process_1_finish <= 1;
+            process_2_finish <= 1;
         end
         @(posedge clk);
     end    
@@ -507,10 +552,10 @@ initial begin : write_an32Coef
     wait(reset === 1);
     @(posedge clk);
     c_bitwidth = an32Coef_c_bitwidth;
-    process_num = 2;
+    process_num = 3;
     count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
     while (1) begin
-        process_2_finish <= 0;
+        process_3_finish <= 0;
 
         if (ongoing_process_number === process_num && process_busy === 0 ) begin
             get_ack = 1;
@@ -541,7 +586,7 @@ initial begin : write_an32Coef
                 @(posedge clk);
                 write_one_an32Coef_data_done <= 0;
             end   
-            process_2_finish <= 1;
+            process_3_finish <= 1;
         end
         @(posedge clk);
     end    
@@ -583,10 +628,10 @@ initial begin : write_regXferLeng
     wait(reset === 1);
     @(posedge clk);
     c_bitwidth = regXferLeng_c_bitwidth;
-    process_num = 3;
+    process_num = 4;
     count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
     while (1) begin
-        process_3_finish <= 0;
+        process_4_finish <= 0;
 
         if (ongoing_process_number === process_num && process_busy === 0 ) begin
             get_ack = 1;
@@ -617,10 +662,55 @@ initial begin : write_regXferLeng
                 @(posedge clk);
                 write_one_regXferLeng_data_done <= 0;
             end   
-            process_3_finish <= 1;
+            process_4_finish <= 1;
         end
         @(posedge clk);
     end    
+end
+
+always @(reset or posedge clk) begin
+    if (reset == 0) begin
+        write_start_run_flag <= 0; 
+        write_start_count <= 0;
+    end
+    else begin
+        if (write_start_count >= 1) begin
+            write_start_run_flag <= 0; 
+        end
+        else if (TRAN_control_write_start_in === 1) begin
+            write_start_run_flag <= 1; 
+        end
+        if (AESL_write_start_finish === 1) begin
+            write_start_count <= write_start_count + 1;
+            write_start_run_flag <= 0; 
+        end
+    end
+end
+
+initial begin : write_start
+    reg [DATA_WIDTH - 1 : 0] write_start_tmp;
+    integer process_num;
+    integer write_start_resp;
+    wait(reset === 1);
+    @(posedge clk);
+    process_num = 5;
+    while (1) begin
+        process_5_finish = 0;
+        if (ongoing_process_number === process_num && process_busy === 0 ) begin
+            if (write_start_run_flag === 1) begin
+                process_busy = 1;
+                write_start_tmp=0;
+                write_start_tmp[0 : 0] = 1;
+                write (START_ADDR, write_start_tmp, write_start_resp);
+                process_busy = 0;
+                AESL_write_start_finish <= 1;
+                @(posedge clk);
+                AESL_write_start_finish <= 0;
+            end
+            process_5_finish <= 1;
+        end 
+        @(posedge clk);
+    end
 end
 
 //------------------------Task and function-------------- 

@@ -7,15 +7,11 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="fir_n11_maxi_fir_n11_maxi,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=2111,HLS_SYN_LUT=2681,HLS_VERSION=2022_1}" *)
+(* CORE_GENERATION_INFO="fir_n11_maxi_fir_n11_maxi,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=2117,HLS_SYN_LUT=2681,HLS_VERSION=2022_1}" *)
 
 module fir_n11_maxi (
         ap_clk,
         ap_rst_n,
-        ap_start,
-        ap_done,
-        ap_idle,
-        ap_ready,
         m_axi_gmem_AWVALID,
         m_axi_gmem_AWREADY,
         m_axi_gmem_AWADDR,
@@ -77,7 +73,8 @@ module fir_n11_maxi (
         s_axi_control_RRESP,
         s_axi_control_BVALID,
         s_axi_control_BREADY,
-        s_axi_control_BRESP
+        s_axi_control_BRESP,
+        interrupt
 );
 
 parameter    ap_ST_fsm_state1 = 14'd1;
@@ -117,10 +114,6 @@ parameter C_M_AXI_WSTRB_WIDTH = (32 / 8);
 
 input   ap_clk;
 input   ap_rst_n;
-input   ap_start;
-output   ap_done;
-output   ap_idle;
-output   ap_ready;
 output   m_axi_gmem_AWVALID;
 input   m_axi_gmem_AWREADY;
 output  [C_M_AXI_GMEM_ADDR_WIDTH - 1:0] m_axi_gmem_AWADDR;
@@ -183,14 +176,15 @@ output  [1:0] s_axi_control_RRESP;
 output   s_axi_control_BVALID;
 input   s_axi_control_BREADY;
 output  [1:0] s_axi_control_BRESP;
-
-reg ap_done;
-reg ap_idle;
-reg ap_ready;
+output   interrupt;
 
  reg    ap_rst_n_inv;
+wire    ap_start;
+reg    ap_done;
+reg    ap_idle;
 (* fsm_encoding = "none" *) reg   [13:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
+reg    ap_ready;
 wire   [63:0] pn32HPInput;
 wire   [63:0] pn32HPOutput;
 reg   [3:0] an32Coef_address0;
@@ -220,10 +214,10 @@ wire    ap_CS_fsm_state11;
 reg   [63:0] pn32HPOutput_read_reg_430;
 wire    ap_CS_fsm_state12;
 reg   [63:0] pn32HPInput_read_reg_435;
-reg   [30:0] lshr_ln16_cast_reg_440;
+reg   [30:0] lshr_ln22_cast_reg_440;
 reg   [31:0] an32Coef_load_10_reg_446;
-reg   [61:0] trunc_ln18_1_reg_451;
-reg   [61:0] trunc_ln30_1_reg_456;
+reg   [61:0] trunc_ln24_1_reg_451;
+reg   [61:0] trunc_ln36_1_reg_456;
 wire    grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242_ap_start;
 wire    grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242_ap_done;
 wire    grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242_ap_idle;
@@ -275,8 +269,8 @@ reg    gmem_BREADY;
 reg    grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242_ap_start_reg;
 wire    ap_CS_fsm_state13;
 wire    ap_CS_fsm_state14;
-wire   [32:0] zext_ln16_fu_285_p1;
-wire   [32:0] add_ln16_fu_289_p2;
+wire   [32:0] zext_ln22_fu_285_p1;
+wire   [32:0] add_ln22_fu_289_p2;
 reg   [13:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 wire    ap_ST_fsm_state2_blk;
@@ -353,11 +347,11 @@ fir_n11_maxi_fir_n11_maxi_Pipeline_XFER_LOOP grp_fir_n11_maxi_Pipeline_XFER_LOOP
     .m_axi_gmem_BRESP(2'd0),
     .m_axi_gmem_BID(1'd0),
     .m_axi_gmem_BUSER(1'd0),
-    .sext_ln30_1(trunc_ln30_1_reg_456),
-    .sext_ln18_1(trunc_ln18_1_reg_451),
-    .lshr_ln16_cast(lshr_ln16_cast_reg_440),
+    .sext_ln36_1(trunc_ln36_1_reg_456),
+    .sext_ln24_1(trunc_ln24_1_reg_451),
+    .lshr_ln22_cast(lshr_ln22_cast_reg_440),
     .pn32HPInput(pn32HPInput_read_reg_435),
-    .empty(lshr_ln16_cast_reg_440),
+    .empty(lshr_ln22_cast_reg_440),
     .an32Coef_load(an32Coef_load_reg_330),
     .an32Coef_load_1(an32Coef_load_1_reg_340),
     .an32Coef_load_2(an32Coef_load_2_reg_350),
@@ -401,7 +395,12 @@ control_s_axi_U(
     .regXferLeng(regXferLeng),
     .an32Coef_address0(an32Coef_address0),
     .an32Coef_ce0(an32Coef_ce0),
-    .an32Coef_q0(an32Coef_q0)
+    .an32Coef_q0(an32Coef_q0),
+    .ap_start(ap_start),
+    .interrupt(interrupt),
+    .ap_ready(ap_ready),
+    .ap_done(ap_done),
+    .ap_idle(ap_idle)
 );
 
 fir_n11_maxi_gmem_m_axi #(
@@ -517,11 +516,11 @@ end
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
         an32Coef_load_10_reg_446 <= an32Coef_q0;
-        lshr_ln16_cast_reg_440 <= {{add_ln16_fu_289_p2[32:2]}};
+        lshr_ln22_cast_reg_440 <= {{add_ln22_fu_289_p2[32:2]}};
         pn32HPInput_read_reg_435 <= pn32HPInput;
         pn32HPOutput_read_reg_430 <= pn32HPOutput;
-        trunc_ln18_1_reg_451 <= {{pn32HPInput[63:2]}};
-        trunc_ln30_1_reg_456 <= {{pn32HPOutput[63:2]}};
+        trunc_ln24_1_reg_451 <= {{pn32HPInput[63:2]}};
+        trunc_ln36_1_reg_456 <= {{pn32HPOutput[63:2]}};
     end
 end
 
@@ -783,7 +782,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln16_fu_289_p2 = (zext_ln16_fu_285_p1 + 33'd3);
+assign add_ln22_fu_289_p2 = (zext_ln22_fu_285_p1 + 33'd3);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -819,6 +818,6 @@ end
 
 assign grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242_ap_start = grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242_ap_start_reg;
 
-assign zext_ln16_fu_285_p1 = regXferLeng;
+assign zext_ln22_fu_285_p1 = regXferLeng;
 
 endmodule //fir_n11_maxi

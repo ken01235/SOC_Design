@@ -74,9 +74,9 @@ Compiling module xil_defaultlib.fir_n11_maxi_gmem_m_axi(CONSERVA...
 Compiling module xil_defaultlib.fir_n11_maxi
 Compiling module xil_defaultlib.AESL_axi_master_gmem
 Compiling module xil_defaultlib.AESL_axi_slave_control
-WARNING: [XSIM 43-3373] "/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/sim/verilog/AESL_axi_slave_control.v" Line 927. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
-WARNING: [XSIM 43-3373] "/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/sim/verilog/AESL_axi_slave_control.v" Line 936. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
-WARNING: [XSIM 43-3373] "/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/sim/verilog/AESL_axi_slave_control.v" Line 977. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/sim/verilog/AESL_axi_slave_control.v" Line 1017. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/sim/verilog/AESL_axi_slave_control.v" Line 1026. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/sim/verilog/AESL_axi_slave_control.v" Line 1067. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
 Compiling module xil_defaultlib.nodf_module_intf
 Compiling module xil_defaultlib.pp_loop_intf(FSM_WIDTH=13)
 Compiling module xil_defaultlib.dataflow_monitor_1

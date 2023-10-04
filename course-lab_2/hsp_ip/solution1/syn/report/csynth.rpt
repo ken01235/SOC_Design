@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'fir_n11_maxi'
 ================================================================
 + General Information: 
-    * Date:           Wed Oct  4 02:25:17 2023
+    * Date:           Wed Oct  4 03:00:55 2023
     * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
     * Project:        hsp_ip
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -19,7 +19,7 @@
     |               Modules              | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |         |            |           |     |
     |               & Loops              | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF     |    LUT    | URAM|
     +------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+---------+------------+-----------+-----+
-    |+ fir_n11_maxi                      |     -|  0.00|        -|       -|         -|        -|     -|        no|     -|  33 (2%)|  2111 (~0%)|  2681 (2%)|    -|
+    |+ fir_n11_maxi                      |     -|  0.00|        -|       -|         -|        -|     -|        no|     -|  33 (2%)|  2117 (~0%)|  2681 (2%)|    -|
     | + fir_n11_maxi_Pipeline_XFER_LOOP  |     -|  0.00|        -|       -|         -|        -|     -|        no|     -|  33 (2%)|   463 (~0%)|  756 (~0%)|    -|
     |  o XFER_LOOP                       |     -|  7.30|        -|       -|         4|        1|     -|       yes|     -|        -|           -|          -|    -|
     +------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+---------+------------+-----------+-----+
@@ -44,24 +44,29 @@
 +---------------+------------+---------------+--------+----------+
 
 * S_AXILITE Registers
-+---------------+----------------+--------+-------+--------+-----------------------------+
-| Interface     | Register       | Offset | Width | Access | Description                 |
-+---------------+----------------+--------+-------+--------+-----------------------------+
-| s_axi_control | pn32HPInput_1  | 0x10   | 32    | W      | Data signal of pn32HPInput  |
-| s_axi_control | pn32HPInput_2  | 0x14   | 32    | W      | Data signal of pn32HPInput  |
-| s_axi_control | pn32HPOutput_1 | 0x1c   | 32    | W      | Data signal of pn32HPOutput |
-| s_axi_control | pn32HPOutput_2 | 0x20   | 32    | W      | Data signal of pn32HPOutput |
-| s_axi_control | regXferLeng    | 0x28   | 32    | W      | Data signal of regXferLeng  |
-+---------------+----------------+--------+-------+--------+-----------------------------+
++---------------+----------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register       | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL           | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER           | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER         | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR         | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | pn32HPInput_1  | 0x10   | 32    | W      | Data signal of pn32HPInput       |                                                                      |
+| s_axi_control | pn32HPInput_2  | 0x14   | 32    | W      | Data signal of pn32HPInput       |                                                                      |
+| s_axi_control | pn32HPOutput_1 | 0x1c   | 32    | W      | Data signal of pn32HPOutput      |                                                                      |
+| s_axi_control | pn32HPOutput_2 | 0x20   | 32    | W      | Data signal of pn32HPOutput      |                                                                      |
+| s_axi_control | regXferLeng    | 0x28   | 32    | W      | Data signal of regXferLeng       |                                                                      |
++---------------+----------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
 
 * TOP LEVEL CONTROL
-+-----------+------------+-----------------------------------+
-| Interface | Type       | Ports                             |
-+-----------+------------+-----------------------------------+
-| ap_clk    | clock      | ap_clk                            |
-| ap_rst_n  | reset      | ap_rst_n                          |
-| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
-+-----------+------------+-----------------------------------+
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
 
 
 ================================================================
@@ -101,8 +106,8 @@
 +--------------+--------------+-------------------------------------------------+------------+------------------------------+
 | HW Interface | Variable     | Problem                                         | Resolution | Location                     |
 +--------------+--------------+-------------------------------------------------+------------+------------------------------+
-| m_axi_gmem   | pn32HPOutput | Volatile or Atomic access cannot be transformed | 214-227    | hls_FIRN11MAXI/FIR.cpp:30:28 |
-| m_axi_gmem   | pn32HPInput  | Volatile or Atomic access cannot be transformed | 214-227    | hls_FIRN11MAXI/FIR.cpp:18:13 |
+| m_axi_gmem   | pn32HPOutput | Volatile or Atomic access cannot be transformed | 214-227    | hls_FIRN11MAXI/FIR.cpp:36:28 |
+| m_axi_gmem   | pn32HPInput  | Volatile or Atomic access cannot be transformed | 214-227    | hls_FIRN11MAXI/FIR.cpp:24:13 |
 +--------------+--------------+-------------------------------------------------+------------+------------------------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
@@ -114,22 +119,22 @@
 | Name                               | DSP | Pragma | Variable    | Op  | Impl   | Latency |
 +------------------------------------+-----+--------+-------------+-----+--------+---------+
 | + fir_n11_maxi                     | 33  |        |             |     |        |         |
-|   add_ln16_fu_289_p2               | -   |        | add_ln16    | add | fabric | 0       |
+|   add_ln22_fu_289_p2               | -   |        | add_ln22    | add | fabric | 0       |
 |  + fir_n11_maxi_Pipeline_XFER_LOOP | 33  |        |             |     |        |         |
-|    add_ln16_fu_282_p2              | -   |        | add_ln16    | add | fabric | 0       |
-|    mul_32s_32s_32_1_1_U1           | 3   |        | mul_ln28    | mul | auto   | 0       |
-|    mul_32s_32s_32_1_1_U2           | 3   |        | mul_ln28_1  | mul | auto   | 0       |
-|    mul_32s_32s_32_1_1_U3           | 3   |        | mul_ln28_2  | mul | auto   | 0       |
-|    mul_32s_32s_32_1_1_U4           | 3   |        | mul_ln28_3  | mul | auto   | 0       |
-|    mul_32s_32s_32_1_1_U5           | 3   |        | mul_ln28_4  | mul | auto   | 0       |
-|    mul_32s_32s_32_1_1_U6           | 3   |        | mul_ln28_5  | mul | auto   | 0       |
-|    mul_32s_32s_32_1_1_U7           | 3   |        | mul_ln28_6  | mul | auto   | 0       |
-|    mul_32s_32s_32_1_1_U8           | 3   |        | mul_ln28_7  | mul | auto   | 0       |
-|    mul_32s_32s_32_1_1_U9           | 3   |        | mul_ln28_8  | mul | auto   | 0       |
-|    mul_32s_32s_32_1_1_U10          | 3   |        | mul_ln28_9  | mul | auto   | 0       |
-|    mul_32s_32s_32_1_1_U11          | 3   |        | mul_ln28_10 | mul | auto   | 0       |
-|    add_ln28_fu_446_p2              | -   |        | add_ln28    | add | fabric | 0       |
-|    add_ln28_4_fu_470_p2            | -   |        | add_ln28_4  | add | fabric | 0       |
+|    add_ln22_fu_282_p2              | -   |        | add_ln22    | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U1           | 3   |        | mul_ln34    | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U2           | 3   |        | mul_ln34_1  | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U3           | 3   |        | mul_ln34_2  | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U4           | 3   |        | mul_ln34_3  | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U5           | 3   |        | mul_ln34_4  | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U6           | 3   |        | mul_ln34_5  | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U7           | 3   |        | mul_ln34_6  | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U8           | 3   |        | mul_ln34_7  | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U9           | 3   |        | mul_ln34_8  | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U10          | 3   |        | mul_ln34_9  | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U11          | 3   |        | mul_ln34_10 | mul | auto   | 0       |
+|    add_ln34_fu_446_p2              | -   |        | add_ln34    | add | fabric | 0       |
+|    add_ln34_4_fu_470_p2            | -   |        | add_ln34_4  | add | fabric | 0       |
 +------------------------------------+-----+--------+-------------+-----+--------+---------+
 
 
@@ -145,6 +150,11 @@
 +-----------+------------------------------------------------+-----------------------------------------------------------------+
 | Type      | Options                                        | Location                                                        |
 +-----------+------------------------------------------------+-----------------------------------------------------------------+
+| interface | s_axilite port=regXferLeng                     | hls_FIRN11MAXI/FIR.cpp:14 in fir_n11_maxi, regXferLeng          |
+| interface | s_axilite port=an32Coef                        | hls_FIRN11MAXI/FIR.cpp:15 in fir_n11_maxi, an32Coef             |
+| interface | m_axi port=pn32HPOutput depth=600 offset=slave | hls_FIRN11MAXI/FIR.cpp:16 in fir_n11_maxi, pn32HPOutput         |
+| interface | m_axi port=pn32HPInput depth=600 offset=slave  | hls_FIRN11MAXI/FIR.cpp:17 in fir_n11_maxi, pn32HPInput          |
+| interface | s_axilite port=return                          | hls_FIRN11MAXI/FIR.cpp:18 in fir_n11_maxi, return               |
 | interface | s_axilite port=an32Coef                        | hsp_ip/solution1/directives.tcl:8 in fir_n11_maxi, an32Coef     |
 | interface | m_axi depth=600 port=pn32HPInput offset=slave  | hsp_ip/solution1/directives.tcl:6 in fir_n11_maxi, pn32HPInput  |
 | interface | m_axi depth=600 port=pn32HPOutput offset=slave | hsp_ip/solution1/directives.tcl:7 in fir_n11_maxi, pn32HPOutput |

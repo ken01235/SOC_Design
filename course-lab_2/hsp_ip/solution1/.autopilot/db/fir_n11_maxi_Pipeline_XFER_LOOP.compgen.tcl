@@ -32,14 +32,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 14 \
-    name sext_ln30_1 \
+    name sext_ln36_1 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_sext_ln30_1 \
+    corename dc_sext_ln36_1 \
     op interface \
-    ports { sext_ln30_1 { I 62 vector } } \
+    ports { sext_ln36_1 { I 62 vector } } \
 } "
 }
 
@@ -47,14 +47,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 15 \
-    name sext_ln18_1 \
+    name sext_ln24_1 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_sext_ln18_1 \
+    corename dc_sext_ln24_1 \
     op interface \
-    ports { sext_ln18_1 { I 62 vector } } \
+    ports { sext_ln24_1 { I 62 vector } } \
 } "
 }
 
@@ -62,14 +62,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 16 \
-    name lshr_ln16_cast \
+    name lshr_ln22_cast \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_lshr_ln16_cast \
+    corename dc_lshr_ln22_cast \
     op interface \
-    ports { lshr_ln16_cast { I 31 vector } } \
+    ports { lshr_ln22_cast { I 31 vector } } \
 } "
 }
 

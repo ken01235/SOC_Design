@@ -643,8 +643,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln30_1</name>
-<Object>sext_ln30_1</Object>
+<name>sext_ln36_1</name>
+<Object>sext_ln36_1</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -654,8 +654,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln18_1</name>
-<Object>sext_ln18_1</Object>
+<name>sext_ln24_1</name>
+<Object>sext_ln24_1</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -665,8 +665,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>lshr_ln16_cast</name>
-<Object>lshr_ln16_cast</Object>
+<name>lshr_ln22_cast</name>
+<Object>lshr_ln22_cast</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -858,7 +858,7 @@
 <DSP>33</DSP>
 <AVAIL_DSP>1248</AVAIL_DSP>
 <UTIL_DSP>2</UTIL_DSP>
-<FF>2111</FF>
+<FF>2117</FF>
 <AVAIL_FF>234240</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
 <LUT>2681</LUT>
@@ -879,7 +879,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_AWREADY</name>
@@ -890,7 +890,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_AWADDR</name>
@@ -901,7 +901,7 @@
 <Bits>7</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_WVALID</name>
@@ -912,7 +912,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_WREADY</name>
@@ -923,7 +923,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_WDATA</name>
@@ -934,7 +934,7 @@
 <Bits>32</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_WSTRB</name>
@@ -945,7 +945,7 @@
 <Bits>4</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_ARVALID</name>
@@ -956,7 +956,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_ARREADY</name>
@@ -967,7 +967,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_ARADDR</name>
@@ -978,7 +978,7 @@
 <Bits>7</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_RVALID</name>
@@ -989,7 +989,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_RREADY</name>
@@ -1000,7 +1000,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_RDATA</name>
@@ -1011,7 +1011,7 @@
 <Bits>32</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_RRESP</name>
@@ -1022,7 +1022,7 @@
 <Bits>2</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_BVALID</name>
@@ -1033,7 +1033,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_BREADY</name>
@@ -1044,7 +1044,7 @@
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>s_axi_control_BRESP</name>
@@ -1055,7 +1055,7 @@
 <Bits>2</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
-<HasCtrl>0</HasCtrl>
+<HasCtrl>1</HasCtrl>
 </RtlPorts>
 <RtlPorts>
 <name>ap_clk</name>
@@ -1080,18 +1080,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>ap_start</name>
-<Object>fir_n11_maxi</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_done</name>
+<name>interrupt</name>
 <Object>fir_n11_maxi</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -1099,29 +1088,7 @@
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_idle</name>
-<Object>fir_n11_maxi</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_ready</name>
-<Object>fir_n11_maxi</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
+<Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
 <name>m_axi_gmem_AWVALID</name>

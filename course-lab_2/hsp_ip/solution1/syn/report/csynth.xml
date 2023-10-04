@@ -33,7 +33,7 @@
         <Resources>
             <BRAM_18K>0</BRAM_18K>
             <DSP>33</DSP>
-            <FF>2111</FF>
+            <FF>2117</FF>
             <LUT>2681</LUT>
             <URAM>0</URAM>
         </Resources>
@@ -55,7 +55,7 @@
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_AWREADY</name>
@@ -66,7 +66,7 @@
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_AWADDR</name>
@@ -77,7 +77,7 @@
             <Bits>7</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_WVALID</name>
@@ -88,7 +88,7 @@
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_WREADY</name>
@@ -99,7 +99,7 @@
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_WDATA</name>
@@ -110,7 +110,7 @@
             <Bits>32</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_WSTRB</name>
@@ -121,7 +121,7 @@
             <Bits>4</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_ARVALID</name>
@@ -132,7 +132,7 @@
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_ARREADY</name>
@@ -143,7 +143,7 @@
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_ARADDR</name>
@@ -154,7 +154,7 @@
             <Bits>7</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_RVALID</name>
@@ -165,7 +165,7 @@
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_RREADY</name>
@@ -176,7 +176,7 @@
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_RDATA</name>
@@ -187,7 +187,7 @@
             <Bits>32</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_RRESP</name>
@@ -198,7 +198,7 @@
             <Bits>2</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_BVALID</name>
@@ -209,7 +209,7 @@
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_BREADY</name>
@@ -220,7 +220,7 @@
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_control_BRESP</name>
@@ -231,7 +231,7 @@
             <Bits>2</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
-            <HasCtrl>0</HasCtrl>
+            <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>ap_clk</name>
@@ -256,18 +256,7 @@
             <Attribute>control</Attribute>
         </RtlPorts>
         <RtlPorts>
-            <name>ap_start</name>
-            <Object>fir_n11_maxi</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>in</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>ap_done</name>
+            <name>interrupt</name>
             <Object>fir_n11_maxi</Object>
             <Type>return value</Type>
             <Scope/>
@@ -275,29 +264,7 @@
             <IOConfig/>
             <Dir>out</Dir>
             <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>ap_idle</name>
-            <Object>fir_n11_maxi</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>ap_ready</name>
-            <Object>fir_n11_maxi</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
+            <Attribute>unknown</Attribute>
         </RtlPorts>
         <RtlPorts>
             <name>m_axi_gmem_AWVALID</name>
@@ -849,10 +816,10 @@
                     <ModuleName>fir_n11_maxi_Pipeline_XFER_LOOP</ModuleName>
                     <IsCompInst>true</IsCompInst>
                     <ID>242</ID>
-                    <BindInstances>add_ln16_fu_282_p2 mul_32s_32s_32_1_1_U1 mul_32s_32s_32_1_1_U2 mul_32s_32s_32_1_1_U3 mul_32s_32s_32_1_1_U4 mul_32s_32s_32_1_1_U5 mul_32s_32s_32_1_1_U6 mul_32s_32s_32_1_1_U7 mul_32s_32s_32_1_1_U8 mul_32s_32s_32_1_1_U9 mul_32s_32s_32_1_1_U10 mul_32s_32s_32_1_1_U11 add_ln28_fu_446_p2 add_ln28_4_fu_470_p2</BindInstances>
+                    <BindInstances>add_ln22_fu_282_p2 mul_32s_32s_32_1_1_U1 mul_32s_32s_32_1_1_U2 mul_32s_32s_32_1_1_U3 mul_32s_32s_32_1_1_U4 mul_32s_32s_32_1_1_U5 mul_32s_32s_32_1_1_U6 mul_32s_32s_32_1_1_U7 mul_32s_32s_32_1_1_U8 mul_32s_32s_32_1_1_U9 mul_32s_32s_32_1_1_U10 mul_32s_32s_32_1_1_U11 add_ln34_fu_446_p2 add_ln34_4_fu_470_p2</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>add_ln16_fu_289_p2</BindInstances>
+            <BindInstances>add_ln22_fu_289_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -910,20 +877,20 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_fu_282_p2" SOURCE="hls_FIRN11MAXI/FIR.cpp:16" URAM="0" VARIABLE="add_ln16"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U1" SOURCE="hls_FIRN11MAXI/FIR.cpp:28" URAM="0" VARIABLE="mul_ln28"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U2" SOURCE="hls_FIRN11MAXI/FIR.cpp:28" URAM="0" VARIABLE="mul_ln28_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U3" SOURCE="hls_FIRN11MAXI/FIR.cpp:28" URAM="0" VARIABLE="mul_ln28_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U4" SOURCE="hls_FIRN11MAXI/FIR.cpp:28" URAM="0" VARIABLE="mul_ln28_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U5" SOURCE="hls_FIRN11MAXI/FIR.cpp:28" URAM="0" VARIABLE="mul_ln28_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U6" SOURCE="hls_FIRN11MAXI/FIR.cpp:28" URAM="0" VARIABLE="mul_ln28_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U7" SOURCE="hls_FIRN11MAXI/FIR.cpp:28" URAM="0" VARIABLE="mul_ln28_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U8" SOURCE="hls_FIRN11MAXI/FIR.cpp:28" URAM="0" VARIABLE="mul_ln28_7"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U9" SOURCE="hls_FIRN11MAXI/FIR.cpp:28" URAM="0" VARIABLE="mul_ln28_8"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U10" SOURCE="hls_FIRN11MAXI/FIR.cpp:28" URAM="0" VARIABLE="mul_ln28_9"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U11" SOURCE="hls_FIRN11MAXI/FIR.cpp:28" URAM="0" VARIABLE="mul_ln28_10"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_446_p2" SOURCE="hls_FIRN11MAXI/FIR.cpp:28" URAM="0" VARIABLE="add_ln28"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_4_fu_470_p2" SOURCE="hls_FIRN11MAXI/FIR.cpp:28" URAM="0" VARIABLE="add_ln28_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="add_ln22_fu_282_p2" SOURCE="hls_FIRN11MAXI/FIR.cpp:22" URAM="0" VARIABLE="add_ln22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U1" SOURCE="hls_FIRN11MAXI/FIR.cpp:34" URAM="0" VARIABLE="mul_ln34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U2" SOURCE="hls_FIRN11MAXI/FIR.cpp:34" URAM="0" VARIABLE="mul_ln34_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U3" SOURCE="hls_FIRN11MAXI/FIR.cpp:34" URAM="0" VARIABLE="mul_ln34_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U4" SOURCE="hls_FIRN11MAXI/FIR.cpp:34" URAM="0" VARIABLE="mul_ln34_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U5" SOURCE="hls_FIRN11MAXI/FIR.cpp:34" URAM="0" VARIABLE="mul_ln34_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U6" SOURCE="hls_FIRN11MAXI/FIR.cpp:34" URAM="0" VARIABLE="mul_ln34_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U7" SOURCE="hls_FIRN11MAXI/FIR.cpp:34" URAM="0" VARIABLE="mul_ln34_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U8" SOURCE="hls_FIRN11MAXI/FIR.cpp:34" URAM="0" VARIABLE="mul_ln34_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U9" SOURCE="hls_FIRN11MAXI/FIR.cpp:34" URAM="0" VARIABLE="mul_ln34_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U10" SOURCE="hls_FIRN11MAXI/FIR.cpp:34" URAM="0" VARIABLE="mul_ln34_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U11" SOURCE="hls_FIRN11MAXI/FIR.cpp:34" URAM="0" VARIABLE="mul_ln34_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="add_ln34_fu_446_p2" SOURCE="hls_FIRN11MAXI/FIR.cpp:34" URAM="0" VARIABLE="add_ln34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="XFER_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="add_ln34_4_fu_470_p2" SOURCE="hls_FIRN11MAXI/FIR.cpp:34" URAM="0" VARIABLE="add_ln34_4"/>
             </BindNodes>
         </Module>
         <Module>
@@ -953,7 +920,7 @@
                     <DSP>33</DSP>
                     <AVAIL_DSP>1248</AVAIL_DSP>
                     <UTIL_DSP>2</UTIL_DSP>
-                    <FF>2111</FF>
+                    <FF>2117</FF>
                     <AVAIL_FF>234240</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
                     <LUT>2681</LUT>
@@ -965,7 +932,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_fu_289_p2" SOURCE="hls_FIRN11MAXI/FIR.cpp:16" URAM="0" VARIABLE="add_ln16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln22_fu_289_p2" SOURCE="hls_FIRN11MAXI/FIR.cpp:22" URAM="0" VARIABLE="add_ln22"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
@@ -1058,6 +1025,39 @@
                 <memorie memorieName="an32Coef" offset="64" range="64"/>
             </memories>
             <registers>
+                <register offset="0x00" name="CTRL" access="RW" description="Control signals" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="AP_START" access="RW" description="Control signal Register for 'ap_start'."/>
+                        <field offset="1" width="1" name="AP_DONE" access="R" description="Control signal Register for 'ap_done'."/>
+                        <field offset="2" width="1" name="AP_IDLE" access="R" description="Control signal Register for 'ap_idle'."/>
+                        <field offset="3" width="1" name="AP_READY" access="R" description="Control signal Register for 'ap_ready'."/>
+                        <field offset="4" width="3" name="RESERVED_1" access="R" description="Reserved.  0s on read."/>
+                        <field offset="7" width="1" name="AUTO_RESTART" access="RW" description="Control signal Register for 'auto_restart'."/>
+                        <field offset="8" width="1" name="RESERVED_2" access="R" description="Reserved.  0s on read."/>
+                        <field offset="9" width="1" name="INTERRUPT" access="R" description="Control signal Register for 'interrupt'."/>
+                        <field offset="10" width="22" name="RESERVED_3" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x04" name="GIER" access="RW" description="Global Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="Enable" access="RW" description="Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x08" name="IP_IER" access="RW" description="IP Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_EN" access="RW" description="Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="1" width="1" name="CHAN1_INT_EN" access="RW" description="Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x0c" name="IP_ISR" access="RW" description="IP Interrupt Status Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_ST" access="R" description="Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt."/>
+                        <field offset="1" width="1" name="CHAN1_INT_ST" access="R" description="Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
                 <register offset="0x10" name="pn32HPInput_1" access="W" description="Data signal of pn32HPInput" range="32">
                     <fields>
                         <field offset="0" width="32" name="pn32HPInput" access="W" description="Bit 31 to 0 of pn32HPInput"/>
@@ -1114,18 +1114,15 @@
                 <port>ap_rst_n</port>
             </ports>
         </Interface>
-        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+        <Interface InterfaceName="interrupt" type="interrupt" busTypeName="interrupt" mode="master" dataWidth="1">
+            <busParams>
+                <busParam busParamName="SENSITIVITY">LEVEL_HIGH</busParam>
+            </busParams>
             <portMaps>
-                <portMap portMapName="ap_start">start</portMap>
-                <portMap portMapName="ap_done">done</portMap>
-                <portMap portMapName="ap_idle">idle</portMap>
-                <portMap portMapName="ap_ready">ready</portMap>
+                <portMap portMapName="interrupt">INTERRUPT</portMap>
             </portMaps>
             <ports>
-                <port>ap_done</port>
-                <port>ap_idle</port>
-                <port>ap_ready</port>
-                <port>ap_start</port>
+                <port>interrupt</port>
             </ports>
         </Interface>
         <Interface InterfaceName="m_axi_gmem" type="axi4full" busTypeName="aximm" mode="master" dataWidth="32" addrWidth="64" portPrefix="m_axi_gmem_" paramPrefix="C_M_AXI_GMEM_" preferredUsageValue="MEMORY">
@@ -1211,7 +1208,11 @@
             </item>
             <item name="S_AXILITE Registers">
                 <table isCollapsed="0">
-                    <keys size="6">Interface, Register, Offset, Width, Access, Description</keys>
+                    <keys size="7">Interface, Register, Offset, Width, Access, Description, Bit Fields</keys>
+                    <column name="s_axi_control">CTRL, 0x00, 32, RW, Control signals, 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT</column>
+                    <column name="s_axi_control">GIER, 0x04, 32, RW, Global Interrupt Enable Register, 0=Enable</column>
+                    <column name="s_axi_control">IP_IER, 0x08, 32, RW, IP Interrupt Enable Register, 0=CHAN0_INT_EN 1=CHAN1_INT_EN</column>
+                    <column name="s_axi_control">IP_ISR, 0x0c, 32, RW, IP Interrupt Status Register, 0=CHAN0_INT_ST 1=CHAN1_INT_ST</column>
                     <column name="s_axi_control">pn32HPInput_1, 0x10, 32, W, Data signal of pn32HPInput, </column>
                     <column name="s_axi_control">pn32HPInput_2, 0x14, 32, W, Data signal of pn32HPInput, </column>
                     <column name="s_axi_control">pn32HPOutput_1, 0x1c, 32, W, Data signal of pn32HPOutput, </column>
@@ -1224,7 +1225,8 @@
                     <keys size="3">Interface, Type, Ports</keys>
                     <column name="ap_clk">clock, ap_clk, </column>
                     <column name="ap_rst_n">reset, ap_rst_n, </column>
-                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start, </column>
+                    <column name="interrupt">interrupt, interrupt, </column>
+                    <column name="ap_ctrl">ap_ctrl_hs, , </column>
                 </table>
             </item>
         </section>
@@ -1260,13 +1262,18 @@
             <item name="Inferred Bursts and Widening Missed">
                 <table>
                     <keys size="5">HW Interface, Variable, Problem, Resolution, Location</keys>
-                    <column name="m_axi_gmem">pn32HPOutput, Volatile or Atomic access cannot be transformed, 214-227, hls_FIRN11MAXI/FIR.cpp:30:28</column>
-                    <column name="m_axi_gmem">pn32HPInput, Volatile or Atomic access cannot be transformed, 214-227, hls_FIRN11MAXI/FIR.cpp:18:13</column>
+                    <column name="m_axi_gmem">pn32HPOutput, Volatile or Atomic access cannot be transformed, 214-227, hls_FIRN11MAXI/FIR.cpp:36:28</column>
+                    <column name="m_axi_gmem">pn32HPInput, Volatile or Atomic access cannot be transformed, 214-227, hls_FIRN11MAXI/FIR.cpp:24:13</column>
                 </table>
             </item>
         </section>
     </ReportBurst>
     <PragmaReport>
+        <Pragma type="interface" location="hls_FIRN11MAXI/FIR.cpp:14" status="valid" parentFunction="fir_n11_maxi" variable="regXferLeng" isDirective="0" options="s_axilite port=regXferLeng"/>
+        <Pragma type="interface" location="hls_FIRN11MAXI/FIR.cpp:15" status="valid" parentFunction="fir_n11_maxi" variable="an32Coef" isDirective="0" options="s_axilite port=an32Coef"/>
+        <Pragma type="interface" location="hls_FIRN11MAXI/FIR.cpp:16" status="valid" parentFunction="fir_n11_maxi" variable="pn32HPOutput" isDirective="0" options="m_axi port=pn32HPOutput depth=600 offset=slave"/>
+        <Pragma type="interface" location="hls_FIRN11MAXI/FIR.cpp:17" status="valid" parentFunction="fir_n11_maxi" variable="pn32HPInput" isDirective="0" options="m_axi port=pn32HPInput depth=600 offset=slave"/>
+        <Pragma type="interface" location="hls_FIRN11MAXI/FIR.cpp:18" status="valid" parentFunction="fir_n11_maxi" variable="return" isDirective="0" options="s_axilite port=return"/>
         <Pragma type="interface" location="hsp_ip/solution1/directives.tcl:8" status="valid" parentFunction="fir_n11_maxi" variable="an32Coef" isDirective="1" options="s_axilite port=an32Coef"/>
         <Pragma type="interface" location="hsp_ip/solution1/directives.tcl:6" status="valid" parentFunction="fir_n11_maxi" variable="pn32HPInput" isDirective="1" options="m_axi depth=600 port=pn32HPInput offset=slave"/>
         <Pragma type="interface" location="hsp_ip/solution1/directives.tcl:7" status="valid" parentFunction="fir_n11_maxi" variable="pn32HPOutput" isDirective="1" options="m_axi depth=600 port=pn32HPOutput offset=slave"/>

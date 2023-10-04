@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'ubuntu' on host 'ubuntu2004.linuxvmimages.local' (Linux_x86_64 version 5.15.0-76-generic) on Wed Oct 04 02:26:43 EDT 2023
+INFO: [HLS 200-10] For user 'ubuntu' on host 'ubuntu2004.linuxvmimages.local' (Linux_x86_64 version 5.15.0-76-generic) on Wed Oct 04 03:02:38 EDT 2023
 INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
 INFO: [HLS 200-10] In directory '/home/ubuntu/SOC_Design/course-lab_2'
 Sourcing Tcl script '/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/export.tcl'
@@ -7,14 +7,14 @@ INFO: [HLS 200-1510] Running: source /home/ubuntu/SOC_Design/course-lab_2/hsp_ip
 INFO: [HLS 200-1510] Running: open_project hsp_ip 
 INFO: [HLS 200-10] Opening project '/home/ubuntu/SOC_Design/course-lab_2/hsp_ip'.
 INFO: [HLS 200-1510] Running: set_top fir_n11_maxi 
-INFO: [HLS 200-1510] Running: add_files hls_FIRN11MAXI/FIR.cpp 
-INFO: [HLS 200-10] Adding design file 'hls_FIRN11MAXI/FIR.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files hls_FIRN11MAXI/FIR.h 
 INFO: [HLS 200-10] Adding design file 'hls_FIRN11MAXI/FIR.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb hls_FIRN11MAXI/FIRTester.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
-INFO: [HLS 200-10] Adding test bench file 'hls_FIRN11MAXI/FIRTester.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files hls_FIRN11MAXI/FIR.cpp 
+INFO: [HLS 200-10] Adding design file 'hls_FIRN11MAXI/FIR.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files -tb hsp_ip/out_gold.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'hsp_ip/out_gold.dat' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hls_FIRN11MAXI/FIRTester.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'hls_FIRN11MAXI/FIRTester.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution '/home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
@@ -45,7 +45,7 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Wed Oct  4 02:26:52 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  4 03:02:47 2023...
 INFO: [HLS 200-802] Generated output file hsp_ip/solution1/impl/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 7.64 seconds. CPU system time: 2.76 seconds. Elapsed time: 10.6 seconds; current allocated memory: -1025.145 MB.
-INFO: [HLS 200-112] Total CPU user time: 9.72 seconds. Total CPU system time: 3.94 seconds. Total elapsed time: 12.84 seconds; peak allocated memory: 471.059 MB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 6.61 seconds. CPU system time: 3.12 seconds. Elapsed time: 10.01 seconds; current allocated memory: -1025.074 MB.
+INFO: [HLS 200-112] Total CPU user time: 8.81 seconds. Total CPU system time: 4.19 seconds. Total elapsed time: 12.26 seconds; peak allocated memory: 471.129 MB.

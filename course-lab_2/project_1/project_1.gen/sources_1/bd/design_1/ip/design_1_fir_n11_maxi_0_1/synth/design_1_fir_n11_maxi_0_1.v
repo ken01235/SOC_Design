@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:fir_n11_maxi:1.0
-// IP Revision: 2113235486
+// IP Revision: 2113235522
 
 (* X_CORE_INFO = "fir_n11_maxi,Vivado 2022.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_fir_n11_maxi_0_1,fir_n11_maxi,{}" *)
-(* CORE_GENERATION_INFO = "design_1_fir_n11_maxi_0_1,fir_n11_maxi,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=fir_n11_maxi,x_ipVersion=1.0,x_ipCoreRevision=2113235486,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_ADDR_WIDTH=7,C_S_AXI_CONTROL_DATA_WIDTH=32,C_M_AXI_GMEM_ID_WIDTH=1,C_M_AXI_GMEM_ADDR_WIDTH=64,C_M_AXI_GMEM_DATA_WIDTH=32,C_M_AXI_GMEM_AWUSER_WIDTH=1,C_M_AXI_GMEM_ARUSER_WIDTH=1,C_M_AXI_GMEM_WUSER_WIDTH=1,C_M_AXI_GMEM_RUSER_WIDTH=1,C_M_AXI_GMEM_BUSER_WIDTH=1,C_M_AXI_GMEM_\
+(* CORE_GENERATION_INFO = "design_1_fir_n11_maxi_0_1,fir_n11_maxi,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=fir_n11_maxi,x_ipVersion=1.0,x_ipCoreRevision=2113235522,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_ADDR_WIDTH=7,C_S_AXI_CONTROL_DATA_WIDTH=32,C_M_AXI_GMEM_ID_WIDTH=1,C_M_AXI_GMEM_ADDR_WIDTH=64,C_M_AXI_GMEM_DATA_WIDTH=32,C_M_AXI_GMEM_AWUSER_WIDTH=1,C_M_AXI_GMEM_ARUSER_WIDTH=1,C_M_AXI_GMEM_WUSER_WIDTH=1,C_M_AXI_GMEM_RUSER_WIDTH=1,C_M_AXI_GMEM_BUSER_WIDTH=1,C_M_AXI_GMEM_\
 USER_VALUE=0x00000000,C_M_AXI_GMEM_PROT_VALUE=000,C_M_AXI_GMEM_CACHE_VALUE=0011}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
@@ -76,10 +76,7 @@ module design_1_fir_n11_maxi_0_1 (
   s_axi_control_RREADY,
   ap_clk,
   ap_rst_n,
-  ap_start,
-  ap_done,
-  ap_idle,
-  ap_ready,
+  interrupt,
   m_axi_gmem_AWADDR,
   m_axi_gmem_AWLEN,
   m_axi_gmem_AWSIZE,
@@ -159,14 +156,9 @@ input wire ap_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *)
 input wire ap_rst_n;
-(* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl start" *)
-input wire ap_start;
-(* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl done" *)
-output wire ap_done;
-(* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl idle" *)
-output wire ap_idle;
-(* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl ready" *)
-output wire ap_ready;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME interrupt, SENSITIVITY LEVEL_HIGH, PortWidth 1" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 interrupt INTERRUPT" *)
+output wire interrupt;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem AWADDR" *)
 output wire [63 : 0] m_axi_gmem_AWADDR;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem AWLEN" *)
@@ -277,10 +269,7 @@ output wire m_axi_gmem_RREADY;
     .s_axi_control_RREADY(s_axi_control_RREADY),
     .ap_clk(ap_clk),
     .ap_rst_n(ap_rst_n),
-    .ap_start(ap_start),
-    .ap_done(ap_done),
-    .ap_idle(ap_idle),
-    .ap_ready(ap_ready),
+    .interrupt(interrupt),
     .m_axi_gmem_AWID(),
     .m_axi_gmem_AWADDR(m_axi_gmem_AWADDR),
     .m_axi_gmem_AWLEN(m_axi_gmem_AWLEN),

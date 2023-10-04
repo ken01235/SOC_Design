@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'fir_n11_maxi_Pipeline_XFER_LOOP'
 ================================================================
-* Date:           Wed Oct  4 02:25:17 2023
+* Date:           Wed Oct  4 03:00:54 2023
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        hsp_ip
@@ -101,19 +101,19 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |add_ln16_fu_282_p2         |         +|   0|  0|  38|          31|           1|
-    |add_ln28_1_fu_452_p2       |         +|   0|  0|  32|          32|          32|
-    |add_ln28_2_fu_458_p2       |         +|   0|  0|  32|          32|          32|
-    |add_ln28_3_fu_464_p2       |         +|   0|  0|  32|          32|          32|
-    |add_ln28_4_fu_470_p2       |         +|   0|  0|  39|          32|          32|
-    |add_ln28_5_fu_476_p2       |         +|   0|  0|  32|          32|          32|
-    |add_ln28_6_fu_482_p2       |         +|   0|  0|  32|          32|          32|
-    |add_ln28_7_fu_488_p2       |         +|   0|  0|  32|          32|          32|
-    |add_ln28_8_fu_494_p2       |         +|   0|  0|  32|          32|          32|
-    |add_ln28_9_fu_500_p2       |         +|   0|  0|  32|          32|          32|
-    |add_ln28_fu_446_p2         |         +|   0|  0|  39|          32|          32|
+    |add_ln22_fu_282_p2         |         +|   0|  0|  38|          31|           1|
+    |add_ln34_1_fu_452_p2       |         +|   0|  0|  32|          32|          32|
+    |add_ln34_2_fu_458_p2       |         +|   0|  0|  32|          32|          32|
+    |add_ln34_3_fu_464_p2       |         +|   0|  0|  32|          32|          32|
+    |add_ln34_4_fu_470_p2       |         +|   0|  0|  39|          32|          32|
+    |add_ln34_5_fu_476_p2       |         +|   0|  0|  32|          32|          32|
+    |add_ln34_6_fu_482_p2       |         +|   0|  0|  32|          32|          32|
+    |add_ln34_7_fu_488_p2       |         +|   0|  0|  32|          32|          32|
+    |add_ln34_8_fu_494_p2       |         +|   0|  0|  32|          32|          32|
+    |add_ln34_9_fu_500_p2       |         +|   0|  0|  32|          32|          32|
+    |add_ln34_fu_446_p2         |         +|   0|  0|  39|          32|          32|
     |ap_block_pp0_stage0_01001  |       and|   0|  0|   2|           1|           1|
-    |icmp_ln16_fu_277_p2        |      icmp|   0|  0|  19|          31|          31|
+    |icmp_ln22_fu_277_p2        |      icmp|   0|  0|  19|          31|          31|
     |ap_block_pp0_stage0_11001  |        or|   0|  0|   2|           1|           1|
     |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
     |ap_enable_reg_pp0_iter1    |       xor|   0|  0|   2|           2|           1|
@@ -142,7 +142,7 @@
     +-------------------------+----+----+-----+-----------+
     |           Name          | FF | LUT| Bits| Const Bits|
     +-------------------------+----+----+-----+-----------+
-    |add_ln28_9_reg_600       |  32|   0|   32|          0|
+    |add_ln34_9_reg_600       |  32|   0|   32|          0|
     |an32ShiftReg_0           |  32|   0|   32|          0|
     |an32ShiftReg_1           |  32|   0|   32|          0|
     |an32ShiftReg_2           |  32|   0|   32|          0|
@@ -226,9 +226,9 @@
 |m_axi_gmem_BRESP     |   in|    2|       m_axi|                             gmem|       pointer|
 |m_axi_gmem_BID       |   in|    1|       m_axi|                             gmem|       pointer|
 |m_axi_gmem_BUSER     |   in|    1|       m_axi|                             gmem|       pointer|
-|sext_ln30_1          |   in|   62|     ap_none|                      sext_ln30_1|        scalar|
-|sext_ln18_1          |   in|   62|     ap_none|                      sext_ln18_1|        scalar|
-|lshr_ln16_cast       |   in|   31|     ap_none|                   lshr_ln16_cast|        scalar|
+|sext_ln36_1          |   in|   62|     ap_none|                      sext_ln36_1|        scalar|
+|sext_ln24_1          |   in|   62|     ap_none|                      sext_ln24_1|        scalar|
+|lshr_ln22_cast       |   in|   31|     ap_none|                   lshr_ln22_cast|        scalar|
 |pn32HPInput          |   in|   64|     ap_none|                      pn32HPInput|        scalar|
 |empty                |   in|   31|     ap_none|                            empty|        scalar|
 |an32Coef_load        |   in|   32|     ap_none|                    an32Coef_load|        scalar|

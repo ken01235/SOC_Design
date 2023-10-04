@@ -38,6 +38,12 @@ an32Coef {
 	core_latency 1
 	byte_write 0
 }
+ap_start { }
+ap_done { }
+ap_ready { }
+ap_idle { }
+interrupt {
+}
 }
 dict set axilite_register_dict control $port_control
 

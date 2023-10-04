@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'fir_n11_maxi'" level="0">
-<item name = "Date">Wed Oct  4 02:25:17 2023
+<item name = "Date">Wed Oct  4 03:00:55 2023
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
 <item name = "Project">hsp_ip</item>
@@ -50,7 +50,7 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 40, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">0, 33, 1461, 2466, 0</column>
+<column name="Instance">0, 33, 1467, 2466, 0</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 175, -</column>
 <column name="Register">-, -, 650, -, -</column>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="control_s_axi_U">control_s_axi, 0, 0, 288, 436, 0</column>
+<column name="control_s_axi_U">control_s_axi, 0, 0, 294, 436, 0</column>
 <column name="grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242">fir_n11_maxi_Pipeline_XFER_LOOP, 0, 33, 463, 756, 0</column>
 <column name="gmem_m_axi_U">gmem_m_axi, 0, 0, 710, 1274, 0</column>
 </table>
@@ -81,7 +81,7 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln16_fu_289_p2">+, 0, 0, 40, 33, 2</column>
+<column name="add_ln22_fu_289_p2">+, 0, 0, 40, 33, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -110,11 +110,11 @@
 <column name="an32Coef_load_reg_330">32, 0, 32, 0</column>
 <column name="ap_CS_fsm">14, 0, 14, 0</column>
 <column name="grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242_ap_start_reg">1, 0, 1, 0</column>
-<column name="lshr_ln16_cast_reg_440">31, 0, 31, 0</column>
+<column name="lshr_ln22_cast_reg_440">31, 0, 31, 0</column>
 <column name="pn32HPInput_read_reg_435">64, 0, 64, 0</column>
 <column name="pn32HPOutput_read_reg_430">64, 0, 64, 0</column>
-<column name="trunc_ln18_1_reg_451">62, 0, 62, 0</column>
-<column name="trunc_ln30_1_reg_456">62, 0, 62, 0</column>
+<column name="trunc_ln24_1_reg_451">62, 0, 62, 0</column>
+<column name="trunc_ln36_1_reg_456">62, 0, 62, 0</column>
 </table>
 </item>
 </section>
@@ -143,10 +143,7 @@
 <column name="s_axi_control_BRESP">out, 2, s_axi, control, array</column>
 <column name="ap_clk">in, 1, ap_ctrl_hs, fir_n11_maxi, return value</column>
 <column name="ap_rst_n">in, 1, ap_ctrl_hs, fir_n11_maxi, return value</column>
-<column name="ap_start">in, 1, ap_ctrl_hs, fir_n11_maxi, return value</column>
-<column name="ap_done">out, 1, ap_ctrl_hs, fir_n11_maxi, return value</column>
-<column name="ap_idle">out, 1, ap_ctrl_hs, fir_n11_maxi, return value</column>
-<column name="ap_ready">out, 1, ap_ctrl_hs, fir_n11_maxi, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, fir_n11_maxi, return value</column>
 <column name="m_axi_gmem_AWVALID">out, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_AWREADY">in, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_AWADDR">out, 64, m_axi, gmem, pointer</column>

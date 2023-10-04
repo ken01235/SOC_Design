@@ -635,8 +635,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln30_1</name>
-<Object>sext_ln30_1</Object>
+<name>sext_ln36_1</name>
+<Object>sext_ln36_1</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -646,8 +646,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln18_1</name>
-<Object>sext_ln18_1</Object>
+<name>sext_ln24_1</name>
+<Object>sext_ln24_1</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -657,8 +657,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>lshr_ln16_cast</name>
-<Object>lshr_ln16_cast</Object>
+<name>lshr_ln22_cast</name>
+<Object>lshr_ln22_cast</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

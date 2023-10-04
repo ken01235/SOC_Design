@@ -14,9 +14,9 @@ set C_modelName {fir_n11_maxi_Pipeline_XFER_LOOP}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ gmem int 32 regular {axi_master 2}  }
-	{ sext_ln30_1 int 62 regular  }
-	{ sext_ln18_1 int 62 regular  }
-	{ lshr_ln16_cast int 31 regular  }
+	{ sext_ln36_1 int 62 regular  }
+	{ sext_ln24_1 int 62 regular  }
+	{ lshr_ln22_cast int 31 regular  }
 	{ pn32HPInput int 64 regular  }
 	{ empty int 31 regular  }
 	{ an32Coef_load int 32 regular  }
@@ -34,9 +34,9 @@ set C_modelArgList {
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READWRITE", "bitSlice":[ {"cElement": [{"cName": "pn32HPInput","offset": { "type": "dynamic","port_name": "pn32HPInput","bundle": "control"},"direction": "READONLY"},{"cName": "pn32HPOutput","offset": { "type": "dynamic","port_name": "pn32HPOutput","bundle": "control"},"direction": "WRITEONLY"}]}]} , 
- 	{ "Name" : "sext_ln30_1", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
- 	{ "Name" : "sext_ln18_1", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
- 	{ "Name" : "lshr_ln16_cast", "interface" : "wire", "bitwidth" : 31, "direction" : "READONLY"} , 
+ 	{ "Name" : "sext_ln36_1", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
+ 	{ "Name" : "sext_ln24_1", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
+ 	{ "Name" : "lshr_ln22_cast", "interface" : "wire", "bitwidth" : 31, "direction" : "READONLY"} , 
  	{ "Name" : "pn32HPInput", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY"} , 
  	{ "Name" : "empty", "interface" : "wire", "bitwidth" : 31, "direction" : "READONLY"} , 
  	{ "Name" : "an32Coef_load", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
@@ -106,9 +106,9 @@ set portList {
 	{ m_axi_gmem_BRESP sc_in sc_lv 2 signal 0 } 
 	{ m_axi_gmem_BID sc_in sc_lv 1 signal 0 } 
 	{ m_axi_gmem_BUSER sc_in sc_lv 1 signal 0 } 
-	{ sext_ln30_1 sc_in sc_lv 62 signal 1 } 
-	{ sext_ln18_1 sc_in sc_lv 62 signal 2 } 
-	{ lshr_ln16_cast sc_in sc_lv 31 signal 3 } 
+	{ sext_ln36_1 sc_in sc_lv 62 signal 1 } 
+	{ sext_ln24_1 sc_in sc_lv 62 signal 2 } 
+	{ lshr_ln22_cast sc_in sc_lv 31 signal 3 } 
 	{ pn32HPInput sc_in sc_lv 64 signal 4 } 
 	{ empty sc_in sc_lv 31 signal 5 } 
 	{ an32Coef_load sc_in sc_lv 32 signal 6 } 
@@ -177,9 +177,9 @@ set NewPortList {[
  	{ "name": "m_axi_gmem_BRESP", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "gmem", "role": "BRESP" }} , 
  	{ "name": "m_axi_gmem_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "BID" }} , 
  	{ "name": "m_axi_gmem_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "BUSER" }} , 
- 	{ "name": "sext_ln30_1", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln30_1", "role": "default" }} , 
- 	{ "name": "sext_ln18_1", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln18_1", "role": "default" }} , 
- 	{ "name": "lshr_ln16_cast", "direction": "in", "datatype": "sc_lv", "bitwidth":31, "type": "signal", "bundle":{"name": "lshr_ln16_cast", "role": "default" }} , 
+ 	{ "name": "sext_ln36_1", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln36_1", "role": "default" }} , 
+ 	{ "name": "sext_ln24_1", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln24_1", "role": "default" }} , 
+ 	{ "name": "lshr_ln22_cast", "direction": "in", "datatype": "sc_lv", "bitwidth":31, "type": "signal", "bundle":{"name": "lshr_ln22_cast", "role": "default" }} , 
  	{ "name": "pn32HPInput", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "pn32HPInput", "role": "default" }} , 
  	{ "name": "empty", "direction": "in", "datatype": "sc_lv", "bitwidth":31, "type": "signal", "bundle":{"name": "empty", "role": "default" }} , 
  	{ "name": "an32Coef_load", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "an32Coef_load", "role": "default" }} , 
@@ -218,9 +218,9 @@ set RtlHierarchyInfo {[
 					{"Name" : "gmem_blk_n_AW", "Type" : "RtlSignal"},
 					{"Name" : "gmem_blk_n_B", "Type" : "RtlSignal"},
 					{"Name" : "gmem_blk_n_W", "Type" : "RtlSignal"}]},
-			{"Name" : "sext_ln30_1", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln18_1", "Type" : "None", "Direction" : "I"},
-			{"Name" : "lshr_ln16_cast", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln36_1", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln24_1", "Type" : "None", "Direction" : "I"},
+			{"Name" : "lshr_ln22_cast", "Type" : "None", "Direction" : "I"},
 			{"Name" : "pn32HPInput", "Type" : "None", "Direction" : "I"},
 			{"Name" : "empty", "Type" : "None", "Direction" : "I"},
 			{"Name" : "an32Coef_load", "Type" : "None", "Direction" : "I"},
@@ -264,9 +264,9 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	fir_n11_maxi_Pipeline_XFER_LOOP {
 		gmem {Type IO LastRead 9 FirstWrite 10}
-		sext_ln30_1 {Type I LastRead 6 FirstWrite -1}
-		sext_ln18_1 {Type I LastRead 0 FirstWrite -1}
-		lshr_ln16_cast {Type I LastRead 6 FirstWrite -1}
+		sext_ln36_1 {Type I LastRead 6 FirstWrite -1}
+		sext_ln24_1 {Type I LastRead 0 FirstWrite -1}
+		lshr_ln22_cast {Type I LastRead 6 FirstWrite -1}
 		pn32HPInput {Type I LastRead 6 FirstWrite -1}
 		empty {Type I LastRead 0 FirstWrite -1}
 		an32Coef_load {Type I LastRead 6 FirstWrite -1}
@@ -305,9 +305,9 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	 { m_axi {  { m_axi_gmem_AWVALID VALID 1 1 }  { m_axi_gmem_AWREADY READY 0 1 }  { m_axi_gmem_AWADDR ADDR 1 64 }  { m_axi_gmem_AWID ID 1 1 }  { m_axi_gmem_AWLEN SIZE 1 32 }  { m_axi_gmem_AWSIZE BURST 1 3 }  { m_axi_gmem_AWBURST LOCK 1 2 }  { m_axi_gmem_AWLOCK CACHE 1 2 }  { m_axi_gmem_AWCACHE PROT 1 4 }  { m_axi_gmem_AWPROT QOS 1 3 }  { m_axi_gmem_AWQOS REGION 1 4 }  { m_axi_gmem_AWREGION USER 1 4 }  { m_axi_gmem_AWUSER DATA 1 1 }  { m_axi_gmem_WVALID VALID 1 1 }  { m_axi_gmem_WREADY READY 0 1 }  { m_axi_gmem_WDATA FIFONUM 1 32 }  { m_axi_gmem_WSTRB STRB 1 4 }  { m_axi_gmem_WLAST LAST 1 1 }  { m_axi_gmem_WID ID 1 1 }  { m_axi_gmem_WUSER DATA 1 1 }  { m_axi_gmem_ARVALID VALID 1 1 }  { m_axi_gmem_ARREADY READY 0 1 }  { m_axi_gmem_ARADDR ADDR 1 64 }  { m_axi_gmem_ARID ID 1 1 }  { m_axi_gmem_ARLEN SIZE 1 32 }  { m_axi_gmem_ARSIZE BURST 1 3 }  { m_axi_gmem_ARBURST LOCK 1 2 }  { m_axi_gmem_ARLOCK CACHE 1 2 }  { m_axi_gmem_ARCACHE PROT 1 4 }  { m_axi_gmem_ARPROT QOS 1 3 }  { m_axi_gmem_ARQOS REGION 1 4 }  { m_axi_gmem_ARREGION USER 1 4 }  { m_axi_gmem_ARUSER DATA 1 1 }  { m_axi_gmem_RVALID VALID 0 1 }  { m_axi_gmem_RREADY READY 1 1 }  { m_axi_gmem_RDATA FIFONUM 0 32 }  { m_axi_gmem_RLAST LAST 0 1 }  { m_axi_gmem_RID ID 0 1 }  { m_axi_gmem_RFIFONUM LEN 0 9 }  { m_axi_gmem_RUSER DATA 0 1 }  { m_axi_gmem_RRESP RESP 0 2 }  { m_axi_gmem_BVALID VALID 0 1 }  { m_axi_gmem_BREADY READY 1 1 }  { m_axi_gmem_BRESP RESP 0 2 }  { m_axi_gmem_BID ID 0 1 }  { m_axi_gmem_BUSER DATA 0 1 } } }
-	sext_ln30_1 { ap_none {  { sext_ln30_1 in_data 0 62 } } }
-	sext_ln18_1 { ap_none {  { sext_ln18_1 in_data 0 62 } } }
-	lshr_ln16_cast { ap_none {  { lshr_ln16_cast in_data 0 31 } } }
+	sext_ln36_1 { ap_none {  { sext_ln36_1 in_data 0 62 } } }
+	sext_ln24_1 { ap_none {  { sext_ln24_1 in_data 0 62 } } }
+	lshr_ln22_cast { ap_none {  { lshr_ln22_cast in_data 0 31 } } }
 	pn32HPInput { ap_none {  { pn32HPInput in_data 0 64 } } }
 	empty { ap_none {  { empty in_data 0 31 } } }
 	an32Coef_load { ap_none {  { an32Coef_load in_data 0 32 } } }

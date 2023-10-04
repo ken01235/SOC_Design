@@ -27,10 +27,6 @@ generic (
 port (
     ap_clk : IN STD_LOGIC;
     ap_rst_n : IN STD_LOGIC;
-    ap_start : IN STD_LOGIC;
-    ap_done : OUT STD_LOGIC;
-    ap_idle : OUT STD_LOGIC;
-    ap_ready : OUT STD_LOGIC;
     m_axi_gmem_AWVALID : OUT STD_LOGIC;
     m_axi_gmem_AWREADY : IN STD_LOGIC;
     m_axi_gmem_AWADDR : OUT STD_LOGIC_VECTOR (C_M_AXI_GMEM_ADDR_WIDTH-1 downto 0);
@@ -92,14 +88,15 @@ port (
     s_axi_control_RRESP : OUT STD_LOGIC_VECTOR (1 downto 0);
     s_axi_control_BVALID : OUT STD_LOGIC;
     s_axi_control_BREADY : IN STD_LOGIC;
-    s_axi_control_BRESP : OUT STD_LOGIC_VECTOR (1 downto 0) );
+    s_axi_control_BRESP : OUT STD_LOGIC_VECTOR (1 downto 0);
+    interrupt : OUT STD_LOGIC );
 end;
 
 
 architecture behav of fir_n11_maxi is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "fir_n11_maxi_fir_n11_maxi,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=2111,HLS_SYN_LUT=2681,HLS_VERSION=2022_1}";
+    "fir_n11_maxi_fir_n11_maxi,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=2117,HLS_SYN_LUT=2681,HLS_VERSION=2022_1}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (13 downto 0) := "00000000000001";
@@ -151,11 +148,15 @@ architecture behav of fir_n11_maxi is
     constant ap_const_lv2_0 : STD_LOGIC_VECTOR (1 downto 0) := "00";
 
     signal ap_rst_n_inv : STD_LOGIC;
+    signal ap_start : STD_LOGIC;
+    signal ap_done : STD_LOGIC;
+    signal ap_idle : STD_LOGIC;
     signal ap_CS_fsm : STD_LOGIC_VECTOR (13 downto 0) := "00000000000001";
     attribute fsm_encoding : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
+    signal ap_ready : STD_LOGIC;
     signal pn32HPInput : STD_LOGIC_VECTOR (63 downto 0);
     signal pn32HPOutput : STD_LOGIC_VECTOR (63 downto 0);
     signal an32Coef_address0 : STD_LOGIC_VECTOR (3 downto 0);
@@ -196,10 +197,10 @@ architecture behav of fir_n11_maxi is
     signal ap_CS_fsm_state12 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state12 : signal is "none";
     signal pn32HPInput_read_reg_435 : STD_LOGIC_VECTOR (63 downto 0);
-    signal lshr_ln16_cast_reg_440 : STD_LOGIC_VECTOR (30 downto 0);
+    signal lshr_ln22_cast_reg_440 : STD_LOGIC_VECTOR (30 downto 0);
     signal an32Coef_load_10_reg_446 : STD_LOGIC_VECTOR (31 downto 0);
-    signal trunc_ln18_1_reg_451 : STD_LOGIC_VECTOR (61 downto 0);
-    signal trunc_ln30_1_reg_456 : STD_LOGIC_VECTOR (61 downto 0);
+    signal trunc_ln24_1_reg_451 : STD_LOGIC_VECTOR (61 downto 0);
+    signal trunc_ln36_1_reg_456 : STD_LOGIC_VECTOR (61 downto 0);
     signal grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242_ap_start : STD_LOGIC;
     signal grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242_ap_done : STD_LOGIC;
     signal grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242_ap_idle : STD_LOGIC;
@@ -253,8 +254,8 @@ architecture behav of fir_n11_maxi is
     attribute fsm_encoding of ap_CS_fsm_state13 : signal is "none";
     signal ap_CS_fsm_state14 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state14 : signal is "none";
-    signal zext_ln16_fu_285_p1 : STD_LOGIC_VECTOR (32 downto 0);
-    signal add_ln16_fu_289_p2 : STD_LOGIC_VECTOR (32 downto 0);
+    signal zext_ln22_fu_285_p1 : STD_LOGIC_VECTOR (32 downto 0);
+    signal add_ln22_fu_289_p2 : STD_LOGIC_VECTOR (32 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (13 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ST_fsm_state2_blk : STD_LOGIC;
@@ -326,9 +327,9 @@ architecture behav of fir_n11_maxi is
         m_axi_gmem_BRESP : IN STD_LOGIC_VECTOR (1 downto 0);
         m_axi_gmem_BID : IN STD_LOGIC_VECTOR (0 downto 0);
         m_axi_gmem_BUSER : IN STD_LOGIC_VECTOR (0 downto 0);
-        sext_ln30_1 : IN STD_LOGIC_VECTOR (61 downto 0);
-        sext_ln18_1 : IN STD_LOGIC_VECTOR (61 downto 0);
-        lshr_ln16_cast : IN STD_LOGIC_VECTOR (30 downto 0);
+        sext_ln36_1 : IN STD_LOGIC_VECTOR (61 downto 0);
+        sext_ln24_1 : IN STD_LOGIC_VECTOR (61 downto 0);
+        lshr_ln22_cast : IN STD_LOGIC_VECTOR (30 downto 0);
         pn32HPInput : IN STD_LOGIC_VECTOR (63 downto 0);
         empty : IN STD_LOGIC_VECTOR (30 downto 0);
         an32Coef_load : IN STD_LOGIC_VECTOR (31 downto 0);
@@ -376,7 +377,12 @@ architecture behav of fir_n11_maxi is
         regXferLeng : OUT STD_LOGIC_VECTOR (31 downto 0);
         an32Coef_address0 : IN STD_LOGIC_VECTOR (3 downto 0);
         an32Coef_ce0 : IN STD_LOGIC;
-        an32Coef_q0 : OUT STD_LOGIC_VECTOR (31 downto 0) );
+        an32Coef_q0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        ap_start : OUT STD_LOGIC;
+        interrupt : OUT STD_LOGIC;
+        ap_ready : IN STD_LOGIC;
+        ap_done : IN STD_LOGIC;
+        ap_idle : IN STD_LOGIC );
     end component;
 
 
@@ -528,11 +534,11 @@ begin
         m_axi_gmem_BRESP => ap_const_lv2_0,
         m_axi_gmem_BID => ap_const_lv1_0,
         m_axi_gmem_BUSER => ap_const_lv1_0,
-        sext_ln30_1 => trunc_ln30_1_reg_456,
-        sext_ln18_1 => trunc_ln18_1_reg_451,
-        lshr_ln16_cast => lshr_ln16_cast_reg_440,
+        sext_ln36_1 => trunc_ln36_1_reg_456,
+        sext_ln24_1 => trunc_ln24_1_reg_451,
+        lshr_ln22_cast => lshr_ln22_cast_reg_440,
         pn32HPInput => pn32HPInput_read_reg_435,
-        empty => lshr_ln16_cast_reg_440,
+        empty => lshr_ln22_cast_reg_440,
         an32Coef_load => an32Coef_load_reg_330,
         an32Coef_load_1 => an32Coef_load_1_reg_340,
         an32Coef_load_2 => an32Coef_load_2_reg_350,
@@ -576,7 +582,12 @@ begin
         regXferLeng => regXferLeng,
         an32Coef_address0 => an32Coef_address0,
         an32Coef_ce0 => an32Coef_ce0,
-        an32Coef_q0 => an32Coef_q0);
+        an32Coef_q0 => an32Coef_q0,
+        ap_start => ap_start,
+        interrupt => interrupt,
+        ap_ready => ap_ready,
+        ap_done => ap_done,
+        ap_idle => ap_idle);
 
     gmem_m_axi_U : component fir_n11_maxi_gmem_m_axi
     generic map (
@@ -704,11 +715,11 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state12)) then
                 an32Coef_load_10_reg_446 <= an32Coef_q0;
-                lshr_ln16_cast_reg_440 <= add_ln16_fu_289_p2(32 downto 2);
+                lshr_ln22_cast_reg_440 <= add_ln22_fu_289_p2(32 downto 2);
                 pn32HPInput_read_reg_435 <= pn32HPInput;
                 pn32HPOutput_read_reg_430 <= pn32HPOutput;
-                trunc_ln18_1_reg_451 <= pn32HPInput(63 downto 2);
-                trunc_ln30_1_reg_456 <= pn32HPOutput(63 downto 2);
+                trunc_ln24_1_reg_451 <= pn32HPInput(63 downto 2);
+                trunc_ln36_1_reg_456 <= pn32HPOutput(63 downto 2);
             end if;
         end if;
     end process;
@@ -836,7 +847,7 @@ begin
                 ap_NS_fsm <= "XXXXXXXXXXXXXX";
         end case;
     end process;
-    add_ln16_fu_289_p2 <= std_logic_vector(unsigned(zext_ln16_fu_285_p1) + unsigned(ap_const_lv33_3));
+    add_ln22_fu_289_p2 <= std_logic_vector(unsigned(zext_ln22_fu_285_p1) + unsigned(ap_const_lv33_3));
 
     an32Coef_address0_assign_proc : process(ap_CS_fsm_state1, ap_CS_fsm_state2, ap_CS_fsm_state3, ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8, ap_CS_fsm_state9, ap_CS_fsm_state10, ap_CS_fsm_state11)
     begin
@@ -1010,5 +1021,5 @@ begin
     end process;
 
     grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242_ap_start <= grp_fir_n11_maxi_Pipeline_XFER_LOOP_fu_242_ap_start_reg;
-    zext_ln16_fu_285_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(regXferLeng),33));
+    zext_ln22_fu_285_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(regXferLeng),33));
 end behav;

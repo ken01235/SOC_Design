@@ -19,6 +19,61 @@ int XFir_n11_maxi_CfgInitialize(XFir_n11_maxi *InstancePtr, XFir_n11_maxi_Config
 }
 #endif
 
+void XFir_n11_maxi_Start(XFir_n11_maxi *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XFir_n11_maxi_ReadReg(InstancePtr->Control_BaseAddress, XFIR_N11_MAXI_CONTROL_ADDR_AP_CTRL) & 0x80;
+    XFir_n11_maxi_WriteReg(InstancePtr->Control_BaseAddress, XFIR_N11_MAXI_CONTROL_ADDR_AP_CTRL, Data | 0x01);
+}
+
+u32 XFir_n11_maxi_IsDone(XFir_n11_maxi *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XFir_n11_maxi_ReadReg(InstancePtr->Control_BaseAddress, XFIR_N11_MAXI_CONTROL_ADDR_AP_CTRL);
+    return (Data >> 1) & 0x1;
+}
+
+u32 XFir_n11_maxi_IsIdle(XFir_n11_maxi *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XFir_n11_maxi_ReadReg(InstancePtr->Control_BaseAddress, XFIR_N11_MAXI_CONTROL_ADDR_AP_CTRL);
+    return (Data >> 2) & 0x1;
+}
+
+u32 XFir_n11_maxi_IsReady(XFir_n11_maxi *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XFir_n11_maxi_ReadReg(InstancePtr->Control_BaseAddress, XFIR_N11_MAXI_CONTROL_ADDR_AP_CTRL);
+    // check ap_start to see if the pcore is ready for next input
+    return !(Data & 0x1);
+}
+
+void XFir_n11_maxi_EnableAutoRestart(XFir_n11_maxi *InstancePtr) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XFir_n11_maxi_WriteReg(InstancePtr->Control_BaseAddress, XFIR_N11_MAXI_CONTROL_ADDR_AP_CTRL, 0x80);
+}
+
+void XFir_n11_maxi_DisableAutoRestart(XFir_n11_maxi *InstancePtr) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XFir_n11_maxi_WriteReg(InstancePtr->Control_BaseAddress, XFIR_N11_MAXI_CONTROL_ADDR_AP_CTRL, 0);
+}
+
 void XFir_n11_maxi_Set_pn32HPInput(XFir_n11_maxi *InstancePtr, u64 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
@@ -167,5 +222,61 @@ u32 XFir_n11_maxi_Read_an32Coef_Bytes(XFir_n11_maxi *InstancePtr, int offset, ch
         *(data + i) = *(char *)(InstancePtr->Control_BaseAddress + XFIR_N11_MAXI_CONTROL_ADDR_AN32COEF_BASE + offset + i);
     }
     return length;
+}
+
+void XFir_n11_maxi_InterruptGlobalEnable(XFir_n11_maxi *InstancePtr) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XFir_n11_maxi_WriteReg(InstancePtr->Control_BaseAddress, XFIR_N11_MAXI_CONTROL_ADDR_GIE, 1);
+}
+
+void XFir_n11_maxi_InterruptGlobalDisable(XFir_n11_maxi *InstancePtr) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XFir_n11_maxi_WriteReg(InstancePtr->Control_BaseAddress, XFIR_N11_MAXI_CONTROL_ADDR_GIE, 0);
+}
+
+void XFir_n11_maxi_InterruptEnable(XFir_n11_maxi *InstancePtr, u32 Mask) {
+    u32 Register;
+
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Register =  XFir_n11_maxi_ReadReg(InstancePtr->Control_BaseAddress, XFIR_N11_MAXI_CONTROL_ADDR_IER);
+    XFir_n11_maxi_WriteReg(InstancePtr->Control_BaseAddress, XFIR_N11_MAXI_CONTROL_ADDR_IER, Register | Mask);
+}
+
+void XFir_n11_maxi_InterruptDisable(XFir_n11_maxi *InstancePtr, u32 Mask) {
+    u32 Register;
+
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Register =  XFir_n11_maxi_ReadReg(InstancePtr->Control_BaseAddress, XFIR_N11_MAXI_CONTROL_ADDR_IER);
+    XFir_n11_maxi_WriteReg(InstancePtr->Control_BaseAddress, XFIR_N11_MAXI_CONTROL_ADDR_IER, Register & (~Mask));
+}
+
+void XFir_n11_maxi_InterruptClear(XFir_n11_maxi *InstancePtr, u32 Mask) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    //XFir_n11_maxi_WriteReg(InstancePtr->Control_BaseAddress, XFIR_N11_MAXI_CONTROL_ADDR_ISR, Mask);
+}
+
+u32 XFir_n11_maxi_InterruptGetEnabled(XFir_n11_maxi *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    return XFir_n11_maxi_ReadReg(InstancePtr->Control_BaseAddress, XFIR_N11_MAXI_CONTROL_ADDR_IER);
+}
+
+u32 XFir_n11_maxi_InterruptGetStatus(XFir_n11_maxi *InstancePtr) {
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    // Current Interrupt Clear Behavior is Clear on Read(COR).
+    return XFir_n11_maxi_ReadReg(InstancePtr->Control_BaseAddress, XFIR_N11_MAXI_CONTROL_ADDR_ISR);
 }
 

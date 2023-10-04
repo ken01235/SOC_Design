@@ -45,7 +45,7 @@ set TargetInfo xck26:-sfvc784:-2LV-c
 set SourceFiles {sc {} c ../../hls_FIRN11MAXI/FIR.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile /home/ubuntu/SOC_Design/course-lab_2/hsp_ip/solution1/solution1.directive
-set TBFiles {verilog {../out_gold.dat ../../hls_FIRN11MAXI/FIRTester.cpp} bc {../out_gold.dat ../../hls_FIRN11MAXI/FIRTester.cpp} sc {../out_gold.dat ../../hls_FIRN11MAXI/FIRTester.cpp} vhdl {../out_gold.dat ../../hls_FIRN11MAXI/FIRTester.cpp} c {} cas {../out_gold.dat ../../hls_FIRN11MAXI/FIRTester.cpp}}
+set TBFiles {verilog {../../hls_FIRN11MAXI/FIRTester.cpp ../out_gold.dat} bc {../../hls_FIRN11MAXI/FIRTester.cpp ../out_gold.dat} sc {../../hls_FIRN11MAXI/FIRTester.cpp ../out_gold.dat} vhdl {../../hls_FIRN11MAXI/FIRTester.cpp ../out_gold.dat} c {} cas {../../hls_FIRN11MAXI/FIRTester.cpp ../out_gold.dat}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

@@ -81,6 +81,12 @@ int XFir_n11_maxi_Initialize(XFir_n11_maxi *InstancePtr, const char* InstanceNam
 int XFir_n11_maxi_Release(XFir_n11_maxi *InstancePtr);
 #endif
 
+void XFir_n11_maxi_Start(XFir_n11_maxi *InstancePtr);
+u32 XFir_n11_maxi_IsDone(XFir_n11_maxi *InstancePtr);
+u32 XFir_n11_maxi_IsIdle(XFir_n11_maxi *InstancePtr);
+u32 XFir_n11_maxi_IsReady(XFir_n11_maxi *InstancePtr);
+void XFir_n11_maxi_EnableAutoRestart(XFir_n11_maxi *InstancePtr);
+void XFir_n11_maxi_DisableAutoRestart(XFir_n11_maxi *InstancePtr);
 
 void XFir_n11_maxi_Set_pn32HPInput(XFir_n11_maxi *InstancePtr, u64 Data);
 u64 XFir_n11_maxi_Get_pn32HPInput(XFir_n11_maxi *InstancePtr);
@@ -97,6 +103,14 @@ u32 XFir_n11_maxi_Write_an32Coef_Words(XFir_n11_maxi *InstancePtr, int offset, w
 u32 XFir_n11_maxi_Read_an32Coef_Words(XFir_n11_maxi *InstancePtr, int offset, word_type *data, int length);
 u32 XFir_n11_maxi_Write_an32Coef_Bytes(XFir_n11_maxi *InstancePtr, int offset, char *data, int length);
 u32 XFir_n11_maxi_Read_an32Coef_Bytes(XFir_n11_maxi *InstancePtr, int offset, char *data, int length);
+
+void XFir_n11_maxi_InterruptGlobalEnable(XFir_n11_maxi *InstancePtr);
+void XFir_n11_maxi_InterruptGlobalDisable(XFir_n11_maxi *InstancePtr);
+void XFir_n11_maxi_InterruptEnable(XFir_n11_maxi *InstancePtr, u32 Mask);
+void XFir_n11_maxi_InterruptDisable(XFir_n11_maxi *InstancePtr, u32 Mask);
+void XFir_n11_maxi_InterruptClear(XFir_n11_maxi *InstancePtr, u32 Mask);
+u32 XFir_n11_maxi_InterruptGetEnabled(XFir_n11_maxi *InstancePtr);
+u32 XFir_n11_maxi_InterruptGetStatus(XFir_n11_maxi *InstancePtr);
 
 #ifdef __cplusplus
 }
