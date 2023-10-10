@@ -1,0 +1,4 @@
+timestamp=[2023-10-09 20:45:13], mode=WORKBENCH_START, duration=0:00:06.698, duration_ms=6698, data={}
+timestamp=[2023-10-09 20:45:14], mode=WORKBENCH_UI_INIT, duration=0:00:01.252, duration_ms=1252, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2023-10-09 20:45:15], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.472, duration_ms=1472, data={}
+timestamp=[2023-10-09 21:13:30], mode=APP_CREATION, duration=0:00:04.982, duration_ms=4982, data={name=vts_Opt1Baseline, project_type=datacenter, os=NA, processor=null, runtime=OpenCL, platform=xilinx_u50_gen3x16_xdma_5_202210_1, application_type=application}

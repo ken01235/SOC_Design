@@ -1,0 +1,14 @@
+Mon Oct  9 20:45:15 2023: Server was asked to start on port: '38537'
+Mon Oct  9 20:45:15 2023: Server is using token UUID: '1f29dc5b-5f3d-4f97-af26-9149dd0e4dc3'
+Mon Oct  9 20:45:15 2023: Attempting to start server on port '38537'
+Mon Oct  9 20:45:15 2023: XRC main fifo: created main fifo '/tmp/xrcmain1f29dc5b-5f3d-4f97-af26-9149dd0e4dc3', fd read = 11
+Mon Oct  9 20:45:15 2023: Running Rule Check Server
+Mon Oct  9 20:45:15 2023: Version 1.6.1
+Mon Oct  9 20:45:16 2023: Rule Check Server: Accepted socket connection from client
+Mon Oct  9 20:45:16 2023: EXCHANGE_TOKEN received, server token: 1f29dc5b-5f3d-4f97-af26-9149dd0e4dc3, passed token: 1f29dc5b-5f3d-4f97-af26-9149dd0e4dc3
+Mon Oct  9 21:13:50 2023: STOP_SERVER received, server token: 1f29dc5b-5f3d-4f97-af26-9149dd0e4dc3, passed token: 1f29dc5b-5f3d-4f97-af26-9149dd0e4dc3
+Mon Oct  9 21:13:50 2023: Socket received request to stop server.
+Mon Oct  9 21:13:50 2023: SERVER: destructor for server bound to port 38537
+Mon Oct  9 21:13:50 2023: XRC main fifo: Good unlink of /tmp/xrcmain1f29dc5b-5f3d-4f97-af26-9149dd0e4dc3
+Mon Oct  9 21:13:50 2023: Server exiting with status 0.
+Mon Oct  9 21:13:50 2023: Closing log file.
