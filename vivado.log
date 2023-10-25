@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Wed Oct 25 03:39:04 2023
-# Process ID: 4021
+# Start of session at: Wed Oct 25 04:19:24 2023
+# Process ID: 6628
 # Current directory: /home/ubuntu/SOC_Design
 # Command line: vivado
 # Log file: /home/ubuntu/SOC_Design/vivado.log
@@ -60,9 +60,10 @@ INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ubuntu/SOC_Design/lab_fir_vivado/lab_fir_vivado.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "fir_tb_behav -key {Behavioral:sim_1:Functional:fir_tb} -tclbatch {fir_tb.tcl} -log {simulate.log}"
+   with args "fir_tb_behav -key {Behavioral:sim_1:Functional:fir_tb} -tclbatch {fir_tb.tcl} -view {/home/ubuntu/SOC_Design/lab_fir_vivado/fir_tb_behav1.wcfg} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Time resolution is 1 ps
+open_wave_config /home/ubuntu/SOC_Design/lab_fir_vivado/fir_tb_behav1.wcfg
 source fir_tb.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
@@ -696,37 +697,8 @@ OK: exp =           0, rdata =           0
 ------End the data input(AXI-Stream)------
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'fir_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 100000ns
-launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7775.551 ; gain = 61.250 ; free physical = 10679 ; free virtual = 14513
-save_wave_config {/home/ubuntu/SOC_Design/lab_fir_vivado/fir_tb_behav1.wcfg}
-add_files -fileset sim_1 -norecurse /home/ubuntu/SOC_Design/lab_fir_vivado/fir_tb_behav1.wcfg
-set_property xsim.view /home/ubuntu/SOC_Design/lab_fir_vivado/fir_tb_behav1.wcfg [get_filesets sim_1]
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xc7z020clg400-1
-INFO: [Device 21-403] Loading part xc7z020clg400-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7832.523 ; gain = 0.000 ; free physical = 10051 ; free virtual = 13906
-INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2022.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/ubuntu/SOC_Design/lab_fir_vivado/lab_fir_vivado.srcs/constrs_1/new/constraints.xdc]
-Finished Parsing XDC File [/home/ubuntu/SOC_Design/lab_fir_vivado/lab_fir_vivado.srcs/constrs_1/new/constraints.xdc]
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7832.523 ; gain = 0.000 ; free physical = 9949 ; free virtual = 13804
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 7887.320 ; gain = 54.797 ; free physical = 9892 ; free virtual = 13747
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
-INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
-INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs
-save_constraints
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 7909.469 ; gain = 51.242 ; free physical = 10485 ; free virtual = 14358
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 25 03:58:28 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 25 04:22:40 2023...
