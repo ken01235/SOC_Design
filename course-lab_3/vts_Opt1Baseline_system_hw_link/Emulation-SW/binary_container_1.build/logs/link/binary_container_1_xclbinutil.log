@@ -1,0 +1,57 @@
+XRT Build Version: 2.13.0 (Vitis)
+       Build Date: 2022-04-06 10:15:09
+          Hash ID: 6bc2a715b17eaa63a4059c9c268abf73662af4d2
+Creating a default 'in-memory' xclbin image.
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 144648 bytes
+Format : RAW
+File   : '/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_system_hw_link/Emulation-SW/binary_container_1.build/link/int/binary_container_1.so'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+WARNING: Skipping CLOCK_FREQ_TOPOLOGY section for count size is zero.
+WARNING: Section 'CLOCK_FREQ_TOPOLOGY' content is empty.  No data in the given JSON file.
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was empty.  No action taken.
+Format : JSON
+File   : '/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_system_hw_link/Emulation-SW/binary_container_1.build/link/int/binary_container_1_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 5264 bytes
+Format : JSON
+File   : '/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_system_hw_link/Emulation-SW/binary_container_1.build/link/int/binary_container_1_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 6575 bytes
+Format : RAW
+File   : '/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_system_hw_link/Emulation-SW/binary_container_1.build/link/int/binary_container_1.xml'
+
+Section: 'DEBUG_DATA'(4) was successfully added.
+Size   : 0 bytes
+Format : RAW
+File   : '/dev/null'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 17168 bytes
+Format : RAW
+File   : '/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_system_hw_link/Emulation-SW/binary_container_1.build/link/int/systemDiagramModel.json'
+
+Section: 'PARTITION_METADATA'(20) was successfully appended to.
+Format : JSON
+File   : 'partition_metadata'
+
+Section: 'IP_LAYOUT'(8) was successfully appended to.
+Format : JSON
+File   : 'ip_layout'
+Successfully wrote (205367 bytes) to the output file: /home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_system_hw_link/Emulation-SW/binary_container_1.xclbin
+Leaving xclbinutil.

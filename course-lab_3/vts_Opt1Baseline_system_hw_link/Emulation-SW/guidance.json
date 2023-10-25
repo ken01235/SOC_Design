@@ -1,0 +1,36 @@
+{
+ "session": {
+  "name": "Emulation-SW",
+  "uuid": "e907605c-305d-417b-9c68-93e190a6f4a3",
+  "description": "Vitis IDE session Emulation-SW",
+  "timestamp": "0",
+  "report_file": {
+   "scheme": "FILE",
+   "host": "",
+   "port": 0,
+   "path": "/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_system_hw_link/Emulation-SW/guidance.html",
+   "query": "",
+   "fragment": "",
+   "media_type": "",
+   "encoding": "",
+   "data": ""
+  },
+  "proto_file": {
+   "scheme": "FILE",
+   "host": "",
+   "port": 0,
+   "path": "/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_system_hw_link/Emulation-SW/guidance.pb",
+   "query": "",
+   "fragment": "",
+   "media_type": "",
+   "encoding": "",
+   "data": ""
+  },
+  "build_target": "",
+  "config_files": []
+ },
+ "violation_count": 0,
+ "waived_count": 0,
+ "affirmation_count": 0
+}
+

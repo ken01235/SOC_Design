@@ -1,0 +1,33 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/Emulation-SW/build/KCalc/KCalc/KCalc.tcl:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="KCalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=KCalc" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/src/vts_Opt1Baseline/K_KCalc.cpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="KCalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=A offset=slave bundle=gmem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/src/vts_Opt1Baseline/K_KCalc.cpp:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="KCalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=B offset=slave bundle=gmem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/src/vts_Opt1Baseline/K_KCalc.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="KCalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=R offset=slave bundle=gmem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/src/vts_Opt1Baseline/K_KCalc.cpp:36:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="KCalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=A bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/src/vts_Opt1Baseline/K_KCalc.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="KCalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=B bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/src/vts_Opt1Baseline/K_KCalc.cpp:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="KCalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=R bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/src/vts_Opt1Baseline/K_KCalc.cpp:39:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="KCalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/src/vts_Opt1Baseline/K_KCalc.cpp:46:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="KCalc" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/src/vts_Opt1Baseline/K_KCalc.cpp:63:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="KCalc" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

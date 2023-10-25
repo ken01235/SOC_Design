@@ -1,0 +1,81 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Oct 24 21:07:25 2023
+# Process ID: 1922
+# Current directory: /home/ubuntu/SOC_Design
+# Command line: vivado
+# Log file: /home/ubuntu/SOC_Design/vivado.log
+# Journal file: /home/ubuntu/SOC_Design/vivado.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 2496.000 MHz, CPU Physical cores: 6, Host memory: 16765 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/ubuntu/SOC_Design/lab_fir_vivado/lab_fir_vivado.xpr
+update_compile_order -fileset sources_1
+set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+file mkdir /home/ubuntu/SOC_Design/lab_fir_vivado/lab_fir_vivado.srcs/constrs_1
+file mkdir /home/ubuntu/SOC_Design/lab_fir_vivado/lab_fir_vivado.srcs/constrs_1/new
+close [ open /home/ubuntu/SOC_Design/lab_fir_vivado/lab_fir_vivado.srcs/constrs_1/new/constraints.xdc w ]
+add_files -fileset constrs_1 /home/ubuntu/SOC_Design/lab_fir_vivado/lab_fir_vivado.srcs/constrs_1/new/constraints.xdc
+export_ip_user_files -of_objects  [get_files /home/ubuntu/SOC_Design/lab_fir_vivado/lab_fir_vivado.srcs/constrs_1/new/constraints.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 /home/ubuntu/SOC_Design/lab_fir_vivado/lab_fir_vivado.srcs/constrs_1/new/constraints.xdc
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+set_property package_pin "" [get_ports [list  axis_clk]]
+set_property PULLTYPE NONE [get_ports [list axis_clk]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list axis_clk]]
+close [ open /home/ubuntu/SOC_Design/lab_fir_vivado/lab_fir_vivado.srcs/constrs_1/new/constraints.xdc w ]
+add_files -fileset constrs_1 /home/ubuntu/SOC_Design/lab_fir_vivado/lab_fir_vivado.srcs/constrs_1/new/constraints.xdc
+set_property target_constrs_file /home/ubuntu/SOC_Design/lab_fir_vivado/lab_fir_vivado.srcs/constrs_1/new/constraints.xdc [current_fileset -constrset]
+save_constraints -force
+set_property IOSTANDARD LVCMOS25 [get_ports [list axis_clk]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list axis_clk]]
+set_property IOSTANDARD {} [get_ports [list axis_clk]]
+set_property PULLTYPE NONE [get_ports [list axis_clk]]
+set_property OFFCHIP_TERM NONE [get_ports [list axis_clk]]
+refresh_design
+refresh_design
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 -file /home/ubuntu/SOC_Design/FirTimingSummary.txt
+launch_simulation
+source fir_tb.tcl
+save_wave_config {/home/ubuntu/SOC_Design/lab_fir_vivado/fir_tb_behav.wcfg}
+close_sim
+launch_simulation
+source fir_tb.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_sim
+launch_simulation
+source fir_tb.tcl
+close_sim
+launch_simulation
+source fir_tb.tcl
+close_sim
+launch_simulation
+source fir_tb.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2 -file /home/ubuntu/SOC_Design/FirTimingSummary.txt
+refresh_design
+report_timing -delay_type min_max -max_paths 10 -sort_by group -input_pins -routable_nets -name timing_1 -file /home/ubuntu/SOC_Design/FirTiming.txt
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+close_sim
+launch_simulation
+source fir_tb.tcl
+close_sim
+launch_simulation
+source fir_tb.tcl
+close_sim

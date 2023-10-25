@@ -1,0 +1,168 @@
+<ENTRY>
+{
+ "thisFile": "/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/Emulation-SW/build/KB.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Oct 10 21:31:16 2023",
+ "timestampMillis": "1696987876678",
+ "buildStep": {
+  "cmdId": "da55ca53-23e7-4f7f-86ff-2f72cb666611",
+  "name": "v++",
+  "logFile": "/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/Emulation-SW/build/KB/KB.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target sw_emu --compile -I../src/vts_Opt1Baseline --config KB-compile.cfg -obuild/KB.xo ../src/vts_Opt1Baseline/K_KB.cpp ",
+  "args": [
+   "--target",
+   "sw_emu",
+   "--compile",
+   "-I../src/vts_Opt1Baseline",
+   "--config",
+   "KB-compile.cfg",
+   "-obuild/KB.xo",
+   "../src/vts_Opt1Baseline/K_KB.cpp"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/Emulation-SW/KB-compile.cfg",
+    "content": "platform=/home/ubuntu/Downloads/data/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm\nsave-temps=1\nkernel=KB\ndebug=1\nmessageDb=build/KB.mdb\ntemp_dir=build\nreport_dir=build/reports\nlog_dir=build/logs\n\n[advanced]\nmisc=solution_name=KB"
+   }
+  ],
+  "cwd": "/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Oct 10 21:31:16 2023",
+ "timestampMillis": "1696987876678",
+ "status": {
+  "cmdId": "da55ca53-23e7-4f7f-86ff-2f72cb666611",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue Oct 10 21:31:21 2023",
+ "timestampMillis": "1696987881379",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u50_gen3x16_xdma_5_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/home/ubuntu/Downloads/data/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_5_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_SW_EMU",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "KB",
+     "file": "/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/Emulation-SW/build/KB.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/src/vts_Opt1Baseline/K_KB.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1. SW Build 3524075 on 2022-04-13-17:42:45"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Oct 10 21:31:21 2023",
+ "timestampMillis": "1696987881402",
+ "buildStep": {
+  "cmdId": "5697bcbf-8cfc-4707-bcfe-3299f9291353",
+  "name": "vitis_hls",
+  "logFile": "/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/Emulation-SW/build/KB/KB/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/Emulation-SW/build/KB/KB/KB.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/Emulation-SW/build/KB/KB/KB.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/Emulation-SW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Oct 10 21:31:21 2023",
+ "timestampMillis": "1696987881407",
+ "status": {
+  "cmdId": "5697bcbf-8cfc-4707-bcfe-3299f9291353",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Oct 10 21:31:33 2023",
+ "timestampMillis": "1696987893232",
+ "status": {
+  "cmdId": "5697bcbf-8cfc-4707-bcfe-3299f9291353",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Oct 10 21:31:33 2023",
+ "timestampMillis": "1696987893238",
+ "report": {
+  "path": "/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/Emulation-SW/guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Oct 10 21:31:33 2023",
+ "timestampMillis": "1696987893239",
+ "report": {
+  "path": "/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/Emulation-SW/guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Oct 10 21:31:33 2023",
+ "timestampMillis": "1696987893240",
+ "status": {
+  "cmdId": "da55ca53-23e7-4f7f-86ff-2f72cb666611",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

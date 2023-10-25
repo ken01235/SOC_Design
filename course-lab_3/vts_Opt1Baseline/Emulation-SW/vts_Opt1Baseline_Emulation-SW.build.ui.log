@@ -1,0 +1,9 @@
+2023-10-10T22:26:50.11235300255-22:26:50 **** Incremental Build of configuration Emulation-SW for project vts_Opt1Baseline ****
+000-make -j6 all 
+000-g++ -o "vts_Opt1Baseline" src/help_functions.o src/host.o -lxilinxopencl -lpthread -lrt -lstdc++ -L/lib/ -Wl,-rpath-link,/lib
+000/vts_Opt1Baseline/Emulation-SW0-1-1cannot find -lxilinxopencl2-/usr/bin/ld: cannot find -lxilinxopencl
+000-collect2: error: ld returned 1 exit status
+000/vts_Opt1Baseline/Emulation-SW0-1-1make: *** [makefile:65: vts_Opt1Baseline] Error 12-make: *** [makefile:65: vts_Opt1Baseline] Error 1
+00255-
+22:26:50 Build Finished (took 246ms)
+
