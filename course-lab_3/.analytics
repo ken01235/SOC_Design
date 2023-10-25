@@ -2,3 +2,48 @@ timestamp=[2023-10-09 20:45:13], mode=WORKBENCH_START, duration=0:00:06.698, dur
 timestamp=[2023-10-09 20:45:14], mode=WORKBENCH_UI_INIT, duration=0:00:01.252, duration_ms=1252, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
 timestamp=[2023-10-09 20:45:15], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.472, duration_ms=1472, data={}
 timestamp=[2023-10-09 21:13:30], mode=APP_CREATION, duration=0:00:04.982, duration_ms=4982, data={name=vts_Opt1Baseline, project_type=datacenter, os=NA, processor=null, runtime=OpenCL, platform=xilinx_u50_gen3x16_xdma_5_202210_1, application_type=application}
+timestamp=[2023-10-10 21:22:02], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:03.540, duration_ms=3540, data={}
+timestamp=[2023-10-10 21:22:04], mode=WORKBENCH_START, duration=0:00:12.982, duration_ms=12982, data={}
+timestamp=[2023-10-10 21:22:05], mode=WORKBENCH_UI_INIT, duration=0:00:00.800, duration_ms=800, data={editors_count=2, platform_editors_count=0, projects_count=5, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles,vts_Opt1Baseline,vts_Opt1Baseline_kernels,vts_Opt1Baseline_system,vts_Opt1Baseline_system_hw_link}
+timestamp=[2023-10-10 21:22:24], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.471, duration_ms=471, data={}
+timestamp=[2023-10-10 21:22:25], mode=WORKBENCH_START, duration=0:00:05.161, duration_ms=5161, data={}
+timestamp=[2023-10-10 21:22:25], mode=WORKBENCH_UI_INIT, duration=0:00:00.866, duration_ms=866, data={editors_count=2, platform_editors_count=0, projects_count=5, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles,vts_Opt1Baseline,vts_Opt1Baseline_kernels,vts_Opt1Baseline_system,vts_Opt1Baseline_system_hw_link}
+timestamp=[2023-10-10 21:29:45], mode=BUILD, duration=0:00:01.365, duration_ms=1365, data={name=vts_Opt1Baseline_system, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 21:31:33], mode=BUILD, duration=0:00:28.141, duration_ms=28141, data={name=vts_Opt1Baseline_kernels, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 21:32:47], mode=BUILD, duration=0:00:00.186, duration_ms=186, data={name=vts_Opt1Baseline_kernels, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 21:33:11], mode=BUILD, duration=0:00:18.010, duration_ms=18010, data={name=vts_Opt1Baseline_system_hw_link, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 21:33:55], mode=BUILD, duration=0:00:03.133, duration_ms=3133, data={name=vts_Opt1Baseline, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 21:35:14], mode=BUILD, duration=0:00:00.330, duration_ms=330, data={name=vts_Opt1Baseline, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 21:35:32], mode=BUILD, duration=0:00:00.199, duration_ms=199, data={name=vts_Opt1Baseline_kernels, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 21:35:39], mode=BUILD, duration=0:00:00.162, duration_ms=162, data={name=vts_Opt1Baseline_kernels, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 21:35:41], mode=BUILD, duration=0:00:00.266, duration_ms=266, data={name=vts_Opt1Baseline_system_hw_link, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 21:35:48], mode=BUILD, duration=0:00:00.309, duration_ms=309, data={name=vts_Opt1Baseline, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:01:38], mode=BUILD, duration=0:00:00.308, duration_ms=308, data={name=vts_Opt1Baseline_kernels, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:02:09], mode=WORKBENCH_START, duration=0:00:05.451, duration_ms=5451, data={}
+timestamp=[2023-10-10 22:02:11], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.983, duration_ms=983, data={}
+timestamp=[2023-10-10 22:02:12], mode=WORKBENCH_UI_INIT, duration=0:00:03.201, duration_ms=3201, data={editors_count=5, platform_editors_count=0, projects_count=5, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles,vts_Opt1Baseline,vts_Opt1Baseline_kernels,vts_Opt1Baseline_system,vts_Opt1Baseline_system_hw_link}
+timestamp=[2023-10-10 22:03:06], mode=BUILD, duration=0:00:00.242, duration_ms=242, data={name=vts_Opt1Baseline_kernels, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:03:10], mode=BUILD, duration=0:00:00.156, duration_ms=156, data={name=vts_Opt1Baseline_kernels, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:03:12], mode=BUILD, duration=0:00:00.191, duration_ms=191, data={name=vts_Opt1Baseline_system_hw_link, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:03:18], mode=BUILD, duration=0:00:00.692, duration_ms=692, data={name=vts_Opt1Baseline, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:19:02], mode=BUILD, duration=0:00:00.209, duration_ms=209, data={name=vts_Opt1Baseline_kernels, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:19:06], mode=BUILD, duration=0:00:00.334, duration_ms=334, data={name=vts_Opt1Baseline_kernels, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:19:06], mode=BUILD, duration=0:00:00.498, duration_ms=498, data={name=vts_Opt1Baseline_system_hw_link, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:19:10], mode=BUILD, duration=0:00:00.150, duration_ms=150, data={name=vts_Opt1Baseline_kernels, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:19:10], mode=BUILD, duration=0:00:00.401, duration_ms=401, data={name=vts_Opt1Baseline_system_hw_link, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:19:15], mode=BUILD, duration=0:00:00.163, duration_ms=163, data={name=vts_Opt1Baseline_kernels, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:19:16], mode=BUILD, duration=0:00:00.333, duration_ms=333, data={name=vts_Opt1Baseline_system_hw_link, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:19:18], mode=BUILD, duration=0:00:00.626, duration_ms=626, data={name=vts_Opt1Baseline, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:19:47], mode=BUILD, duration=0:00:00.571, duration_ms=571, data={name=vts_Opt1Baseline, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:19:50], mode=BUILD, duration=0:00:00.322, duration_ms=322, data={name=vts_Opt1Baseline_kernels, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:19:53], mode=BUILD, duration=0:00:00.197, duration_ms=197, data={name=vts_Opt1Baseline_kernels, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:19:53], mode=BUILD, duration=0:00:00.185, duration_ms=185, data={name=vts_Opt1Baseline_system_hw_link, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:19:56], mode=BUILD, duration=0:00:00.327, duration_ms=327, data={name=vts_Opt1Baseline, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:23:35], mode=WORKBENCH_START, duration=0:00:05.017, duration_ms=5017, data={}
+timestamp=[2023-10-10 22:23:36], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.688, duration_ms=688, data={}
+timestamp=[2023-10-10 22:23:39], mode=WORKBENCH_UI_INIT, duration=0:00:04.035, duration_ms=4035, data={editors_count=4, platform_editors_count=0, projects_count=5, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles,vts_Opt1Baseline,vts_Opt1Baseline_kernels,vts_Opt1Baseline_system,vts_Opt1Baseline_system_hw_link}
+timestamp=[2023-10-10 22:23:48], mode=BUILD, duration=0:00:00.786, duration_ms=786, data={name=vts_Opt1Baseline_kernels, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:23:50], mode=BUILD, duration=0:00:00.321, duration_ms=321, data={name=vts_Opt1Baseline_kernels, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:23:51], mode=BUILD, duration=0:00:00.803, duration_ms=803, data={name=vts_Opt1Baseline_system_hw_link, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:23:54], mode=BUILD, duration=0:00:00.437, duration_ms=437, data={name=vts_Opt1Baseline, configuration=Emulation-SW, clean_build=false}
+timestamp=[2023-10-10 22:26:50], mode=BUILD, duration=0:00:00.258, duration_ms=258, data={name=vts_Opt1Baseline, configuration=Emulation-SW, clean_build=false}

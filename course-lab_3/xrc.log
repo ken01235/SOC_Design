@@ -1,14 +1,24 @@
-Mon Oct  9 20:45:15 2023: Server was asked to start on port: '38537'
-Mon Oct  9 20:45:15 2023: Server is using token UUID: '1f29dc5b-5f3d-4f97-af26-9149dd0e4dc3'
-Mon Oct  9 20:45:15 2023: Attempting to start server on port '38537'
-Mon Oct  9 20:45:15 2023: XRC main fifo: created main fifo '/tmp/xrcmain1f29dc5b-5f3d-4f97-af26-9149dd0e4dc3', fd read = 11
-Mon Oct  9 20:45:15 2023: Running Rule Check Server
-Mon Oct  9 20:45:15 2023: Version 1.6.1
-Mon Oct  9 20:45:16 2023: Rule Check Server: Accepted socket connection from client
-Mon Oct  9 20:45:16 2023: EXCHANGE_TOKEN received, server token: 1f29dc5b-5f3d-4f97-af26-9149dd0e4dc3, passed token: 1f29dc5b-5f3d-4f97-af26-9149dd0e4dc3
-Mon Oct  9 21:13:50 2023: STOP_SERVER received, server token: 1f29dc5b-5f3d-4f97-af26-9149dd0e4dc3, passed token: 1f29dc5b-5f3d-4f97-af26-9149dd0e4dc3
-Mon Oct  9 21:13:50 2023: Socket received request to stop server.
-Mon Oct  9 21:13:50 2023: SERVER: destructor for server bound to port 38537
-Mon Oct  9 21:13:50 2023: XRC main fifo: Good unlink of /tmp/xrcmain1f29dc5b-5f3d-4f97-af26-9149dd0e4dc3
-Mon Oct  9 21:13:50 2023: Server exiting with status 0.
-Mon Oct  9 21:13:50 2023: Closing log file.
+Tue Oct 10 22:23:36 2023: Server was asked to start on port: '34629'
+Tue Oct 10 22:23:36 2023: Server is using token UUID: '1b83d2aa-01f3-469e-acc6-14c408aeeccb'
+Tue Oct 10 22:23:36 2023: Attempting to start server on port '34629'
+Tue Oct 10 22:23:36 2023: XRC main fifo: created main fifo '/tmp/xrcmain1b83d2aa-01f3-469e-acc6-14c408aeeccb', fd read = 11
+Tue Oct 10 22:23:36 2023: Running Rule Check Server
+Tue Oct 10 22:23:36 2023: Version 1.6.1
+Tue Oct 10 22:23:38 2023: Rule Check Server: Accepted socket connection from client
+Tue Oct 10 22:23:38 2023: EXCHANGE_TOKEN received, server token: 1b83d2aa-01f3-469e-acc6-14c408aeeccb, passed token: 1b83d2aa-01f3-469e-acc6-14c408aeeccb
+Tue Oct 10 22:23:48 2023: SESSION_MGR: creating session with session uuid: 'b130bf62-060d-4c02-8d53-da2958444817' and name 'Emulation-SW'
+Tue Oct 10 22:23:48 2023: SESSION_MGR: closing session for UUID 'b130bf62-060d-4c02-8d53-da2958444817' with name 'Emulation-SW'
+Tue Oct 10 22:23:50 2023: SESSION_MGR: creating session with session uuid: 'cb214c06-607f-4cd3-8bdf-8985ee1d125e' and name 'Emulation-SW'
+Tue Oct 10 22:23:50 2023: SESSION_MGR: closing session for UUID 'cb214c06-607f-4cd3-8bdf-8985ee1d125e' with name 'Emulation-SW'
+Tue Oct 10 22:23:50 2023: SESSION_MGR: creating session with session uuid: 'e907605c-305d-417b-9c68-93e190a6f4a3' and name 'Emulation-SW'
+Tue Oct 10 22:23:51 2023: SESSION_MGR: closing session for UUID 'e907605c-305d-417b-9c68-93e190a6f4a3' with name 'Emulation-SW'
+Tue Oct 10 22:23:54 2023: SESSION_MGR: creating session with session uuid: '0e6d0581-f113-4c7d-894e-cabc9303c626' and name 'Emulation-SW'
+Tue Oct 10 22:23:54 2023: SESSION_MGR: closing session for UUID '0e6d0581-f113-4c7d-894e-cabc9303c626' with name 'Emulation-SW'
+Tue Oct 10 22:26:50 2023: SESSION_MGR: creating session with session uuid: 'df4ed8bb-345a-4e99-9ae3-8f6bf3ebcb1b' and name 'Emulation-SW'
+Tue Oct 10 22:26:50 2023: SESSION_MGR: closing session for UUID 'df4ed8bb-345a-4e99-9ae3-8f6bf3ebcb1b' with name 'Emulation-SW'
+Tue Oct 10 22:35:52 2023: STOP_SERVER received, server token: 1b83d2aa-01f3-469e-acc6-14c408aeeccb, passed token: 1b83d2aa-01f3-469e-acc6-14c408aeeccb
+Tue Oct 10 22:35:52 2023: Socket received request to stop server.
+Tue Oct 10 22:35:52 2023: SERVER: destructor for server bound to port 34629
+Tue Oct 10 22:35:52 2023: XRC main fifo: Good unlink of /tmp/xrcmain1b83d2aa-01f3-469e-acc6-14c408aeeccb
+Tue Oct 10 22:35:52 2023: Server exiting with status 0.
+Tue Oct 10 22:35:52 2023: Closing log file.

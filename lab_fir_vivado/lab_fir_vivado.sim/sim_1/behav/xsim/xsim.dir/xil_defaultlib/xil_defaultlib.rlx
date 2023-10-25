@@ -1,0 +1,8 @@
+0.7
+2020.2
+Apr 18 2022
+15:53:03
+/home/ubuntu/SOC_Design/lab-fir/bram/bram11.v,1698090643,verilog,,/home/ubuntu/SOC_Design/lab-fir/fir/rtl/fir.v,,bram11,,,,,,,,
+/home/ubuntu/SOC_Design/lab-fir/fir/rtl/fir.v,1698200210,verilog,,/home/ubuntu/SOC_Design/lab-fir/fir/tb/fir_tb.v,,fir,,,,,,,,
+/home/ubuntu/SOC_Design/lab-fir/fir/tb/fir_tb.v,1698090650,verilog,,,,fir_tb,,,,,,,,
+/home/ubuntu/SOC_Design/lab_fir_vivado/lab_fir_vivado.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,,,,,,,

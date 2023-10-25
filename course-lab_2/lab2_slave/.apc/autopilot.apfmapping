@@ -5,7 +5,7 @@
     <originFiles name="FIR.cpp" path="/home/ubuntu/SOC_Design/course-lab_2/hls_FIRN11Stream/FIR.cpp"/>
   </source>
   <testbench>
-    <originFiles name="FIRTester.cpp" path="/home/ubuntu/SOC_Design/course-lab_2/hls_FIRN11Stream/FIRTester.cpp"/>
     <originFiles name="out_gold.dat" path="/home/ubuntu/SOC_Design/course-lab_2/hls_FIRN11Stream/out_gold.dat"/>
+    <originFiles name="FIRTester.cpp" path="/home/ubuntu/SOC_Design/course-lab_2/hls_FIRN11Stream/FIRTester.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
