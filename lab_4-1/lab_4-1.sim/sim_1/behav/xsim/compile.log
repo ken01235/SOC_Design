@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/SOC_Design/course-lab_4-1/testbench/counter_la_fir/counter_la_fir_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter_la_fir_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/SOC_Design/lab_4-1/lab_4-1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

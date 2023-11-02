@@ -1,0 +1,10 @@
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot counter_la_fir_tb_behav xil_defaultlib.counter_la_fir_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <caravel> not found while processing module instance <uut> [/home/ubuntu/SOC_Design/course-lab_4-1/testbench/counter_la_fir/counter_la_fir_tb.v:211]
+ERROR: [VRFC 10-2063] Module <spiflash> not found while processing module instance <spiflash> [/home/ubuntu/SOC_Design/course-lab_4-1/testbench/counter_la_fir/counter_la_fir_tb.v:242]
+ERROR: [VRFC 10-2063] Module <tbuart> not found while processing module instance <tbuart> [/home/ubuntu/SOC_Design/course-lab_4-1/testbench/counter_la_fir/counter_la_fir_tb.v:254]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
