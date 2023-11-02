@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="KpB" LaunchDir="/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/Emulation-SW/build/KpB/KpB" FlowId="Build_IP" FromStepId="vitis_hls" ToStepId="vitis_hls"/>
-</Runs>
-

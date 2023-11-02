@@ -1,8 +1,0 @@
-obj/K_KA.o: \
- /home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_system_hw_link/Emulation-SW/binary_container_1.build/link/int/xo/KA/KA/cpu_sources/K_KA.cpp \
- /usr/include/stdc-predef.h \
- /home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/src/vts_Opt1Baseline/kernel.h
-
-/usr/include/stdc-predef.h:
-
-/home/ubuntu/SOC_Design/course-lab_3/vts_Opt1Baseline_kernels/src/vts_Opt1Baseline/kernel.h:
