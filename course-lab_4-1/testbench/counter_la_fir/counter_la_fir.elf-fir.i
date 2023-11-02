@@ -14,25 +14,23 @@ int inputbuffer[11];
 int inputsignal[11] = {1,2,3,4,5,6,7,8,9,10,11};
 int outputsignal[11];
 # 2 "fir.c" 2
-
-
-
-
-
-
-
+# 11 "fir.c"
 void __attribute__ ( ( section ( ".mprjram" ) ) ) initfir() {
 
+ for(int i=0; i<11; i=i+1){
+  inputbuffer[i] = 0;
+  outputsignal[i] = 0;
+ }
 }
 
 int* __attribute__ ( ( section ( ".mprjram" ) ) ) fir(){
+ initfir();
 
-    initfir();
-
-    for (int index = 0; index < 11; index++) {
-        inputbuffer[index] = taps[index] * inputsignal[index];
-        outputsignal[index] = inputbuffer[index] + outputsignal[index];
-    }
-
+ for(int t=0; t<11; t=t+1){
+  inputbuffer[t] = inputsignal[t];
+  for(int i=0; i<t+1; i=i+1){
+   outputsignal[t] += taps[i] * inputbuffer[t-i];
+  }
+ }
  return outputsignal;
 }

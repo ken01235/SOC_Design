@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1698927192">
-  <File Type="VDS-TIMING-PB" Name="user_proj_example_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="user_proj_example_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="user_proj_example.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="user_proj_example_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="user_proj_example_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="user_proj_example_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="user_proj_example.vds"/>
   <File Type="REPORTS-TCL" Name="user_proj_example_reports.tcl"/>
   <File Type="PA-TCL" Name="user_proj_example.tcl"/>
+  <File Type="RDS-DCP" Name="user_proj_example.dcp"/>
+  <File Type="RDS-UTIL" Name="user_proj_example_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="user_proj_example_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../course-lab_4-1/rtl/user/bram.v">
