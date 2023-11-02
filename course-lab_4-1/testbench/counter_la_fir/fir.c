@@ -11,11 +11,10 @@ void __attribute__ ( ( section ( ".mprjram" ) ) ) initfir() {
 }
 
 int* __attribute__ ( ( section ( ".mprjram" ) ) ) fir(){
-    initfir();
-    //write down your fir
-    int index;
 
-    for (index = 0; index < N; index++) {
+    initfir();
+
+    for (int index = 0; index < N; index++) {
         inputbuffer[index] = taps[index] * inputsignal[index];
         outputsignal[index] = inputbuffer[index] + outputsignal[index];
     }

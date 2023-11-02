@@ -1023,10 +1023,10 @@ Disassembly of section .debug_line:
  324:	10090203          	lb	tp,256(s2)
  328:	0100                	.2byte	0x100
  32a:	0505                	.2byte	0x505
- 32c:	10090103          	lb	sp,256(s2)
+ 32c:	10090203          	lb	tp,256(s2)
  330:	0100                	.2byte	0x100
- 332:	1005                	.2byte	0x1005
- 334:	04090403          	lb	s0,64(s2)
+ 332:	0e05                	.2byte	0xe05
+ 334:	04090203          	lb	tp,64(s2)
  338:	0100                	.2byte	0x100
  33a:	0505                	.2byte	0x505
  33c:	04090003          	lb	zero,64(s2)
@@ -1071,12 +1071,12 @@ Disassembly of section .debug_line:
  39a:	0304                	.2byte	0x304
  39c:	04090003          	lb	zero,64(s2)
  3a0:	0100                	.2byte	0x100
- 3a2:	2605                	.2byte	0x2605
+ 3a2:	2a05                	.2byte	0x2a05
  3a4:	0200                	.2byte	0x200
  3a6:	0304                	.2byte	0x304
  3a8:	14097e03          	.4byte	0x14097e03
  3ac:	0100                	.2byte	0x100
- 3ae:	1b05                	.2byte	0x1b05
+ 3ae:	1f05                	.2byte	0x1f05
  3b0:	0200                	.2byte	0x200
  3b2:	0104                	.2byte	0x104
  3b4:	0c090003          	lb	zero,192(s2)
@@ -2068,7 +2068,8 @@ Disassembly of section .debug_info:
  10c:	0000                	.2byte	0x0
  10e:	0100                	.2byte	0x100
  110:	009c                	.2byte	0x9c
- 112:	000000c3          	.4byte	0xc3
+ 112:	00cd                	.2byte	0xcd
+ 114:	0000                	.2byte	0x0
  116:	0005                	.2byte	0x5
  118:	0401                	.2byte	0x401
  11a:	00bd                	.2byte	0xbd
@@ -2134,193 +2135,198 @@ Disassembly of section .debug_info:
  196:	72696607          	.4byte	0x72696607
  19a:	0100                	.2byte	0x100
  19c:	330d                	.2byte	0x330d
- 19e:	00ae                	.2byte	0xae
+ 19e:	00b8                	.2byte	0xb8
  1a0:	0000                	.2byte	0x0
  1a2:	0040                	.2byte	0x40
  1a4:	3800                	.2byte	0x3800
  1a6:	00dc                	.2byte	0xdc
  1a8:	0000                	.2byte	0x0
  1aa:	9c01                	.2byte	0x9c01
- 1ac:	00ae                	.2byte	0xae
+ 1ac:	00b8                	.2byte	0xb8
  1ae:	0000                	.2byte	0x0
- 1b0:	5f08                	.2byte	0x5f08
- 1b2:	0001                	.2byte	0x1
- 1b4:	0100                	.2byte	0x100
- 1b6:	0910                	.2byte	0x910
- 1b8:	003d                	.2byte	0x3d
- 1ba:	0000                	.2byte	0x0
- 1bc:	9102                	.2byte	0x9102
- 1be:	006c                	.2byte	0x6c
- 1c0:	0409                	.2byte	0x409
- 1c2:	003d                	.2byte	0x3d
- 1c4:	0000                	.2byte	0x0
- 1c6:	570a                	.2byte	0x570a
- 1c8:	0001                	.2byte	0x1
- 1ca:	0100                	.2byte	0x100
- 1cc:	3309                	.2byte	0x3309
- 1ce:	0024                	.2byte	0x24
- 1d0:	3800                	.2byte	0x3800
- 1d2:	001c                	.2byte	0x1c
- 1d4:	0000                	.2byte	0x0
- 1d6:	9c01                	.2byte	0x9c01
- 1d8:	2f00                	.2byte	0x2f00
- 1da:	0001                	.2byte	0x1
- 1dc:	0500                	.2byte	0x500
- 1de:	0100                	.2byte	0x100
- 1e0:	5a04                	.2byte	0x5a04
- 1e2:	0001                	.2byte	0x1
- 1e4:	0600                	.2byte	0x600
- 1e6:	0098                	.2byte	0x98
- 1e8:	0000                	.2byte	0x0
- 1ea:	cb1d                	.2byte	0xcb1d
- 1ec:	0000                	.2byte	0x0
- 1ee:	0000                	.2byte	0x0
- 1f0:	0000                	.2byte	0x0
- 1f2:	f800                	.2byte	0xf800
- 1f4:	0001                	.2byte	0x1
- 1f6:	b410                	.2byte	0xb410
- 1f8:	0005                	.2byte	0x5
- 1fa:	d000                	.2byte	0xd000
- 1fc:	01000003          	lb	zero,16(zero) # 10 <taps+0x10>
- 200:	0601                	.2byte	0x601
- 202:	0079                	.2byte	0x79
- 204:	0000                	.2byte	0x0
- 206:	0201                	.2byte	0x201
- 208:	3605                	.2byte	0x3605
- 20a:	0001                	.2byte	0x1
- 20c:	0100                	.2byte	0x100
- 20e:	0504                	.2byte	0x504
- 210:	012d                	.2byte	0x12d
- 212:	0000                	.2byte	0x0
- 214:	0801                	.2byte	0x801
- 216:	2805                	.2byte	0x2805
- 218:	0001                	.2byte	0x1
- 21a:	0100                	.2byte	0x100
- 21c:	0801                	.2byte	0x801
- 21e:	00000077          	.4byte	0x77
- 222:	0201                	.2byte	0x201
- 224:	00008507          	.4byte	0x8507
- 228:	0700                	.2byte	0x700
- 22a:	0149                	.2byte	0x149
- 22c:	0000                	.2byte	0x0
- 22e:	3404                	.2byte	0x3404
- 230:	00005c1b          	.4byte	0x5c1b
- 234:	0100                	.2byte	0x100
- 236:	0704                	.2byte	0x704
- 238:	0105                	.2byte	0x105
- 23a:	0000                	.2byte	0x0
- 23c:	0801                	.2byte	0x801
- 23e:	00010007          	.4byte	0x10007
- 242:	0800                	.2byte	0x800
- 244:	0504                	.2byte	0x504
- 246:	6e69                	.2byte	0x6e69
- 248:	0074                	.2byte	0x74
- 24a:	0401                	.2byte	0x401
- 24c:	00010a07          	.4byte	0x10a07
- 250:	0900                	.2byte	0x900
- 252:	6966                	.2byte	0x6966
- 254:	0072                	.2byte	0x72
- 256:	8a0d1603          	lh	a2,-1888(s10)
- 25a:	0000                	.2byte	0x0
- 25c:	8a00                	.2byte	0x8a00
- 25e:	0000                	.2byte	0x0
- 260:	0a00                	.2byte	0xa00
- 262:	0200                	.2byte	0x200
- 264:	006a                	.2byte	0x6a
- 266:	0000                	.2byte	0x0
- 268:	0001920b          	.4byte	0x1920b
- 26c:	0300                	.2byte	0x300
- 26e:	0622                	.2byte	0x622
- 270:	02ec                	.2byte	0x2ec
- 272:	1000                	.2byte	0x1000
- 274:	04c0                	.2byte	0x4c0
- 276:	0000                	.2byte	0x0
- 278:	9c01                	.2byte	0x9c01
- 27a:	000000bf 03006a0c 	.8byte	0x3006a0c000000bf
- 282:	0624                	.2byte	0x624
- 284:	006a                	.2byte	0x6a
- 286:	0000                	.2byte	0x0
- 288:	740d                	.2byte	0x740d
- 28a:	706d                	.2byte	0x706d
- 28c:	0300                	.2byte	0x300
- 28e:	0782                	.2byte	0x782
- 290:	008a                	.2byte	0x8a
- 292:	0000                	.2byte	0x0
- 294:	9102                	.2byte	0x9102
- 296:	006c                	.2byte	0x6c
- 298:	00019703          	lh	a4,0(gp)
- 29c:	1a00                	.2byte	0x1a00
- 29e:	0298                	.2byte	0x298
- 2a0:	1000                	.2byte	0x1000
- 2a2:	0054                	.2byte	0x54
- 2a4:	0000                	.2byte	0x0
- 2a6:	9c01                	.2byte	0x9c01
- 2a8:	00e0                	.2byte	0xe0
- 2aa:	0000                	.2byte	0x0
- 2ac:	7004                	.2byte	0x7004
- 2ae:	1a00                	.2byte	0x1a00
- 2b0:	e018                	.2byte	0xe018
- 2b2:	0000                	.2byte	0x0
- 2b4:	0200                	.2byte	0x200
- 2b6:	6c91                	.2byte	0x6c91
- 2b8:	0200                	.2byte	0x200
- 2ba:	00ec                	.2byte	0xec
+ 1b0:	5408                	.2byte	0x5408
+ 1b2:	0000                	.2byte	0x0
+ 1b4:	b038                	.2byte	0xb038
+ 1b6:	0000                	.2byte	0x0
+ 1b8:	0900                	.2byte	0x900
+ 1ba:	015f 0000 1101      	.byte	0x5f, 0x01, 0x00, 0x00, 0x01, 0x11
+ 1c0:	3d0e                	.2byte	0x3d0e
+ 1c2:	0000                	.2byte	0x0
+ 1c4:	0200                	.2byte	0x200
+ 1c6:	6c91                	.2byte	0x6c91
+ 1c8:	0000                	.2byte	0x0
+ 1ca:	040a                	.2byte	0x40a
+ 1cc:	003d                	.2byte	0x3d
+ 1ce:	0000                	.2byte	0x0
+ 1d0:	0001570b          	.4byte	0x1570b
+ 1d4:	0100                	.2byte	0x100
+ 1d6:	3309                	.2byte	0x3309
+ 1d8:	0024                	.2byte	0x24
+ 1da:	3800                	.2byte	0x3800
+ 1dc:	001c                	.2byte	0x1c
+ 1de:	0000                	.2byte	0x0
+ 1e0:	9c01                	.2byte	0x9c01
+ 1e2:	2f00                	.2byte	0x2f00
+ 1e4:	0001                	.2byte	0x1
+ 1e6:	0500                	.2byte	0x500
+ 1e8:	0100                	.2byte	0x100
+ 1ea:	6304                	.2byte	0x6304
+ 1ec:	0001                	.2byte	0x1
+ 1ee:	0600                	.2byte	0x600
+ 1f0:	0098                	.2byte	0x98
+ 1f2:	0000                	.2byte	0x0
+ 1f4:	cb1d                	.2byte	0xcb1d
+ 1f6:	0000                	.2byte	0x0
+ 1f8:	0000                	.2byte	0x0
+ 1fa:	0000                	.2byte	0x0
+ 1fc:	f800                	.2byte	0xf800
+ 1fe:	0001                	.2byte	0x1
+ 200:	b410                	.2byte	0xb410
+ 202:	0005                	.2byte	0x5
+ 204:	d000                	.2byte	0xd000
+ 206:	01000003          	lb	zero,16(zero) # 10 <taps+0x10>
+ 20a:	0601                	.2byte	0x601
+ 20c:	0079                	.2byte	0x79
+ 20e:	0000                	.2byte	0x0
+ 210:	0201                	.2byte	0x201
+ 212:	3605                	.2byte	0x3605
+ 214:	0001                	.2byte	0x1
+ 216:	0100                	.2byte	0x100
+ 218:	0504                	.2byte	0x504
+ 21a:	012d                	.2byte	0x12d
+ 21c:	0000                	.2byte	0x0
+ 21e:	0801                	.2byte	0x801
+ 220:	2805                	.2byte	0x2805
+ 222:	0001                	.2byte	0x1
+ 224:	0100                	.2byte	0x100
+ 226:	0801                	.2byte	0x801
+ 228:	00000077          	.4byte	0x77
+ 22c:	0201                	.2byte	0x201
+ 22e:	00008507          	.4byte	0x8507
+ 232:	0700                	.2byte	0x700
+ 234:	0149                	.2byte	0x149
+ 236:	0000                	.2byte	0x0
+ 238:	3404                	.2byte	0x3404
+ 23a:	00005c1b          	.4byte	0x5c1b
+ 23e:	0100                	.2byte	0x100
+ 240:	0704                	.2byte	0x704
+ 242:	0105                	.2byte	0x105
+ 244:	0000                	.2byte	0x0
+ 246:	0801                	.2byte	0x801
+ 248:	00010007          	.4byte	0x10007
+ 24c:	0800                	.2byte	0x800
+ 24e:	0504                	.2byte	0x504
+ 250:	6e69                	.2byte	0x6e69
+ 252:	0074                	.2byte	0x74
+ 254:	0401                	.2byte	0x401
+ 256:	00010a07          	.4byte	0x10a07
+ 25a:	0900                	.2byte	0x900
+ 25c:	6966                	.2byte	0x6966
+ 25e:	0072                	.2byte	0x72
+ 260:	8a0d1603          	lh	a2,-1888(s10)
+ 264:	0000                	.2byte	0x0
+ 266:	8a00                	.2byte	0x8a00
+ 268:	0000                	.2byte	0x0
+ 26a:	0a00                	.2byte	0xa00
+ 26c:	0200                	.2byte	0x200
+ 26e:	006a                	.2byte	0x6a
+ 270:	0000                	.2byte	0x0
+ 272:	0001920b          	.4byte	0x1920b
+ 276:	0300                	.2byte	0x300
+ 278:	0622                	.2byte	0x622
+ 27a:	02ec                	.2byte	0x2ec
+ 27c:	1000                	.2byte	0x1000
+ 27e:	04c0                	.2byte	0x4c0
+ 280:	0000                	.2byte	0x0
+ 282:	9c01                	.2byte	0x9c01
+ 284:	000000bf 03006a0c 	.8byte	0x3006a0c000000bf
+ 28c:	0624                	.2byte	0x624
+ 28e:	006a                	.2byte	0x6a
+ 290:	0000                	.2byte	0x0
+ 292:	740d                	.2byte	0x740d
+ 294:	706d                	.2byte	0x706d
+ 296:	0300                	.2byte	0x300
+ 298:	0782                	.2byte	0x782
+ 29a:	008a                	.2byte	0x8a
+ 29c:	0000                	.2byte	0x0
+ 29e:	9102                	.2byte	0x9102
+ 2a0:	006c                	.2byte	0x6c
+ 2a2:	00019703          	lh	a4,0(gp)
+ 2a6:	1a00                	.2byte	0x1a00
+ 2a8:	0298                	.2byte	0x298
+ 2aa:	1000                	.2byte	0x1000
+ 2ac:	0054                	.2byte	0x54
+ 2ae:	0000                	.2byte	0x0
+ 2b0:	9c01                	.2byte	0x9c01
+ 2b2:	00e0                	.2byte	0xe0
+ 2b4:	0000                	.2byte	0x0
+ 2b6:	7004                	.2byte	0x7004
+ 2b8:	1a00                	.2byte	0x1a00
+ 2ba:	e018                	.2byte	0xe018
  2bc:	0000                	.2byte	0x0
- 2be:	0101                	.2byte	0x101
- 2c0:	8008                	.2byte	0x8008
- 2c2:	0000                	.2byte	0x0
- 2c4:	0e00                	.2byte	0xe00
- 2c6:	00e5                	.2byte	0xe5
- 2c8:	0000                	.2byte	0x0
- 2ca:	00018a03          	lb	s4,0(gp)
- 2ce:	1200                	.2byte	0x1200
- 2d0:	0230                	.2byte	0x230
- 2d2:	1000                	.2byte	0x1000
- 2d4:	0068                	.2byte	0x68
- 2d6:	0000                	.2byte	0x0
- 2d8:	9c01                	.2byte	0x9c01
- 2da:	0112                	.2byte	0x112
- 2dc:	0000                	.2byte	0x0
- 2de:	6304                	.2byte	0x6304
- 2e0:	1200                	.2byte	0x1200
- 2e2:	0000e513          	ori	a0,ra,0
- 2e6:	0200                	.2byte	0x200
- 2e8:	6f91                	.2byte	0x6f91
- 2ea:	0500                	.2byte	0x500
- 2ec:	0066                	.2byte	0x66
- 2ee:	0000                	.2byte	0x0
- 2f0:	141c                	.2byte	0x141c
- 2f2:	0002                	.2byte	0x2
- 2f4:	1c10                	.2byte	0x1c10
- 2f6:	0000                	.2byte	0x0
- 2f8:	0100                	.2byte	0x100
- 2fa:	059c                	.2byte	0x59c
- 2fc:	00000117          	auipc	sp,0x0
- 300:	f80e                	.2byte	0xf80e
- 302:	0001                	.2byte	0x1
- 304:	1c10                	.2byte	0x1c10
- 306:	0000                	.2byte	0x0
- 308:	0100                	.2byte	0x100
- 30a:	009c                	.2byte	0x9c
- 30c:	0000002b          	.4byte	0x2b
- 310:	0005                	.2byte	0x5
- 312:	0401                	.2byte	0x401
- 314:	0000023f 00099701 	.8byte	0x997010000023f
- 31c:	0000                	.2byte	0x0
- 31e:	0000                	.2byte	0x0
- 320:	2438                	.2byte	0x2438
- 322:	019d                	.2byte	0x19d
- 324:	0000                	.2byte	0x0
- 326:	01de                	.2byte	0x1de
+ 2be:	0200                	.2byte	0x200
+ 2c0:	6c91                	.2byte	0x6c91
+ 2c2:	0200                	.2byte	0x200
+ 2c4:	00ec                	.2byte	0xec
+ 2c6:	0000                	.2byte	0x0
+ 2c8:	0101                	.2byte	0x101
+ 2ca:	8008                	.2byte	0x8008
+ 2cc:	0000                	.2byte	0x0
+ 2ce:	0e00                	.2byte	0xe00
+ 2d0:	00e5                	.2byte	0xe5
+ 2d2:	0000                	.2byte	0x0
+ 2d4:	00018a03          	lb	s4,0(gp)
+ 2d8:	1200                	.2byte	0x1200
+ 2da:	0230                	.2byte	0x230
+ 2dc:	1000                	.2byte	0x1000
+ 2de:	0068                	.2byte	0x68
+ 2e0:	0000                	.2byte	0x0
+ 2e2:	9c01                	.2byte	0x9c01
+ 2e4:	0112                	.2byte	0x112
+ 2e6:	0000                	.2byte	0x0
+ 2e8:	6304                	.2byte	0x6304
+ 2ea:	1200                	.2byte	0x1200
+ 2ec:	0000e513          	ori	a0,ra,0
+ 2f0:	0200                	.2byte	0x200
+ 2f2:	6f91                	.2byte	0x6f91
+ 2f4:	0500                	.2byte	0x500
+ 2f6:	0066                	.2byte	0x66
+ 2f8:	0000                	.2byte	0x0
+ 2fa:	141c                	.2byte	0x141c
+ 2fc:	0002                	.2byte	0x2
+ 2fe:	1c10                	.2byte	0x1c10
+ 300:	0000                	.2byte	0x0
+ 302:	0100                	.2byte	0x100
+ 304:	059c                	.2byte	0x59c
+ 306:	00000117          	auipc	sp,0x0
+ 30a:	f80e                	.2byte	0xf80e
+ 30c:	0001                	.2byte	0x1
+ 30e:	1c10                	.2byte	0x1c10
+ 310:	0000                	.2byte	0x0
+ 312:	0100                	.2byte	0x100
+ 314:	009c                	.2byte	0x9c
+ 316:	0000002b          	.4byte	0x2b
+ 31a:	0005                	.2byte	0x5
+ 31c:	0401                	.2byte	0x401
+ 31e:	0248                	.2byte	0x248
+ 320:	0000                	.2byte	0x0
+ 322:	9701                	.2byte	0x9701
+ 324:	0009                	.2byte	0x9
+ 326:	0000                	.2byte	0x0
  328:	0000                	.2byte	0x0
- 32a:	005a                	.2byte	0x5a
- 32c:	0000                	.2byte	0x0
- 32e:	8001                	.2byte	0x8001
- 330:	3102                	.2byte	0x3102
- 332:	0002                	.2byte	0x2
- 334:	0000                	.2byte	0x0
+ 32a:	2438                	.2byte	0x2438
+ 32c:	019d                	.2byte	0x19d
+ 32e:	0000                	.2byte	0x0
+ 330:	01de                	.2byte	0x1de
+ 332:	0000                	.2byte	0x0
+ 334:	005a                	.2byte	0x5a
  336:	0000                	.2byte	0x0
- 338:	2438                	.2byte	0x2438
+ 338:	8001                	.2byte	0x8001
+ 33a:	3102                	.2byte	0x3102
+ 33c:	0002                	.2byte	0x2
+ 33e:	0000                	.2byte	0x0
+ 340:	0000                	.2byte	0x0
+ 342:	2438                	.2byte	0x2438
 	...
 
 Disassembly of section .debug_abbrev:
@@ -2432,126 +2438,129 @@ Disassembly of section .debug_abbrev:
  122:	197c                	.2byte	0x197c
  124:	1301                	.2byte	0x1301
  126:	0000                	.2byte	0x0
- 128:	3408                	.2byte	0x3408
- 12a:	0300                	.2byte	0x300
- 12c:	3a0e                	.2byte	0x3a0e
- 12e:	390b3b0b          	.4byte	0x390b3b0b
- 132:	0213490b          	.4byte	0x213490b
- 136:	0018                	.2byte	0x18
- 138:	0900                	.2byte	0x900
- 13a:	0b0b000f          	.4byte	0xb0b000f
- 13e:	1349                	.2byte	0x1349
+ 128:	0b08                	.2byte	0xb08
+ 12a:	1101                	.2byte	0x1101
+ 12c:	1201                	.2byte	0x1201
+ 12e:	0006                	.2byte	0x6
+ 130:	0900                	.2byte	0x900
+ 132:	0034                	.2byte	0x34
+ 134:	0b3a0e03          	lb	t3,179(s4)
+ 138:	0b390b3b          	.4byte	0xb390b3b
+ 13c:	1349                	.2byte	0x1349
+ 13e:	1802                	.2byte	0x1802
  140:	0000                	.2byte	0x0
- 142:	2e0a                	.2byte	0x2e0a
- 144:	3f00                	.2byte	0x3f00
- 146:	0319                	.2byte	0x319
- 148:	3a0e                	.2byte	0x3a0e
- 14a:	390b3b0b          	.4byte	0x390b3b0b
- 14e:	1201110b          	.4byte	0x1201110b
- 152:	4006                	.2byte	0x4006
- 154:	7a18                	.2byte	0x7a18
- 156:	0019                	.2byte	0x19
- 158:	0000                	.2byte	0x0
- 15a:	2401                	.2byte	0x2401
- 15c:	0b00                	.2byte	0xb00
- 15e:	030b3e0b          	.4byte	0x30b3e0b
- 162:	000e                	.2byte	0xe
- 164:	0200                	.2byte	0x200
- 166:	210b000f          	.4byte	0x210b000f
- 16a:	4904                	.2byte	0x4904
- 16c:	03000013          	li	zero,48
- 170:	012e                	.2byte	0x12e
- 172:	0e03193f 3b02213a 	.8byte	0x3b02213a0e03193f
- 17a:	0621390b          	.4byte	0x621390b
- 17e:	01111927          	.4byte	0x1111927
- 182:	0612                	.2byte	0x612
- 184:	1840                	.2byte	0x1840
- 186:	197c                	.2byte	0x197c
- 188:	1301                	.2byte	0x1301
- 18a:	0000                	.2byte	0x0
- 18c:	0504                	.2byte	0x504
- 18e:	0300                	.2byte	0x300
- 190:	3a08                	.2byte	0x3a08
- 192:	0221                	.2byte	0x221
- 194:	0b390b3b          	.4byte	0xb390b3b
- 198:	1349                	.2byte	0x1349
- 19a:	1802                	.2byte	0x1802
- 19c:	0000                	.2byte	0x0
- 19e:	2e05                	.2byte	0x2e05
- 1a0:	0300                	.2byte	0x300
- 1a2:	3a0e                	.2byte	0x3a0e
- 1a4:	0121                	.2byte	0x121
- 1a6:	21390b3b          	.4byte	0x21390b3b
- 1aa:	2725                	.2byte	0x2725
- 1ac:	1119                	.2byte	0x1119
- 1ae:	1201                	.2byte	0x1201
- 1b0:	4006                	.2byte	0x4006
- 1b2:	7a18                	.2byte	0x7a18
- 1b4:	0019                	.2byte	0x19
- 1b6:	0600                	.2byte	0x600
- 1b8:	0111                	.2byte	0x111
- 1ba:	0e25                	.2byte	0xe25
- 1bc:	1f030b13          	addi	s6,t1,496
- 1c0:	01111f1b          	.4byte	0x1111f1b
- 1c4:	0612                	.2byte	0x612
- 1c6:	1710                	.2byte	0x1710
- 1c8:	0000                	.2byte	0x0
- 1ca:	03001607          	.4byte	0x3001607
- 1ce:	3a0e                	.2byte	0x3a0e
- 1d0:	390b3b0b          	.4byte	0x390b3b0b
- 1d4:	0013490b          	.4byte	0x13490b
- 1d8:	0800                	.2byte	0x800
- 1da:	0024                	.2byte	0x24
- 1dc:	0b3e0b0b          	.4byte	0xb3e0b0b
- 1e0:	00000803          	lb	a6,0(zero) # 0 <taps>
- 1e4:	2e09                	.2byte	0x2e09
- 1e6:	3f01                	.2byte	0x3f01
- 1e8:	0319                	.2byte	0x319
- 1ea:	3a08                	.2byte	0x3a08
- 1ec:	390b3b0b          	.4byte	0x390b3b0b
- 1f0:	3c13490b          	.4byte	0x3c13490b
- 1f4:	0119                	.2byte	0x119
- 1f6:	0a000013          	li	zero,160
- 1fa:	0018                	.2byte	0x18
- 1fc:	0000                	.2byte	0x0
- 1fe:	3f012e0b          	.4byte	0x3f012e0b
- 202:	0319                	.2byte	0x319
- 204:	3a0e                	.2byte	0x3a0e
- 206:	390b3b0b          	.4byte	0x390b3b0b
- 20a:	1201110b          	.4byte	0x1201110b
- 20e:	4006                	.2byte	0x4006
- 210:	7c18                	.2byte	0x7c18
- 212:	0119                	.2byte	0x119
- 214:	0c000013          	li	zero,192
- 218:	0034                	.2byte	0x34
- 21a:	0b3a0803          	lb	a6,179(s4)
- 21e:	0b390b3b          	.4byte	0xb390b3b
- 222:	1349                	.2byte	0x1349
- 224:	0000                	.2byte	0x0
- 226:	340d                	.2byte	0x340d
- 228:	0300                	.2byte	0x300
- 22a:	3a08                	.2byte	0x3a08
- 22c:	390b3b0b          	.4byte	0x390b3b0b
- 230:	0213490b          	.4byte	0x213490b
- 234:	0018                	.2byte	0x18
- 236:	0e00                	.2byte	0xe00
- 238:	0026                	.2byte	0x26
+ 142:	0f0a                	.2byte	0xf0a
+ 144:	0b00                	.2byte	0xb00
+ 146:	0013490b          	.4byte	0x13490b
+ 14a:	0b00                	.2byte	0xb00
+ 14c:	002e                	.2byte	0x2e
+ 14e:	0e03193f 0b3b0b3a 	.8byte	0xb3b0b3a0e03193f
+ 156:	0b39                	.2byte	0xb39
+ 158:	0111                	.2byte	0x111
+ 15a:	0612                	.2byte	0x612
+ 15c:	1840                	.2byte	0x1840
+ 15e:	197a                	.2byte	0x197a
+ 160:	0000                	.2byte	0x0
+ 162:	0100                	.2byte	0x100
+ 164:	0024                	.2byte	0x24
+ 166:	0b3e0b0b          	.4byte	0xb3e0b0b
+ 16a:	00000e03          	lb	t3,0(zero) # 0 <taps>
+ 16e:	0f02                	.2byte	0xf02
+ 170:	0b00                	.2byte	0xb00
+ 172:	0421                	.2byte	0x421
+ 174:	1349                	.2byte	0x1349
+ 176:	0000                	.2byte	0x0
+ 178:	3f012e03          	lw	t3,1008(sp) # 120113f4 <_esram_rom+0x2010bec>
+ 17c:	0319                	.2byte	0x319
+ 17e:	3a0e                	.2byte	0x3a0e
+ 180:	0221                	.2byte	0x221
+ 182:	21390b3b          	.4byte	0x21390b3b
+ 186:	2706                	.2byte	0x2706
+ 188:	1119                	.2byte	0x1119
+ 18a:	1201                	.2byte	0x1201
+ 18c:	4006                	.2byte	0x4006
+ 18e:	7c18                	.2byte	0x7c18
+ 190:	0119                	.2byte	0x119
+ 192:	04000013          	li	zero,64
+ 196:	0005                	.2byte	0x5
+ 198:	213a0803          	lb	a6,531(s4)
+ 19c:	3b02                	.2byte	0x3b02
+ 19e:	490b390b          	.4byte	0x490b390b
+ 1a2:	00180213          	addi	tp,a6,1
+ 1a6:	0500                	.2byte	0x500
+ 1a8:	002e                	.2byte	0x2e
+ 1aa:	213a0e03          	lb	t3,531(s4)
+ 1ae:	3b01                	.2byte	0x3b01
+ 1b0:	2521390b          	.4byte	0x2521390b
+ 1b4:	01111927          	.4byte	0x1111927
+ 1b8:	0612                	.2byte	0x612
+ 1ba:	1840                	.2byte	0x1840
+ 1bc:	197a                	.2byte	0x197a
+ 1be:	0000                	.2byte	0x0
+ 1c0:	1106                	.2byte	0x1106
+ 1c2:	2501                	.2byte	0x2501
+ 1c4:	130e                	.2byte	0x130e
+ 1c6:	1b1f030b          	.4byte	0x1b1f030b
+ 1ca:	111f 1201 1006      	.byte	0x1f, 0x11, 0x01, 0x12, 0x06, 0x10
+ 1d0:	07000017          	auipc	zero,0x7000
+ 1d4:	0016                	.2byte	0x16
+ 1d6:	0b3a0e03          	lb	t3,179(s4)
+ 1da:	0b390b3b          	.4byte	0xb390b3b
+ 1de:	1349                	.2byte	0x1349
+ 1e0:	0000                	.2byte	0x0
+ 1e2:	2408                	.2byte	0x2408
+ 1e4:	0b00                	.2byte	0xb00
+ 1e6:	030b3e0b          	.4byte	0x30b3e0b
+ 1ea:	0008                	.2byte	0x8
+ 1ec:	0900                	.2byte	0x900
+ 1ee:	012e                	.2byte	0x12e
+ 1f0:	0803193f 0b3b0b3a 	.8byte	0xb3b0b3a0803193f
+ 1f8:	0b39                	.2byte	0xb39
+ 1fa:	1349                	.2byte	0x1349
+ 1fc:	193c                	.2byte	0x193c
+ 1fe:	1301                	.2byte	0x1301
+ 200:	0000                	.2byte	0x0
+ 202:	180a                	.2byte	0x180a
+ 204:	0000                	.2byte	0x0
+ 206:	0b00                	.2byte	0xb00
+ 208:	012e                	.2byte	0x12e
+ 20a:	0e03193f 0b3b0b3a 	.8byte	0xb3b0b3a0e03193f
+ 212:	0b39                	.2byte	0xb39
+ 214:	0111                	.2byte	0x111
+ 216:	0612                	.2byte	0x612
+ 218:	1840                	.2byte	0x1840
+ 21a:	197c                	.2byte	0x197c
+ 21c:	1301                	.2byte	0x1301
+ 21e:	0000                	.2byte	0x0
+ 220:	340c                	.2byte	0x340c
+ 222:	0300                	.2byte	0x300
+ 224:	3a08                	.2byte	0x3a08
+ 226:	390b3b0b          	.4byte	0x390b3b0b
+ 22a:	0013490b          	.4byte	0x13490b
+ 22e:	0d00                	.2byte	0xd00
+ 230:	0034                	.2byte	0x34
+ 232:	0b3a0803          	lb	a6,179(s4)
+ 236:	0b390b3b          	.4byte	0xb390b3b
  23a:	1349                	.2byte	0x1349
- 23c:	0000                	.2byte	0x0
- 23e:	0100                	.2byte	0x100
- 240:	0111                	.2byte	0x111
- 242:	1710                	.2byte	0x1710
- 244:	0111                	.2byte	0x111
- 246:	0f12                	.2byte	0xf12
- 248:	0e1b0e03          	lb	t3,225(s6)
- 24c:	0e25                	.2byte	0xe25
- 24e:	00000513          	li	a0,0
- 252:	2e02                	.2byte	0x2e02
- 254:	0300                	.2byte	0x300
- 256:	3f0e                	.2byte	0x3f0e
- 258:	1119                	.2byte	0x1119
- 25a:	1201                	.2byte	0x1201
- 25c:	0000000f          	fence	unknown,unknown
+ 23c:	1802                	.2byte	0x1802
+ 23e:	0000                	.2byte	0x0
+ 240:	260e                	.2byte	0x260e
+ 242:	4900                	.2byte	0x4900
+ 244:	00000013          	nop
+ 248:	1101                	.2byte	0x1101
+ 24a:	1001                	.2byte	0x1001
+ 24c:	12011117          	auipc	sp,0x12011
+ 250:	1b0e030f          	.4byte	0x1b0e030f
+ 254:	250e                	.2byte	0x250e
+ 256:	130e                	.2byte	0x130e
+ 258:	0005                	.2byte	0x5
+ 25a:	0200                	.2byte	0x200
+ 25c:	002e                	.2byte	0x2e
+ 25e:	193f0e03          	lb	t3,403(t5)
+ 262:	0111                	.2byte	0x111
+ 264:	0f12                	.2byte	0xf12
+ 266:	0000                	.2byte	0x0
+	...
 
 Disassembly of section .debug_aranges:
 
@@ -2602,8 +2611,7 @@ Disassembly of section .debug_aranges:
   68:	001c                	.2byte	0x1c
   6a:	0000                	.2byte	0x0
   6c:	0002                	.2byte	0x2
-  6e:	01d9                	.2byte	0x1d9
-  70:	0000                	.2byte	0x0
+  6e:	000001e3          	beqz	zero,870 <_fstack+0x270>
   72:	0004                	.2byte	0x4
   74:	0000                	.2byte	0x0
   76:	0000                	.2byte	0x0
@@ -2615,7 +2623,7 @@ Disassembly of section .debug_aranges:
   88:	001c                	.2byte	0x1c
   8a:	0000                	.2byte	0x0
   8c:	0002                	.2byte	0x2
-  8e:	030c                	.2byte	0x30c
+  8e:	0316                	.2byte	0x316
   90:	0000                	.2byte	0x0
   92:	0004                	.2byte	0x4
   94:	0000                	.2byte	0x0
@@ -2855,7 +2863,7 @@ Disassembly of section .debug_frame:
    2:	0000                	.2byte	0x0
    4:	ffff                	.2byte	0xffff
    6:	ffff                	.2byte	0xffff
-   8:	7c010003          	lb	zero,1984(sp) # 120117c4 <_esram_rom+0x2010fbc>
+   8:	7c010003          	lb	zero,1984(sp) # 12011a0c <_esram_rom+0x2011204>
    c:	0d01                	.2byte	0xd01
    e:	0002                	.2byte	0x2
   10:	0020                	.2byte	0x20

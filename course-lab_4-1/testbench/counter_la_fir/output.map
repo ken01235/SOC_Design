@@ -158,19 +158,19 @@ OUTPUT(counter_la_fir.elf elf32-littleriscv)
  .debug_line_str
                 0x00000000000000e3       0x94 /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
 
-.debug_info     0x0000000000000000      0x33b
+.debug_info     0x0000000000000000      0x345
  .debug_info    0x0000000000000000       0x25 counter_la_fir.elf-crt0_vex.o
  .debug_info    0x0000000000000025       0xed counter_la_fir.elf-isr.o
- .debug_info    0x0000000000000112       0xc7 counter_la_fir.elf-fir.o
- .debug_info    0x00000000000001d9      0x133 counter_la_fir.elf-counter_la_fir.o
- .debug_info    0x000000000000030c       0x2f /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
+ .debug_info    0x0000000000000112       0xd1 counter_la_fir.elf-fir.o
+ .debug_info    0x00000000000001e3      0x133 counter_la_fir.elf-counter_la_fir.o
+ .debug_info    0x0000000000000316       0x2f /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
 
-.debug_abbrev   0x0000000000000000      0x260
+.debug_abbrev   0x0000000000000000      0x269
  .debug_abbrev  0x0000000000000000       0x14 counter_la_fir.elf-crt0_vex.o
  .debug_abbrev  0x0000000000000014       0xa9 counter_la_fir.elf-isr.o
- .debug_abbrev  0x00000000000000bd       0x9d counter_la_fir.elf-fir.o
- .debug_abbrev  0x000000000000015a       0xe5 counter_la_fir.elf-counter_la_fir.o
- .debug_abbrev  0x000000000000023f       0x21 /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
+ .debug_abbrev  0x00000000000000bd       0xa6 counter_la_fir.elf-fir.o
+ .debug_abbrev  0x0000000000000163       0xe5 counter_la_fir.elf-counter_la_fir.o
+ .debug_abbrev  0x0000000000000248       0x21 /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
 
 .debug_aranges  0x0000000000000000       0xa8
  .debug_aranges
