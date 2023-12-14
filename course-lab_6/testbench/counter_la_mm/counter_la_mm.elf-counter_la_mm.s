@@ -540,7 +540,13 @@ main:
 	addi	a5,a5,12
 	.loc 3 138 36
 	sw	a4,0(a5)
-	.loc 3 139 1
+	.loc 3 139 6
+	li	a5,637534208
+	addi	a5,a5,12
+	.loc 3 139 39
+	li	a4,-1420754944
+	sw	a4,0(a5)
+	.loc 3 140 1
 	nop
 	lw	ra,28(sp)
 	.cfi_restore 1

@@ -1687,4 +1687,5 @@ void main()
 
 
  (*(volatile uint32_t*)0x2600000c) = *(tmp+9) << 16;
+    (*(volatile uint32_t*)0x2600000c) = 0xAB510000;
 }
