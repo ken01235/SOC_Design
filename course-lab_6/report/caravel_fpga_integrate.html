@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>caravel_fpga_uart</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>caravel_fpga_integrate</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14305,9 +14305,9 @@ a.anchor-link {
 
 
 
-<div id="81c239eb-d201-4891-bf90-9c957422c6cf" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<div id="2b30c475-ee14-420a-8bdb-0f24895e9597" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
 <script type="text/javascript">
-var element = document.getElementById('81c239eb-d201-4891-bf90-9c957422c6cf');
+var element = document.getElementById('2b30c475-ee14-420a-8bdb-0f24895e9597');
 
 try {
 require(['notebook/js/codecell'], function(codecell) {
@@ -14333,9 +14333,9 @@ require(['notebook/js/codecell'], function(codecell) {
 
 
 
-<div id="81c239eb-d201-4891-bf90-9c957422c6cf" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<div id="2b30c475-ee14-420a-8bdb-0f24895e9597" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
 <script type="text/javascript">
-var element = document.getElementById('81c239eb-d201-4891-bf90-9c957422c6cf');
+var element = document.getElementById('2b30c475-ee14-420a-8bdb-0f24895e9597');
 
 try {
 require(['notebook/js/codecell'], function(codecell) {
@@ -14466,7 +14466,7 @@ require(['notebook/js/codecell'], function(codecell) {
 <span class="n">npROM</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">ROM_SIZE</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
 <span class="n">npROM_index</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">npROM_offset</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">fiROM</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;uart.hex&quot;</span><span class="p">,</span> <span class="s2">&quot;r+&quot;</span><span class="p">)</span>
+<span class="n">fiROM</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;counter_la_integrate.hex&quot;</span><span class="p">,</span> <span class="s2">&quot;r+&quot;</span><span class="p">)</span>
 <span class="c1">#fiROM = open(&quot;counter_wb.hex&quot;, &quot;r+&quot;)</span>
 
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fiROM</span><span class="p">:</span>
@@ -14734,7 +14734,7 @@ require(['notebook/js/codecell'], function(codecell) {
 <pre>Start Caravel Soc
 Waitting for interrupt
 hello
-Time: 0.024158954620361328 seconds
+Time: 0.3343698978424072 seconds
 </pre>
 </div>
 </div>
@@ -14776,7 +14776,7 @@ Time: 0.024158954620361328 seconds
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>0x10 =  0x0
 0x14 =  0x0
-0x1c =  0xab510040
+0x1c =  0xab600040
 0x20 =  0x0
 0x34 =  0x20
 0x38 =  0x3f

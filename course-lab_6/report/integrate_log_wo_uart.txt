@@ -1,0 +1,54 @@
+Reading counter_la_integrate.hex
+counter_la_integrate.hex loaded into memory
+Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
+VCD info: dumpfile counter_la_integrate.vcd opened for output.
+LA Test 1 started
+-----------Uart Enable-----------------
+
+-----------Test function fir() Start-----------------
+Start FIR Time: 9364088000
+Call function fir() in User Project BRAM (mprjram, 0x38000000) return value passed,   539
+Call function fir() in User Project BRAM (mprjram, 0x38000000) return value passed,   732
+Call function fir() in User Project BRAM (mprjram, 0x38000000) return value passed,   915
+Call function fir() in User Project BRAM (mprjram, 0x38000000) return value passed,  1098
+End FIR Time: 9643713000
+-----------Test function fir() Pass-----------------
+
+-----------Test function matmul() Start-----------------
+Start Matmul Time: 9643988000
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x003e
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x0044
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x004a
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x0050
+End Matmul Time: 10062238000
+-----------Test function matmul() Pass-----------------
+
+-----------Test function qsort() Start-----------------
+Start QSort Time: 10062513000
+Call function qsort() in User Project BRAM (mprjram, 0x38000000) return value passed,  4622
+Call function qsort() in User Project BRAM (mprjram, 0x38000000) return value passed,  5681
+Call function qsort() in User Project BRAM (mprjram, 0x38000000) return value passed,  6023
+Call function qsort() in User Project BRAM (mprjram, 0x38000000) return value passed,  9073
+End QSort Time: 10313763000
+-----------Test function qsort() Pass-----------------
+
+-----------Test function matmul() 2nd Start-----------------
+Start Matmul 2nd Time: 10340713000
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x003e
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x0044
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x004a
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x0050
+End Matmul 2nd Time: 10732413000
+-----------Test function matmul() 2nd Pass-----------------
+
+-----------Test function matmul() 3rd Start-----------------
+Start Matmul 3rd Time: 10759238000
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x003e
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x0044
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x004a
+Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x0050
+End Matmul 3rd Time: 11151213000
+-----------Test function matmul() 3rd Pass-----------------
+[1;31m
+Monitor: Timeout, Test LA (RTL) Failed
+[0m
