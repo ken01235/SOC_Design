@@ -159,6 +159,5 @@ void main()
 	// enable user_irq_0_ev_enable
 	user_irq_0_ev_enable_write(1);	
 #endif
-    reg_mprj_datal = 0xAB510000;
 }
 

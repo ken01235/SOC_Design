@@ -64,7 +64,7 @@ Disassembly of section .text:
 100000c8:	28000597          	auipc	a1,0x28000
 100000cc:	f3858593          	addi	a1,a1,-200 # 38000000 <_esram>
 100000d0:	00001617          	auipc	a2,0x1
-100000d4:	8b060613          	addi	a2,a2,-1872 # 10000980 <_esram_rom>
+100000d4:	8a060613          	addi	a2,a2,-1888 # 10000970 <_esram_rom>
 
 100000d8 <sram_loop>:
 100000d8:	00b50c63          	beq	a0,a1,100000f0 <data_init>
@@ -78,7 +78,7 @@ Disassembly of section .text:
 100000f0:	00000513          	li	a0,0
 100000f4:	00800593          	li	a1,8
 100000f8:	00001617          	auipc	a2,0x1
-100000fc:	88060613          	addi	a2,a2,-1920 # 10000978 <_erodata>
+100000fc:	87060613          	addi	a2,a2,-1936 # 10000968 <_erodata>
 
 10000100 <data_loop>:
 10000100:	00b50c63          	beq	a0,a1,10000118 <bss_init>
@@ -197,10 +197,10 @@ Disassembly of section .text:
 1000026c:	02078063          	beqz	a5,1000028c <isr+0x54>
 10000270:	00100513          	li	a0,1
 10000274:	f3dff0ef          	jal	ra,100001b0 <user_irq_0_ev_pending_write>
-10000278:	68c000ef          	jal	ra,10000904 <uart_read>
+10000278:	67c000ef          	jal	ra,100008f4 <uart_read>
 1000027c:	fea42423          	sw	a0,-24(s0)
 10000280:	fe842503          	lw	a0,-24(s0)
-10000284:	508000ef          	jal	ra,1000078c <uart_write>
+10000284:	4f8000ef          	jal	ra,1000077c <uart_write>
 10000288:	00000013          	nop
 1000028c:	00000013          	nop
 10000290:	01c12083          	lw	ra,28(sp)
@@ -309,170 +309,170 @@ Disassembly of section .text:
 100003e4:	00100713          	li	a4,1
 100003e8:	00e7a023          	sw	a4,0(a5)
 100003ec:	260007b7          	lui	a5,0x26000
-100003f0:	0a078793          	addi	a5,a5,160 # 260000a0 <_esram_rom+0x15fff720>
+100003f0:	0a078793          	addi	a5,a5,160 # 260000a0 <_esram_rom+0x15fff730>
 100003f4:	00002737          	lui	a4,0x2
 100003f8:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 100003fc:	00e7a023          	sw	a4,0(a5)
 10000400:	260007b7          	lui	a5,0x26000
-10000404:	09c78793          	addi	a5,a5,156 # 2600009c <_esram_rom+0x15fff71c>
+10000404:	09c78793          	addi	a5,a5,156 # 2600009c <_esram_rom+0x15fff72c>
 10000408:	00002737          	lui	a4,0x2
 1000040c:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 10000410:	00e7a023          	sw	a4,0(a5)
 10000414:	260007b7          	lui	a5,0x26000
-10000418:	09878793          	addi	a5,a5,152 # 26000098 <_esram_rom+0x15fff718>
+10000418:	09878793          	addi	a5,a5,152 # 26000098 <_esram_rom+0x15fff728>
 1000041c:	00002737          	lui	a4,0x2
 10000420:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 10000424:	00e7a023          	sw	a4,0(a5)
 10000428:	260007b7          	lui	a5,0x26000
-1000042c:	09478793          	addi	a5,a5,148 # 26000094 <_esram_rom+0x15fff714>
+1000042c:	09478793          	addi	a5,a5,148 # 26000094 <_esram_rom+0x15fff724>
 10000430:	00002737          	lui	a4,0x2
 10000434:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 10000438:	00e7a023          	sw	a4,0(a5)
 1000043c:	260007b7          	lui	a5,0x26000
-10000440:	09078793          	addi	a5,a5,144 # 26000090 <_esram_rom+0x15fff710>
+10000440:	09078793          	addi	a5,a5,144 # 26000090 <_esram_rom+0x15fff720>
 10000444:	00002737          	lui	a4,0x2
 10000448:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 1000044c:	00e7a023          	sw	a4,0(a5)
 10000450:	260007b7          	lui	a5,0x26000
-10000454:	08c78793          	addi	a5,a5,140 # 2600008c <_esram_rom+0x15fff70c>
+10000454:	08c78793          	addi	a5,a5,140 # 2600008c <_esram_rom+0x15fff71c>
 10000458:	00002737          	lui	a4,0x2
 1000045c:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 10000460:	00e7a023          	sw	a4,0(a5)
 10000464:	260007b7          	lui	a5,0x26000
-10000468:	08878793          	addi	a5,a5,136 # 26000088 <_esram_rom+0x15fff708>
+10000468:	08878793          	addi	a5,a5,136 # 26000088 <_esram_rom+0x15fff718>
 1000046c:	00002737          	lui	a4,0x2
 10000470:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 10000474:	00e7a023          	sw	a4,0(a5)
 10000478:	260007b7          	lui	a5,0x26000
-1000047c:	08478793          	addi	a5,a5,132 # 26000084 <_esram_rom+0x15fff704>
+1000047c:	08478793          	addi	a5,a5,132 # 26000084 <_esram_rom+0x15fff714>
 10000480:	00002737          	lui	a4,0x2
 10000484:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 10000488:	00e7a023          	sw	a4,0(a5)
 1000048c:	260007b7          	lui	a5,0x26000
-10000490:	08078793          	addi	a5,a5,128 # 26000080 <_esram_rom+0x15fff700>
+10000490:	08078793          	addi	a5,a5,128 # 26000080 <_esram_rom+0x15fff710>
 10000494:	00002737          	lui	a4,0x2
 10000498:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 1000049c:	00e7a023          	sw	a4,0(a5)
 100004a0:	260007b7          	lui	a5,0x26000
-100004a4:	07c78793          	addi	a5,a5,124 # 2600007c <_esram_rom+0x15fff6fc>
+100004a4:	07c78793          	addi	a5,a5,124 # 2600007c <_esram_rom+0x15fff70c>
 100004a8:	00002737          	lui	a4,0x2
 100004ac:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 100004b0:	00e7a023          	sw	a4,0(a5)
 100004b4:	260007b7          	lui	a5,0x26000
-100004b8:	07878793          	addi	a5,a5,120 # 26000078 <_esram_rom+0x15fff6f8>
+100004b8:	07878793          	addi	a5,a5,120 # 26000078 <_esram_rom+0x15fff708>
 100004bc:	00002737          	lui	a4,0x2
 100004c0:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 100004c4:	00e7a023          	sw	a4,0(a5)
 100004c8:	260007b7          	lui	a5,0x26000
-100004cc:	07478793          	addi	a5,a5,116 # 26000074 <_esram_rom+0x15fff6f4>
+100004cc:	07478793          	addi	a5,a5,116 # 26000074 <_esram_rom+0x15fff704>
 100004d0:	00002737          	lui	a4,0x2
 100004d4:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 100004d8:	00e7a023          	sw	a4,0(a5)
 100004dc:	260007b7          	lui	a5,0x26000
-100004e0:	07078793          	addi	a5,a5,112 # 26000070 <_esram_rom+0x15fff6f0>
+100004e0:	07078793          	addi	a5,a5,112 # 26000070 <_esram_rom+0x15fff700>
 100004e4:	00002737          	lui	a4,0x2
 100004e8:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 100004ec:	00e7a023          	sw	a4,0(a5)
 100004f0:	260007b7          	lui	a5,0x26000
-100004f4:	06c78793          	addi	a5,a5,108 # 2600006c <_esram_rom+0x15fff6ec>
+100004f4:	06c78793          	addi	a5,a5,108 # 2600006c <_esram_rom+0x15fff6fc>
 100004f8:	00002737          	lui	a4,0x2
 100004fc:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 10000500:	00e7a023          	sw	a4,0(a5)
 10000504:	260007b7          	lui	a5,0x26000
-10000508:	06878793          	addi	a5,a5,104 # 26000068 <_esram_rom+0x15fff6e8>
+10000508:	06878793          	addi	a5,a5,104 # 26000068 <_esram_rom+0x15fff6f8>
 1000050c:	00002737          	lui	a4,0x2
 10000510:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 10000514:	00e7a023          	sw	a4,0(a5)
 10000518:	260007b7          	lui	a5,0x26000
-1000051c:	06478793          	addi	a5,a5,100 # 26000064 <_esram_rom+0x15fff6e4>
+1000051c:	06478793          	addi	a5,a5,100 # 26000064 <_esram_rom+0x15fff6f4>
 10000520:	00002737          	lui	a4,0x2
 10000524:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 10000528:	00e7a023          	sw	a4,0(a5)
 1000052c:	260007b7          	lui	a5,0x26000
-10000530:	06078793          	addi	a5,a5,96 # 26000060 <_esram_rom+0x15fff6e0>
+10000530:	06078793          	addi	a5,a5,96 # 26000060 <_esram_rom+0x15fff6f0>
 10000534:	00002737          	lui	a4,0x2
 10000538:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 1000053c:	00e7a023          	sw	a4,0(a5)
 10000540:	260007b7          	lui	a5,0x26000
-10000544:	05c78793          	addi	a5,a5,92 # 2600005c <_esram_rom+0x15fff6dc>
+10000544:	05c78793          	addi	a5,a5,92 # 2600005c <_esram_rom+0x15fff6ec>
 10000548:	00002737          	lui	a4,0x2
 1000054c:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 10000550:	00e7a023          	sw	a4,0(a5)
 10000554:	260007b7          	lui	a5,0x26000
-10000558:	05878793          	addi	a5,a5,88 # 26000058 <_esram_rom+0x15fff6d8>
+10000558:	05878793          	addi	a5,a5,88 # 26000058 <_esram_rom+0x15fff6e8>
 1000055c:	00002737          	lui	a4,0x2
 10000560:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 10000564:	00e7a023          	sw	a4,0(a5)
 10000568:	260007b7          	lui	a5,0x26000
-1000056c:	05478793          	addi	a5,a5,84 # 26000054 <_esram_rom+0x15fff6d4>
+1000056c:	05478793          	addi	a5,a5,84 # 26000054 <_esram_rom+0x15fff6e4>
 10000570:	00002737          	lui	a4,0x2
 10000574:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 10000578:	00e7a023          	sw	a4,0(a5)
 1000057c:	260007b7          	lui	a5,0x26000
-10000580:	05078793          	addi	a5,a5,80 # 26000050 <_esram_rom+0x15fff6d0>
+10000580:	05078793          	addi	a5,a5,80 # 26000050 <_esram_rom+0x15fff6e0>
 10000584:	00002737          	lui	a4,0x2
 10000588:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 1000058c:	00e7a023          	sw	a4,0(a5)
 10000590:	260007b7          	lui	a5,0x26000
-10000594:	04c78793          	addi	a5,a5,76 # 2600004c <_esram_rom+0x15fff6cc>
+10000594:	04c78793          	addi	a5,a5,76 # 2600004c <_esram_rom+0x15fff6dc>
 10000598:	00002737          	lui	a4,0x2
 1000059c:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 100005a0:	00e7a023          	sw	a4,0(a5)
 100005a4:	260007b7          	lui	a5,0x26000
-100005a8:	04878793          	addi	a5,a5,72 # 26000048 <_esram_rom+0x15fff6c8>
+100005a8:	04878793          	addi	a5,a5,72 # 26000048 <_esram_rom+0x15fff6d8>
 100005ac:	00002737          	lui	a4,0x2
 100005b0:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 100005b4:	00e7a023          	sw	a4,0(a5)
 100005b8:	260007b7          	lui	a5,0x26000
-100005bc:	04478793          	addi	a5,a5,68 # 26000044 <_esram_rom+0x15fff6c4>
+100005bc:	04478793          	addi	a5,a5,68 # 26000044 <_esram_rom+0x15fff6d4>
 100005c0:	00002737          	lui	a4,0x2
 100005c4:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 100005c8:	00e7a023          	sw	a4,0(a5)
 100005cc:	260007b7          	lui	a5,0x26000
-100005d0:	04078793          	addi	a5,a5,64 # 26000040 <_esram_rom+0x15fff6c0>
+100005d0:	04078793          	addi	a5,a5,64 # 26000040 <_esram_rom+0x15fff6d0>
 100005d4:	00002737          	lui	a4,0x2
 100005d8:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 100005dc:	00e7a023          	sw	a4,0(a5)
 100005e0:	260007b7          	lui	a5,0x26000
-100005e4:	03478793          	addi	a5,a5,52 # 26000034 <_esram_rom+0x15fff6b4>
+100005e4:	03478793          	addi	a5,a5,52 # 26000034 <_esram_rom+0x15fff6c4>
 100005e8:	00002737          	lui	a4,0x2
 100005ec:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 100005f0:	00e7a023          	sw	a4,0(a5)
 100005f4:	260007b7          	lui	a5,0x26000
-100005f8:	03078793          	addi	a5,a5,48 # 26000030 <_esram_rom+0x15fff6b0>
+100005f8:	03078793          	addi	a5,a5,48 # 26000030 <_esram_rom+0x15fff6c0>
 100005fc:	00002737          	lui	a4,0x2
 10000600:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 10000604:	00e7a023          	sw	a4,0(a5)
 10000608:	260007b7          	lui	a5,0x26000
-1000060c:	02c78793          	addi	a5,a5,44 # 2600002c <_esram_rom+0x15fff6ac>
+1000060c:	02c78793          	addi	a5,a5,44 # 2600002c <_esram_rom+0x15fff6bc>
 10000610:	00002737          	lui	a4,0x2
 10000614:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 10000618:	00e7a023          	sw	a4,0(a5)
 1000061c:	260007b7          	lui	a5,0x26000
-10000620:	02878793          	addi	a5,a5,40 # 26000028 <_esram_rom+0x15fff6a8>
+10000620:	02878793          	addi	a5,a5,40 # 26000028 <_esram_rom+0x15fff6b8>
 10000624:	00002737          	lui	a4,0x2
 10000628:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 1000062c:	00e7a023          	sw	a4,0(a5)
 10000630:	260007b7          	lui	a5,0x26000
-10000634:	02478793          	addi	a5,a5,36 # 26000024 <_esram_rom+0x15fff6a4>
+10000634:	02478793          	addi	a5,a5,36 # 26000024 <_esram_rom+0x15fff6b4>
 10000638:	00002737          	lui	a4,0x2
 1000063c:	80970713          	addi	a4,a4,-2039 # 1809 <_fstack+0x1209>
 10000640:	00e7a023          	sw	a4,0(a5)
 10000644:	260007b7          	lui	a5,0x26000
-10000648:	03c78793          	addi	a5,a5,60 # 2600003c <_esram_rom+0x15fff6bc>
+10000648:	03c78793          	addi	a5,a5,60 # 2600003c <_esram_rom+0x15fff6cc>
 1000064c:	00002737          	lui	a4,0x2
 10000650:	80870713          	addi	a4,a4,-2040 # 1808 <_fstack+0x1208>
 10000654:	00e7a023          	sw	a4,0(a5)
 10000658:	260007b7          	lui	a5,0x26000
-1000065c:	03878793          	addi	a5,a5,56 # 26000038 <_esram_rom+0x15fff6b8>
+1000065c:	03878793          	addi	a5,a5,56 # 26000038 <_esram_rom+0x15fff6c8>
 10000660:	40200713          	li	a4,1026
 10000664:	00e7a023          	sw	a4,0(a5)
 10000668:	260007b7          	lui	a5,0x26000
 1000066c:	00100713          	li	a4,1
-10000670:	00e7a023          	sw	a4,0(a5) # 26000000 <_esram_rom+0x15fff680>
+10000670:	00e7a023          	sw	a4,0(a5) # 26000000 <_esram_rom+0x15fff690>
 10000674:	00000013          	nop
 10000678:	260007b7          	lui	a5,0x26000
-1000067c:	0007a703          	lw	a4,0(a5) # 26000000 <_esram_rom+0x15fff680>
+1000067c:	0007a703          	lw	a4,0(a5) # 26000000 <_esram_rom+0x15fff690>
 10000680:	00100793          	li	a5,1
 10000684:	fef70ae3          	beq	a4,a5,10000678 <main+0x2ac>
 10000688:	f00037b7          	lui	a5,0xf0003
@@ -503,7 +503,7 @@ Disassembly of section .text:
 100006ec:	01070713          	addi	a4,a4,16 # f0003010 <_esram+0xb8003010>
 100006f0:	00f72023          	sw	a5,0(a4)
 100006f4:	260007b7          	lui	a5,0x26000
-100006f8:	00c78793          	addi	a5,a5,12 # 2600000c <_esram_rom+0x15fff68c>
+100006f8:	00c78793          	addi	a5,a5,12 # 2600000c <_esram_rom+0x15fff69c>
 100006fc:	ab400737          	lui	a4,0xab400
 10000700:	00e7a023          	sw	a4,0(a5)
 10000704:	f00037b7          	lui	a5,0xf0003
@@ -517,7 +517,7 @@ Disassembly of section .text:
 10000724:	01870713          	addi	a4,a4,24 # f0003018 <_esram+0xb8003018>
 10000728:	00f72023          	sw	a5,0(a4)
 1000072c:	260007b7          	lui	a5,0x26000
-10000730:	00c78793          	addi	a5,a5,12 # 2600000c <_esram_rom+0x15fff68c>
+10000730:	00c78793          	addi	a5,a5,12 # 2600000c <_esram_rom+0x15fff69c>
 10000734:	ab510737          	lui	a4,0xab510
 10000738:	00e7a023          	sw	a4,0(a5)
 1000073c:	c41ff0ef          	jal	ra,1000037c <irq_getmask>
@@ -531,150 +531,146 @@ Disassembly of section .text:
 1000075c:	c49ff0ef          	jal	ra,100003a4 <irq_setmask>
 10000760:	00100513          	li	a0,1
 10000764:	be1ff0ef          	jal	ra,10000344 <user_irq_0_ev_enable_write>
-10000768:	260007b7          	lui	a5,0x26000
-1000076c:	00c78793          	addi	a5,a5,12 # 2600000c <_esram_rom+0x15fff68c>
-10000770:	ab510737          	lui	a4,0xab510
-10000774:	00e7a023          	sw	a4,0(a5)
-10000778:	00000013          	nop
-1000077c:	01c12083          	lw	ra,28(sp)
-10000780:	01812403          	lw	s0,24(sp)
-10000784:	02010113          	addi	sp,sp,32
-10000788:	00008067          	ret
+10000768:	00000013          	nop
+1000076c:	01c12083          	lw	ra,28(sp)
+10000770:	01812403          	lw	s0,24(sp)
+10000774:	02010113          	addi	sp,sp,32
+10000778:	00008067          	ret
 
 Disassembly of section .mprj:
 
-1000078c <uart_write>:
-1000078c:	fe010113          	addi	sp,sp,-32
-10000790:	00812e23          	sw	s0,28(sp)
-10000794:	02010413          	addi	s0,sp,32
-10000798:	fea42623          	sw	a0,-20(s0)
-1000079c:	00000013          	nop
-100007a0:	300007b7          	lui	a5,0x30000
-100007a4:	00878793          	addi	a5,a5,8 # 30000008 <_esram_rom+0x1ffff688>
-100007a8:	0007a783          	lw	a5,0(a5)
-100007ac:	0087f793          	andi	a5,a5,8
-100007b0:	fe0798e3          	bnez	a5,100007a0 <uart_write+0x14>
-100007b4:	300007b7          	lui	a5,0x30000
-100007b8:	00478793          	addi	a5,a5,4 # 30000004 <_esram_rom+0x1ffff684>
-100007bc:	fec42703          	lw	a4,-20(s0)
-100007c0:	00e7a023          	sw	a4,0(a5)
-100007c4:	00000013          	nop
-100007c8:	01c12403          	lw	s0,28(sp)
-100007cc:	02010113          	addi	sp,sp,32
-100007d0:	00008067          	ret
+1000077c <uart_write>:
+1000077c:	fe010113          	addi	sp,sp,-32
+10000780:	00812e23          	sw	s0,28(sp)
+10000784:	02010413          	addi	s0,sp,32
+10000788:	fea42623          	sw	a0,-20(s0)
+1000078c:	00000013          	nop
+10000790:	300007b7          	lui	a5,0x30000
+10000794:	00878793          	addi	a5,a5,8 # 30000008 <_esram_rom+0x1ffff698>
+10000798:	0007a783          	lw	a5,0(a5)
+1000079c:	0087f793          	andi	a5,a5,8
+100007a0:	fe0798e3          	bnez	a5,10000790 <uart_write+0x14>
+100007a4:	300007b7          	lui	a5,0x30000
+100007a8:	00478793          	addi	a5,a5,4 # 30000004 <_esram_rom+0x1ffff694>
+100007ac:	fec42703          	lw	a4,-20(s0)
+100007b0:	00e7a023          	sw	a4,0(a5)
+100007b4:	00000013          	nop
+100007b8:	01c12403          	lw	s0,28(sp)
+100007bc:	02010113          	addi	sp,sp,32
+100007c0:	00008067          	ret
 
-100007d4 <uart_write_char>:
-100007d4:	fe010113          	addi	sp,sp,-32
-100007d8:	00112e23          	sw	ra,28(sp)
-100007dc:	00812c23          	sw	s0,24(sp)
-100007e0:	02010413          	addi	s0,sp,32
-100007e4:	00050793          	mv	a5,a0
-100007e8:	fef407a3          	sb	a5,-17(s0)
-100007ec:	fef44703          	lbu	a4,-17(s0)
-100007f0:	00a00793          	li	a5,10
-100007f4:	00f71663          	bne	a4,a5,10000800 <uart_write_char+0x2c>
-100007f8:	00d00513          	li	a0,13
-100007fc:	fd9ff0ef          	jal	ra,100007d4 <uart_write_char>
-10000800:	00000013          	nop
-10000804:	300007b7          	lui	a5,0x30000
-10000808:	00878793          	addi	a5,a5,8 # 30000008 <_esram_rom+0x1ffff688>
-1000080c:	0007a783          	lw	a5,0(a5)
-10000810:	0087f793          	andi	a5,a5,8
-10000814:	fe0798e3          	bnez	a5,10000804 <uart_write_char+0x30>
-10000818:	300007b7          	lui	a5,0x30000
-1000081c:	00478793          	addi	a5,a5,4 # 30000004 <_esram_rom+0x1ffff684>
-10000820:	fef44703          	lbu	a4,-17(s0)
-10000824:	00e7a023          	sw	a4,0(a5)
-10000828:	00000013          	nop
-1000082c:	01c12083          	lw	ra,28(sp)
-10000830:	01812403          	lw	s0,24(sp)
-10000834:	02010113          	addi	sp,sp,32
-10000838:	00008067          	ret
+100007c4 <uart_write_char>:
+100007c4:	fe010113          	addi	sp,sp,-32
+100007c8:	00112e23          	sw	ra,28(sp)
+100007cc:	00812c23          	sw	s0,24(sp)
+100007d0:	02010413          	addi	s0,sp,32
+100007d4:	00050793          	mv	a5,a0
+100007d8:	fef407a3          	sb	a5,-17(s0)
+100007dc:	fef44703          	lbu	a4,-17(s0)
+100007e0:	00a00793          	li	a5,10
+100007e4:	00f71663          	bne	a4,a5,100007f0 <uart_write_char+0x2c>
+100007e8:	00d00513          	li	a0,13
+100007ec:	fd9ff0ef          	jal	ra,100007c4 <uart_write_char>
+100007f0:	00000013          	nop
+100007f4:	300007b7          	lui	a5,0x30000
+100007f8:	00878793          	addi	a5,a5,8 # 30000008 <_esram_rom+0x1ffff698>
+100007fc:	0007a783          	lw	a5,0(a5)
+10000800:	0087f793          	andi	a5,a5,8
+10000804:	fe0798e3          	bnez	a5,100007f4 <uart_write_char+0x30>
+10000808:	300007b7          	lui	a5,0x30000
+1000080c:	00478793          	addi	a5,a5,4 # 30000004 <_esram_rom+0x1ffff694>
+10000810:	fef44703          	lbu	a4,-17(s0)
+10000814:	00e7a023          	sw	a4,0(a5)
+10000818:	00000013          	nop
+1000081c:	01c12083          	lw	ra,28(sp)
+10000820:	01812403          	lw	s0,24(sp)
+10000824:	02010113          	addi	sp,sp,32
+10000828:	00008067          	ret
 
-1000083c <uart_write_string>:
-1000083c:	fe010113          	addi	sp,sp,-32
-10000840:	00112e23          	sw	ra,28(sp)
-10000844:	00812c23          	sw	s0,24(sp)
-10000848:	02010413          	addi	s0,sp,32
-1000084c:	fea42623          	sw	a0,-20(s0)
-10000850:	01c0006f          	j	1000086c <uart_write_string+0x30>
-10000854:	fec42783          	lw	a5,-20(s0)
-10000858:	00178713          	addi	a4,a5,1
-1000085c:	fee42623          	sw	a4,-20(s0)
+1000082c <uart_write_string>:
+1000082c:	fe010113          	addi	sp,sp,-32
+10000830:	00112e23          	sw	ra,28(sp)
+10000834:	00812c23          	sw	s0,24(sp)
+10000838:	02010413          	addi	s0,sp,32
+1000083c:	fea42623          	sw	a0,-20(s0)
+10000840:	01c0006f          	j	1000085c <uart_write_string+0x30>
+10000844:	fec42783          	lw	a5,-20(s0)
+10000848:	00178713          	addi	a4,a5,1
+1000084c:	fee42623          	sw	a4,-20(s0)
+10000850:	0007c783          	lbu	a5,0(a5)
+10000854:	00078513          	mv	a0,a5
+10000858:	f6dff0ef          	jal	ra,100007c4 <uart_write_char>
+1000085c:	fec42783          	lw	a5,-20(s0)
 10000860:	0007c783          	lbu	a5,0(a5)
-10000864:	00078513          	mv	a0,a5
-10000868:	f6dff0ef          	jal	ra,100007d4 <uart_write_char>
-1000086c:	fec42783          	lw	a5,-20(s0)
-10000870:	0007c783          	lbu	a5,0(a5)
-10000874:	fe0790e3          	bnez	a5,10000854 <uart_write_string+0x18>
-10000878:	00000013          	nop
-1000087c:	00000013          	nop
-10000880:	01c12083          	lw	ra,28(sp)
-10000884:	01812403          	lw	s0,24(sp)
-10000888:	02010113          	addi	sp,sp,32
-1000088c:	00008067          	ret
+10000864:	fe0790e3          	bnez	a5,10000844 <uart_write_string+0x18>
+10000868:	00000013          	nop
+1000086c:	00000013          	nop
+10000870:	01c12083          	lw	ra,28(sp)
+10000874:	01812403          	lw	s0,24(sp)
+10000878:	02010113          	addi	sp,sp,32
+1000087c:	00008067          	ret
 
-10000890 <uart_read_char>:
-10000890:	fe010113          	addi	sp,sp,-32
-10000894:	00812e23          	sw	s0,28(sp)
-10000898:	02010413          	addi	s0,sp,32
-1000089c:	300007b7          	lui	a5,0x30000
-100008a0:	00878793          	addi	a5,a5,8 # 30000008 <_esram_rom+0x1ffff688>
-100008a4:	0007a783          	lw	a5,0(a5)
-100008a8:	0057d793          	srli	a5,a5,0x5
-100008ac:	04079263          	bnez	a5,100008f0 <uart_read_char+0x60>
-100008b0:	300007b7          	lui	a5,0x30000
-100008b4:	00878793          	addi	a5,a5,8 # 30000008 <_esram_rom+0x1ffff688>
-100008b8:	0007a783          	lw	a5,0(a5)
-100008bc:	0047d793          	srli	a5,a5,0x4
-100008c0:	02079863          	bnez	a5,100008f0 <uart_read_char+0x60>
-100008c4:	fe042423          	sw	zero,-24(s0)
-100008c8:	0140006f          	j	100008dc <uart_read_char+0x4c>
-100008cc:	00000013          	nop
-100008d0:	fe842783          	lw	a5,-24(s0)
-100008d4:	00178793          	addi	a5,a5,1
-100008d8:	fef42423          	sw	a5,-24(s0)
-100008dc:	fe842783          	lw	a5,-24(s0)
-100008e0:	fef056e3          	blez	a5,100008cc <uart_read_char+0x3c>
-100008e4:	300007b7          	lui	a5,0x30000
-100008e8:	0007a783          	lw	a5,0(a5) # 30000000 <_esram_rom+0x1ffff680>
-100008ec:	fef407a3          	sb	a5,-17(s0)
-100008f0:	fef44783          	lbu	a5,-17(s0)
-100008f4:	00078513          	mv	a0,a5
-100008f8:	01c12403          	lw	s0,28(sp)
-100008fc:	02010113          	addi	sp,sp,32
-10000900:	00008067          	ret
+10000880 <uart_read_char>:
+10000880:	fe010113          	addi	sp,sp,-32
+10000884:	00812e23          	sw	s0,28(sp)
+10000888:	02010413          	addi	s0,sp,32
+1000088c:	300007b7          	lui	a5,0x30000
+10000890:	00878793          	addi	a5,a5,8 # 30000008 <_esram_rom+0x1ffff698>
+10000894:	0007a783          	lw	a5,0(a5)
+10000898:	0057d793          	srli	a5,a5,0x5
+1000089c:	04079263          	bnez	a5,100008e0 <uart_read_char+0x60>
+100008a0:	300007b7          	lui	a5,0x30000
+100008a4:	00878793          	addi	a5,a5,8 # 30000008 <_esram_rom+0x1ffff698>
+100008a8:	0007a783          	lw	a5,0(a5)
+100008ac:	0047d793          	srli	a5,a5,0x4
+100008b0:	02079863          	bnez	a5,100008e0 <uart_read_char+0x60>
+100008b4:	fe042423          	sw	zero,-24(s0)
+100008b8:	0140006f          	j	100008cc <uart_read_char+0x4c>
+100008bc:	00000013          	nop
+100008c0:	fe842783          	lw	a5,-24(s0)
+100008c4:	00178793          	addi	a5,a5,1
+100008c8:	fef42423          	sw	a5,-24(s0)
+100008cc:	fe842783          	lw	a5,-24(s0)
+100008d0:	fef056e3          	blez	a5,100008bc <uart_read_char+0x3c>
+100008d4:	300007b7          	lui	a5,0x30000
+100008d8:	0007a783          	lw	a5,0(a5) # 30000000 <_esram_rom+0x1ffff690>
+100008dc:	fef407a3          	sb	a5,-17(s0)
+100008e0:	fef44783          	lbu	a5,-17(s0)
+100008e4:	00078513          	mv	a0,a5
+100008e8:	01c12403          	lw	s0,28(sp)
+100008ec:	02010113          	addi	sp,sp,32
+100008f0:	00008067          	ret
 
-10000904 <uart_read>:
-10000904:	fe010113          	addi	sp,sp,-32
-10000908:	00812e23          	sw	s0,28(sp)
-1000090c:	02010413          	addi	s0,sp,32
-10000910:	300007b7          	lui	a5,0x30000
-10000914:	00878793          	addi	a5,a5,8 # 30000008 <_esram_rom+0x1ffff688>
-10000918:	0007a783          	lw	a5,0(a5)
-1000091c:	0057d793          	srli	a5,a5,0x5
-10000920:	04079263          	bnez	a5,10000964 <uart_read+0x60>
-10000924:	300007b7          	lui	a5,0x30000
-10000928:	00878793          	addi	a5,a5,8 # 30000008 <_esram_rom+0x1ffff688>
-1000092c:	0007a783          	lw	a5,0(a5)
-10000930:	0047d793          	srli	a5,a5,0x4
-10000934:	02079863          	bnez	a5,10000964 <uart_read+0x60>
-10000938:	fe042423          	sw	zero,-24(s0)
-1000093c:	0140006f          	j	10000950 <uart_read+0x4c>
-10000940:	00000013          	nop
-10000944:	fe842783          	lw	a5,-24(s0)
-10000948:	00178793          	addi	a5,a5,1
-1000094c:	fef42423          	sw	a5,-24(s0)
-10000950:	fe842783          	lw	a5,-24(s0)
-10000954:	fef056e3          	blez	a5,10000940 <uart_read+0x3c>
-10000958:	300007b7          	lui	a5,0x30000
-1000095c:	0007a783          	lw	a5,0(a5) # 30000000 <_esram_rom+0x1ffff680>
-10000960:	fef42623          	sw	a5,-20(s0)
-10000964:	fec42783          	lw	a5,-20(s0)
-10000968:	00078513          	mv	a0,a5
-1000096c:	01c12403          	lw	s0,28(sp)
-10000970:	02010113          	addi	sp,sp,32
-10000974:	00008067          	ret
+100008f4 <uart_read>:
+100008f4:	fe010113          	addi	sp,sp,-32
+100008f8:	00812e23          	sw	s0,28(sp)
+100008fc:	02010413          	addi	s0,sp,32
+10000900:	300007b7          	lui	a5,0x30000
+10000904:	00878793          	addi	a5,a5,8 # 30000008 <_esram_rom+0x1ffff698>
+10000908:	0007a783          	lw	a5,0(a5)
+1000090c:	0057d793          	srli	a5,a5,0x5
+10000910:	04079263          	bnez	a5,10000954 <uart_read+0x60>
+10000914:	300007b7          	lui	a5,0x30000
+10000918:	00878793          	addi	a5,a5,8 # 30000008 <_esram_rom+0x1ffff698>
+1000091c:	0007a783          	lw	a5,0(a5)
+10000920:	0047d793          	srli	a5,a5,0x4
+10000924:	02079863          	bnez	a5,10000954 <uart_read+0x60>
+10000928:	fe042423          	sw	zero,-24(s0)
+1000092c:	0140006f          	j	10000940 <uart_read+0x4c>
+10000930:	00000013          	nop
+10000934:	fe842783          	lw	a5,-24(s0)
+10000938:	00178793          	addi	a5,a5,1
+1000093c:	fef42423          	sw	a5,-24(s0)
+10000940:	fe842783          	lw	a5,-24(s0)
+10000944:	fef056e3          	blez	a5,10000930 <uart_read+0x3c>
+10000948:	300007b7          	lui	a5,0x30000
+1000094c:	0007a783          	lw	a5,0(a5) # 30000000 <_esram_rom+0x1ffff690>
+10000950:	fef42623          	sw	a5,-20(s0)
+10000954:	fec42783          	lw	a5,-20(s0)
+10000958:	00078513          	mv	a0,a5
+1000095c:	01c12403          	lw	s0,28(sp)
+10000960:	02010113          	addi	sp,sp,32
+10000964:	00008067          	ret
 
 Disassembly of section .data:
 
@@ -1105,7 +1101,7 @@ Disassembly of section .debug_line:
  3c8:	0502                	.2byte	0x502
  3ca:	0001                	.2byte	0x1
  3cc:	0205                	.2byte	0x205
- 3ce:	078c                	.2byte	0x78c
+ 3ce:	077c                	.2byte	0x77c
  3d0:	1000                	.2byte	0x1000
  3d2:	0518                	.2byte	0x518
  3d4:	030a                	.2byte	0x30a
@@ -1326,7 +1322,7 @@ Disassembly of section .debug_line:
  5b2:	0901                	.2byte	0x901
  5b4:	0010                	.2byte	0x10
  5b6:	0100                	.2byte	0x100
- 5b8:	4101                	.2byte	0x4101
+ 5b8:	3101                	.2byte	0x3101
  5ba:	0004                	.2byte	0x4
  5bc:	0500                	.2byte	0x500
  5be:	0400                	.2byte	0x400
@@ -1738,18 +1734,12 @@ Disassembly of section .debug_line:
  9d8:	0100                	.2byte	0x100
  9da:	0c090203          	lb	tp,192(s2)
  9de:	0100                	.2byte	0x100
- 9e0:	0605                	.2byte	0x605
+ 9e0:	0105                	.2byte	0x105
  9e2:	08090203          	lb	tp,128(s2)
  9e6:	0100                	.2byte	0x100
- 9e8:	2705                	.2byte	0x2705
- 9ea:	08090003          	lb	zero,128(s2)
- 9ee:	0100                	.2byte	0x100
- 9f0:	0105                	.2byte	0x105
- 9f2:	08090103          	lb	sp,128(s2)
- 9f6:	0100                	.2byte	0x100
- 9f8:	1409                	.2byte	0x1409
- 9fa:	0000                	.2byte	0x0
- 9fc:	0101                	.2byte	0x101
+ 9e8:	1409                	.2byte	0x1409
+ 9ea:	0000                	.2byte	0x0
+ 9ec:	0101                	.2byte	0x101
 
 Disassembly of section .debug_line_str:
 
@@ -2123,8 +2113,8 @@ Disassembly of section .debug_info:
  242:	0000                	.2byte	0x0
  244:	2a00                	.2byte	0x2a00
  246:	00006a2f          	.4byte	0x6a2f
- 24a:	0400                	.2byte	0x400
- 24c:	0009                	.2byte	0x9
+ 24a:	f400                	.2byte	0xf400
+ 24c:	0008                	.2byte	0x8
  24e:	7410                	.2byte	0x7410
  250:	0000                	.2byte	0x0
  252:	0100                	.2byte	0x100
@@ -2138,7 +2128,7 @@ Disassembly of section .debug_info:
  262:	0000                	.2byte	0x0
  264:	9102                	.2byte	0x9102
  266:	056c                	.2byte	0x56c
- 268:	0938                	.2byte	0x938
+ 268:	0928                	.2byte	0x928
  26a:	1000                	.2byte	0x1000
  26c:	0020                	.2byte	0x20
  26e:	0000                	.2byte	0x0
@@ -2154,7 +2144,7 @@ Disassembly of section .debug_info:
  282:	1d00                	.2byte	0x1d00
  284:	f430                	.2byte	0xf430
  286:	0000                	.2byte	0x0
- 288:	9000                	.2byte	0x9000
+ 288:	8000                	.2byte	0x8000
  28a:	0008                	.2byte	0x8
  28c:	7410                	.2byte	0x7410
  28e:	0000                	.2byte	0x0
@@ -2166,7 +2156,7 @@ Disassembly of section .debug_info:
  29a:	006d                	.2byte	0x6d
  29c:	071f 00f4 0000      	.byte	0x1f, 0x07, 0xf4, 0x00, 0x00, 0x00
  2a2:	9102                	.2byte	0x9102
- 2a4:	08c4056f          	jal	a0,40330 <_fstack+0x3fd30>
+ 2a4:	08b4056f          	jal	a0,40b2e <_fstack+0x4052e>
  2a8:	1000                	.2byte	0x1000
  2aa:	0020                	.2byte	0x20
  2ac:	0000                	.2byte	0x0
@@ -2186,7 +2176,7 @@ Disassembly of section .debug_info:
  2c8:	9306                	.2byte	0x9306
  2ca:	0001                	.2byte	0x1
  2cc:	1600                	.2byte	0x1600
- 2ce:	083c                	.2byte	0x83c
+ 2ce:	082c                	.2byte	0x82c
  2d0:	1000                	.2byte	0x1000
  2d2:	0054                	.2byte	0x54
  2d4:	0000                	.2byte	0x0
@@ -2204,7 +2194,7 @@ Disassembly of section .debug_info:
  2ee:	0600                	.2byte	0x600
  2f0:	01b4                	.2byte	0x1b4
  2f2:	0000                	.2byte	0x0
- 2f4:	d40c                	.2byte	0xd40c
+ 2f4:	c40c                	.2byte	0xc40c
  2f6:	68100007          	.4byte	0x68100007
  2fa:	0000                	.2byte	0x0
  2fc:	0100                	.2byte	0x100
@@ -2219,7 +2209,7 @@ Disassembly of section .debug_info:
  312:	0000                	.2byte	0x0
  314:	0200                	.2byte	0x200
  316:	3006                	.2byte	0x3006
- 318:	078c                	.2byte	0x78c
+ 318:	077c                	.2byte	0x77c
  31a:	1000                	.2byte	0x1000
  31c:	0048                	.2byte	0x48
  31e:	0000                	.2byte	0x0
@@ -2259,7 +2249,7 @@ Disassembly of section .debug_info:
  36c:	0000                	.2byte	0x0
  36e:	02dc                	.2byte	0x2dc
  370:	1000                	.2byte	0x1000
- 372:	04b0                	.2byte	0x4b0
+ 372:	04a0                	.2byte	0x4a0
  374:	0000                	.2byte	0x0
  376:	05b9                	.2byte	0x5b9
  378:	0000                	.2byte	0x0
@@ -2305,7 +2295,7 @@ Disassembly of section .debug_info:
  3d0:	0500                	.2byte	0x500
  3d2:	03cc062b          	.4byte	0x3cc062b
  3d6:	1000                	.2byte	0x1000
- 3d8:	03c0                	.2byte	0x3c0
+ 3d8:	03b0                	.2byte	0x3b0
  3da:	0000                	.2byte	0x0
  3dc:	9c01                	.2byte	0x9c01
  3de:	009e                	.2byte	0x9e
@@ -2429,7 +2419,7 @@ Disassembly of section .debug_abbrev:
   2a:	1349                	.2byte	0x1349
   2c:	1802                	.2byte	0x1802
   2e:	0000                	.2byte	0x0
-  30:	3f012e03          	lw	t3,1008(sp) # 120113f4 <_esram_rom+0x2010a74>
+  30:	3f012e03          	lw	t3,1008(sp) # 120113f4 <_esram_rom+0x2010a84>
   34:	0319                	.2byte	0x319
   36:	3a0e                	.2byte	0x3a0e
   38:	0521                	.2byte	0x521
@@ -2761,23 +2751,23 @@ Disassembly of section .debug_aranges:
   52:	1000                	.2byte	0x1000
   54:	0038                	.2byte	0x38
   56:	0000                	.2byte	0x0
-  58:	078c                	.2byte	0x78c
+  58:	077c                	.2byte	0x77c
   5a:	1000                	.2byte	0x1000
   5c:	0048                	.2byte	0x48
   5e:	0000                	.2byte	0x0
-  60:	07d4                	.2byte	0x7d4
+  60:	07c4                	.2byte	0x7c4
   62:	1000                	.2byte	0x1000
   64:	0068                	.2byte	0x68
   66:	0000                	.2byte	0x0
-  68:	083c                	.2byte	0x83c
+  68:	082c                	.2byte	0x82c
   6a:	1000                	.2byte	0x1000
   6c:	0054                	.2byte	0x54
   6e:	0000                	.2byte	0x0
-  70:	0890                	.2byte	0x890
+  70:	0880                	.2byte	0x880
   72:	1000                	.2byte	0x1000
   74:	0074                	.2byte	0x74
   76:	0000                	.2byte	0x0
-  78:	0904                	.2byte	0x904
+  78:	08f4                	.2byte	0x8f4
   7a:	1000                	.2byte	0x1000
   7c:	0074                	.2byte	0x74
 	...
@@ -2792,7 +2782,7 @@ Disassembly of section .debug_aranges:
   96:	0000                	.2byte	0x0
   98:	02dc                	.2byte	0x2dc
   9a:	1000                	.2byte	0x1000
-  9c:	04b0                	.2byte	0x4b0
+  9c:	04a0                	.2byte	0x4a0
 	...
 
 Disassembly of section .debug_str:
@@ -3172,7 +3162,7 @@ Disassembly of section .debug_frame:
  172:	0000                	.2byte	0x0
  174:	0118                	.2byte	0x118
  176:	0000                	.2byte	0x0
- 178:	078c                	.2byte	0x78c
+ 178:	077c                	.2byte	0x77c
  17a:	1000                	.2byte	0x1000
  17c:	0048                	.2byte	0x48
  17e:	0000                	.2byte	0x0
@@ -3190,7 +3180,7 @@ Disassembly of section .debug_frame:
  196:	0000                	.2byte	0x0
  198:	0118                	.2byte	0x118
  19a:	0000                	.2byte	0x0
- 19c:	07d4                	.2byte	0x7d4
+ 19c:	07c4                	.2byte	0x7c4
  19e:	1000                	.2byte	0x1000
  1a0:	0068                	.2byte	0x68
  1a2:	0000                	.2byte	0x0
@@ -3210,7 +3200,7 @@ Disassembly of section .debug_frame:
  1be:	0000                	.2byte	0x0
  1c0:	0118                	.2byte	0x118
  1c2:	0000                	.2byte	0x0
- 1c4:	083c                	.2byte	0x83c
+ 1c4:	082c                	.2byte	0x82c
  1c6:	1000                	.2byte	0x1000
  1c8:	0054                	.2byte	0x54
  1ca:	0000                	.2byte	0x0
@@ -3230,7 +3220,7 @@ Disassembly of section .debug_frame:
  1e6:	0000                	.2byte	0x0
  1e8:	0118                	.2byte	0x118
  1ea:	0000                	.2byte	0x0
- 1ec:	0890                	.2byte	0x890
+ 1ec:	0880                	.2byte	0x880
  1ee:	1000                	.2byte	0x1000
  1f0:	0074                	.2byte	0x74
  1f2:	0000                	.2byte	0x0
@@ -3248,7 +3238,7 @@ Disassembly of section .debug_frame:
  20a:	0000                	.2byte	0x0
  20c:	0118                	.2byte	0x118
  20e:	0000                	.2byte	0x0
- 210:	0904                	.2byte	0x904
+ 210:	08f4                	.2byte	0x8f4
  212:	1000                	.2byte	0x1000
  214:	0074                	.2byte	0x74
  216:	0000                	.2byte	0x0
@@ -3385,7 +3375,7 @@ Disassembly of section .debug_frame:
  31e:	0000                	.2byte	0x0
  320:	03cc                	.2byte	0x3cc
  322:	1000                	.2byte	0x1000
- 324:	03c0                	.2byte	0x3c0
+ 324:	03b0                	.2byte	0x3b0
  326:	0000                	.2byte	0x0
  328:	0e44                	.2byte	0xe44
  32a:	4820                	.2byte	0x4820
@@ -3393,7 +3383,7 @@ Disassembly of section .debug_frame:
  32e:	0288                	.2byte	0x288
  330:	0c44                	.2byte	0xc44
  332:	0008                	.2byte	0x8
- 334:	c103a403          	lw	s0,-1008(t2)
+ 334:	c1039403          	lh	s0,-1008(t2)
  338:	c844                	.2byte	0xc844
  33a:	020c                	.2byte	0x20c
  33c:	4420                	.2byte	0x4420
@@ -3410,25 +3400,25 @@ Disassembly of section .debug_rnglists:
   10:	dc10                	.2byte	0xdc10
   12:	0002                	.2byte	0x2
   14:	0610                	.2byte	0x610
-  16:	078c                	.2byte	0x78c
+  16:	077c                	.2byte	0x77c
   18:	1000                	.2byte	0x1000
-  1a:	07d4                	.2byte	0x7d4
+  1a:	07c4                	.2byte	0x7c4
   1c:	1000                	.2byte	0x1000
-  1e:	d406                	.2byte	0xd406
-  20:	3c100007          	.4byte	0x3c100007
+  1e:	c406                	.2byte	0xc406
+  20:	2c100007          	.4byte	0x2c100007
   24:	0008                	.2byte	0x8
   26:	0610                	.2byte	0x610
-  28:	083c                	.2byte	0x83c
+  28:	082c                	.2byte	0x82c
   2a:	1000                	.2byte	0x1000
-  2c:	0890                	.2byte	0x890
+  2c:	0880                	.2byte	0x880
   2e:	1000                	.2byte	0x1000
-  30:	9006                	.2byte	0x9006
+  30:	8006                	.2byte	0x8006
   32:	0008                	.2byte	0x8
-  34:	0410                	.2byte	0x410
-  36:	0009                	.2byte	0x9
+  34:	f410                	.2byte	0xf410
+  36:	0008                	.2byte	0x8
   38:	0610                	.2byte	0x610
-  3a:	0904                	.2byte	0x904
+  3a:	08f4                	.2byte	0x8f4
   3c:	1000                	.2byte	0x1000
-  3e:	0978                	.2byte	0x978
+  3e:	0968                	.2byte	0x968
   40:	1000                	.2byte	0x1000
 	...

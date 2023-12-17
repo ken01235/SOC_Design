@@ -284,7 +284,6 @@ module uart_tb;
 		.tx_clear_req(tx_clear_req)
 	);
 
+
 endmodule
 `default_nettype wire
-
-

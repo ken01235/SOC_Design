@@ -1717,5 +1717,4 @@ void main()
 
  user_irq_0_ev_enable_write(1);
 
-    (*(volatile uint32_t*)0x2600000c) = 0xAB510000;
 }

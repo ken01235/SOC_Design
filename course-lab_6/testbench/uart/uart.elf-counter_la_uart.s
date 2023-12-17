@@ -529,13 +529,7 @@ main:
 	.loc 5 160 2
 	li	a0,1
 	call	user_irq_0_ev_enable_write
-	.loc 5 162 6
-	li	a5,637534208
-	addi	a5,a5,12
-	.loc 5 162 39
-	li	a4,-1420754944
-	sw	a4,0(a5)
-	.loc 5 163 1
+	.loc 5 162 1
 	nop
 	lw	ra,28(sp)
 	.cfi_restore 1
