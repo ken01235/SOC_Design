@@ -136,5 +136,9 @@ void main()
 	//print("\n");
 	//print("Monitor: Test 1 Passed\n\n");	// Makes simulation very long!
 	reg_mprj_datal = *(tmp+9) << 16;
+<<<<<<< HEAD
+=======
+    reg_mprj_datal = 0xAB510000;
+>>>>>>> 0b4e9068b50eb921c7d66d803c21b46f90ec2ab5
 }
 
