@@ -1,0 +1,3 @@
+[submodule "course-lab_sdram"]
+	path = course-lab_sdram
+	url = https://github.com/yousungyeh/course-lab_sdram
