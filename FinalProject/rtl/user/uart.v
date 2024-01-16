@@ -41,8 +41,9 @@ assign io_out[6] = tx;	// Connect mprj_io_6 to tx
 assign rx = io_in[5];	// Connect mprj_io_5 to rx
 
 // irq
-wire irq;
-assign user_irq = {2'b00,irq};	// Use USER_IRQ_0
+wire rx_irq;
+wire ctrl_irq;
+assign user_irq = {2'b00,ctrl_irq};	// Use USER_IRQ_0
 
 // CSR
 wire [7:0] rx_data;
@@ -55,6 +56,14 @@ wire tx_start;
 wire tx_busy;
 wire wb_valid;
 wire frame_err;
+
+// fifo
+wire [7:0] rx_fifo_data;
+wire [7:0] tx_fifo_data;
+wire [2:0] rx_fifo_cnt;
+wire [2:0] tx_fifo_cnt;
+
+wire tx_push;
 
 // 32'h3000_0000 memory regions of user project  
 assign wb_valid = (wbs_adr_i[31:8] == 32'h3000_00) ? wbs_cyc_i && wbs_stb_i : 1'b0;
@@ -69,20 +78,40 @@ uart_receive receive(
     .rx         (rx         ),
     .rx_data    (rx_data    ),
     .rx_finish  (rx_finish  ),	// data receive finish
-    .irq        (irq        ),
+    .irq        (rx_irq     ),
     .frame_err  (frame_err  ),
     .busy       (rx_busy    )
 );
 
+fifo rx_fifo(
+    .rst_n  (~wb_rst_i  ),
+    .clk    (wb_clk_i   ),
+    .i_data (rx_data    ),
+    .push   (rx_irq     ),
+    .pop    (rx_finish  ),
+    .o_data (rx_fifo_data),
+    .cnt    (rx_fifo_cnt)
+);
+
 uart_transmission transmission(
-    .rst_n      (~wb_rst_i  ),
-    .clk        (wb_clk_i   ),
-    .clk_div    (clk_div    ),
-    .tx         (tx         ),
-    .tx_data    (tx_data    ),
-    .clear_req  (tx_start_clear), // clear transmission request
-    .tx_start   (tx_start   ),
-    .busy       (tx_busy    )
+    .rst_n      (~wb_rst_i      ),
+    .clk        (wb_clk_i       ),
+    .clk_div    (clk_div        ),
+    .tx         (tx             ),
+    .tx_data    (tx_fifo_data   ),
+    .clear_req  (tx_start_clear ), // clear transmission request
+    .tx_start   (tx_start       ),
+    .busy       (tx_busy        )
+);
+
+fifo tx_fifo(
+    .rst_n  (~wb_rst_i      ),
+    .clk    (wb_clk_i       ),
+    .i_data (tx_data        ),
+    .push   (tx_push        ),
+    .pop    (tx_start_clear ),
+    .o_data (tx_fifo_data   ),
+    .cnt    (tx_fifo_cnt    )
 );
 
 ctrl ctrl(
@@ -95,15 +124,17 @@ ctrl ctrl(
     .i_wb_sel	(wbs_sel_i  ),
     .o_wb_ack	(wbs_ack_o  ),
     .o_wb_dat   (wbs_dat_o  ),
-    .i_rx       (rx_data    ),
-    .i_irq      (irq        ),
-    .i_frame_err        (frame_err  ),
-    .i_rx_busy          (rx_busy    ),
-    .o_rx_finish        (rx_finish  ),
-    .o_tx		        (tx_data    ),
-    .i_tx_start_clear   (tx_start_clear), 
-    .i_tx_busy          (tx_busy    ),
-    .o_tx_start	        (tx_start   )
+    .i_rx               (rx_fifo_data   ),
+    // .i_irq           (ctrl_irq       ),
+    .i_frame_err        (frame_err      ),
+    .i_rx_busy          (rx_busy        ),
+    .o_rx_finish        (rx_finish      ),
+    .o_tx		        (tx_data        ),
+    .o_tx_start         (tx_start       ),
+    .o_tx_push          (tx_push        ),
+    .i_tx_start_clear   (tx_start_clear ), 
+    .i_tx_fifo_cnt      (tx_fifo_cnt    ),
+    .i_tx_busy          (tx_busy        )
 );
 
 endmodule
